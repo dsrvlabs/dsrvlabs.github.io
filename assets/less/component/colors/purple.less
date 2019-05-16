@@ -1,0 +1,373 @@
+@import "../../variables";
+
+/*---------------------------------------*/
+/*  BUTTON
+/*---------------------------------------*/
+.btn.btn-rj {
+    background-color: @purple;
+    border-color: lighten(@purple, 5%);
+
+    &:hover,
+    &:focus {
+        background-color: darken(@purple, 5%);
+    }
+}
+
+
+/*---------------------------------------*/
+/*  ACCORDION
+/*---------------------------------------*/
+.accordion.accordion-rj {
+    .panel-group {
+        > .panel {
+            border-color: @purple;
+            
+            > .panel-heading {
+                background-color: @purple;
+                border-color: @purple;
+            }
+
+            > .panel-collapse {
+                > .panel-body {
+                    border-color: lighten(@purple, 10%);
+                }
+            }
+        }
+    }
+}
+
+/*  ACCORDION STYLE THREE */
+.accordion.accordion-rj.style-three {
+    .panel-group {
+        border-top: 1px solid @purple;
+
+        > .panel {
+            border-bottom: 1px solid @purple;
+
+            > .panel-heading {
+                > .panel-title {
+                    > a {   
+                        &:after {
+                            color: @purple;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*  ACCORDION STYLE FOUR */
+.accordion.accordion-rj.style-four {
+    .panel-group {
+        border-top: 1px solid @purple;
+
+        > .panel {
+            border-bottom: 1px solid @purple;
+
+            > .panel-heading {
+                > .panel-title {
+                    > a {
+                        &:before {
+                            color: @purple;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/*---------------------------------------*/
+/*  BAR CHART
+/*---------------------------------------*/
+.bar-chart {
+    .bar-chart-item {    
+        background: @purple;
+    }
+}
+
+
+/*---------------------------------------*/
+/*  CONTENT BOXES
+/*---------------------------------------*/
+.content-boxes {
+    > .content-boxes-icon {
+        > i {
+            color: @purple;
+        }
+    }
+}
+
+/* CONTENT BOXES STYLE TWO */
+.content-boxes.style-two {
+    > .content-boxes-icon {
+        > i {
+            background-color: @purple;
+        }
+    }
+}
+
+/* CONTENT BOXES STYLE THREE */
+.content-boxes.style-three {
+    > .content-boxes-icon {
+        > i {
+            background-color: @purple;
+        }
+    }
+}
+
+
+/*---------------------------------------*/
+/*  COUNTDOWN
+/*---------------------------------------*/
+.countdown {
+    .cd-content {
+        .cd-element {
+            border-bottom: 1px solid @purple;
+
+            > .cd-value {
+                color: @purple;
+            }
+        }
+    }
+}
+
+
+/*---------------------------------------*/
+/*  COUNTERS
+/*---------------------------------------*/
+.counter-item {
+    > i {
+        color: @purple;
+    }
+    
+    > p {
+        color: @purple;
+    }
+}
+
+.counter-item.bubble {
+    .inner-content {
+        background-color: @purple;
+        
+        &:before {
+            border-top-color: @purple;
+        }
+    }
+
+    > p {
+        border-bottom: 1px solid @purple;
+    }
+}
+
+
+/*---------------------------------------*/
+/*  FANCY TABLE
+/*---------------------------------------*/
+.table.table-rj {
+    border-bottom: 2px solid @purple;
+   
+    > thead {
+        background-color: @purple;
+        
+        > tr {
+            > th {
+                border-bottom: 2px solid darken(@purple, 5%);
+            }
+        }
+    }
+}
+
+.table.table-bordered.table-rj {
+    > thead {
+        > tr {
+            > th {
+                border: 1px solid lighten(@purple, 8%);
+            }
+        }
+    }
+}
+
+
+/*---------------------------------------*/
+/*  FUNNY BOXES
+/*---------------------------------------*/
+.funny-boxes {     
+    &:hover {
+        > .funny-boxes-icon {
+            background-color: @purple;
+        }
+    }
+
+    > .funny-boxes-icon {
+        border: 1px solid @purple;
+        color: @purple;
+    }
+
+    > .funny-boxes-text {
+        > h4 {
+            &:after {
+                background-color: @purple;
+            }
+        }
+    }
+}
+
+.funny-boxes.not-right-column {
+    &:before {
+        @media(min-width:1023px) {
+            background: -moz-linear-gradient(top, fade(@purple, 0%) 0%, fade(@purple, 90%) 15%, fade(@purple, 90%) 85%, fade(@purple, 0%) 100%);
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, fade(@purple, 0%)), color-stop(15%, fade(@purple, 90%)), color-stop(85%, rgba(221,221,221,1)), color-stop(100%, fade(@purple, 0%)));
+            background: -webkit-linear-gradient(top, fade(@purple, 0%) 0%, fade(@purple, 90%) 15%, fade(@purple, 90%) 85%, fade(@purple, 0%) 100%);
+            background: -o-linear-gradient(top, fade(@purple, 0%) 0%, fade(@purple, 90%) 15%, fade(@purple, 90%) 85%, fade(@purple, 0%) 100%);
+            background: -ms-linear-gradient(top, fade(@purple, 0%) 0%, fade(@purple, 90%) 15%, fade(@purple, 90%) 85%, fade(@purple, 0%) 100%);
+            background: linear-gradient(to bottom, fade(@purple, 0%) 0%, fade(@purple, 90%) 15%, fade(@purple, 90%) 85%, fade(@purple, 0%) 100%);
+        }            
+    }
+}
+
+/* FUNNY BOXES OUTLINE INWARD EFFECT */
+.funny-boxes.outline-inward {
+    > .funny-boxes-icon {
+        &:before {
+            border: @purple solid 4px;
+        }
+    }
+}
+
+/* FUNNY BOXES OUTLINE OUTWARD EFFECT */
+.funny-boxes.outline-outward {
+    > .funny-boxes-icon {
+        &:before {
+            border: @purple solid 4px;
+        }
+    }
+}
+
+
+/*---------------------------------------*/
+/*  PIE CHART
+/*---------------------------------------*/
+.pie-chart-item {
+    .pie-chart-text {
+        > h4 {
+            color: @purple;
+        }
+    }
+}
+
+
+/*---------------------------------------*/
+/*  PRICING TABLES
+/*---------------------------------------*/
+.pricing-table {
+    .pricing-wrapper {
+        > .pricing-column {
+            > .plan-title {
+                > h2 {
+                    background-color: @purple;
+                }
+
+                > .pricing-box {
+                    border-bottom: 3px solid @purple;
+                }
+            }
+        }
+    }
+}
+
+/* PRICING TABLES STYLE FOUR */
+.pricing-table.style-four {
+    .pricing-wrapper.features {
+        > .pricing-column {
+            > .item-list {
+                border-top: 3px solid @purple;
+            }
+        }
+    }
+}
+
+/* PRICING TABLES STYLE FIVE */
+.pricing-table.style-five {
+    .pricing-wrapper {
+        > .pricing-column {
+            border-top: 6px solid @purple;
+            
+            > .plan-footer {
+                background-color: @purple;
+                border-right: 1px solid darken(@purple, 2%);
+                border-bottom: 1px solid darken(@purple, 2%);
+                border-left: 1px solid darken(@purple, 2%);
+            }
+        }
+    }
+}
+
+/* PRICING TABLES STYLE SIX */
+.pricing-table.style-six {
+    .pricing-wrapper {
+        > .pricing-column {
+            border-top: 6px solid @purple;
+            
+            > .plan-footer {
+                background-color: @purple;
+                border-right: 1px solid darken(@purple, 2%);
+                border-bottom: 1px solid darken(@purple, 2%);
+                border-left: 1px solid darken(@purple, 2%);
+            }
+        }
+    }
+}
+
+
+/*---------------------------------------*/
+/*  TABULAR CONTENT
+/*---------------------------------------*/
+.tabular-content {
+    > ul.nav-tabs {
+        > li.active {
+            > a {
+                border-top: 5px solid @purple;
+            }
+        }
+    }
+}
+
+
+/*---------------------------------------*/
+/*  TESTIMONIALS
+/*---------------------------------------*/
+.testimonial-item {
+    > .testimonial-content {
+        background: @purple;
+
+        &:after {
+            border-top-color: @purple;
+        }
+    }
+}
+
+
+/*---------------------------------------*/
+/*  TIMELINE
+/*---------------------------------------*/
+.timeline {
+    > li {
+        > .timeline-panel {
+            &:after {
+                @media(min-width:767px) {    
+                    border-right: 0 solid @purple;
+                    border-left: 14px solid @purple;
+                }
+            }
+
+            > .timeline-heading {
+                > .timeline-title {
+                    background: @purple;
+                }
+            }
+        }
+    }
+}

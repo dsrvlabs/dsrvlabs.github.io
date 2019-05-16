@@ -1,0 +1,120 @@
+@import "../variables";
+
+/*---------------------------------------*/
+/*  NAVBAR
+/*---------------------------------------*/
+.navbar.navbar-fixed-top {
+    .navbar-toggle {        
+        background-color: @green;
+    }
+
+    .navbar-nav {
+        > li {
+            > a {
+                &:hover {
+                    color: @green;
+                }
+            }
+        }
+
+        > li.active {
+            a, a:hover {
+                background-color: @green;
+
+                @media(min-width:992px) {
+                    background-color: @green;
+                }
+            }
+        }
+    }
+}
+
+.navbar-trigger-open {
+    a {
+        background-color: @green;
+    }
+}
+
+
+/*---------------------------------------*/
+/*  QUOTE SECTION
+/*---------------------------------------*/
+#quote {
+    > .section-inner {
+        > .section-content {
+            .quote-text {
+                > .quote-icon {
+                    > i {
+                        color: @green;
+                       
+                    }
+                }
+
+                > h2.quote-by {
+                    color: @green;
+                }
+            }
+        }
+    }
+}
+
+
+/*---------------------------------------*/
+/*  KEEP IN TOUCH SECTION
+/*---------------------------------------*/
+#keep-in-touch {
+    .social-icon-item {    
+        > a {
+            &:hover {
+                color: @green;
+                
+                .social-icon {
+                    > i {
+                        color: @green;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/*---------------------------------------*/
+/*  CONTACT US SECTION
+/*---------------------------------------*/
+#contact-us {
+    > .section-inner {
+        > .section-content {
+            .content-message {
+                background-color: @green;
+            }
+
+            .form-group {
+                input, 
+                textarea {
+                    border-left-color: @green;
+                }
+
+                span {
+                    background-color: @green;
+                    border-color: @green;
+                }
+            }
+
+            .social-icon-text {
+                > h2 {
+                    background-color: @green;
+                    border: 1px solid darken(@green, 10%);
+                }
+            }
+        }
+    }
+}
+
+
+/*---------------------------------------*/
+/*  FOOTER
+/*---------------------------------------*/
+footer.footer {
+    border-top: 2px solid @green;
+}
