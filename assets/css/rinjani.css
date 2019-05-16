@@ -498,7 +498,7 @@ span.navbar-trigger-close a:hover {
   background-image: url("../myimg/dsrvlabs-logo.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-position: center center;
+  background-position: center top;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
