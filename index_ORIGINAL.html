@@ -1,0 +1,2348 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>dsrv labs - Blockchain research labs.</title>
+<meta name="description" content="블록체인 연구소">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<!-- Info Meta Tags -->
+<link rel="image_src" href="http://kksencha.com/assets/img/kksencha.png" />
+<!-- 대표 이미지 URL (이미지를 여러 개 지정할 수 있음) -->
+<meta name="description" content="블록체인 연구소" />
+<!-- 페이지 설명 -->
+
+<!-- Twitter Meta Tags -->
+<meta name="twitter:card" content="summary" />
+<!-- 트위터 카드 summary는 웹페이지에 대한 요약정보를 보여주는 카드로 우측에 썸네일을 보여주고 그 옆에 페이지의 제목과 요약 내용을 보여준다.-->
+<meta name="twitter:url" content="http://www.kksencha.com" />
+<!-- 트위터 카드를 사용하는 표시하고싶은URL-->
+<meta name="twitter:title" content="dsrv labs." />
+<!-- 트위터 카드에 나타날 웹 사이트의 제목-->
+<meta name="twitter:description" content="Ext JS / Sencha Touch 전문 컨설팅 그룹. 컨설팅/기술지원/교육/개발을 실무경험이 많은 김종광/곽옥석 대표컨설턴트가 직접 수행합니다." />
+<!-- 트위터 카드에 나타날 요약 설명-->
+<meta name="twitter:image" content="http://kksencha.com/assets/img/kksencha.png" />
+<!-- 트위터 카드에 보여줄 대표 이미지 URL-->
+<meta name="twitter:site" content="@jongkwang" />
+<!-- 트위터 카드에 사이트 배포자 트위터아이디-->
+<meta name="twitter:creator" content="@jongkwang" />
+<!-- 트위터 카드에 배포자 트위터아이디 -->
+
+<!-- Facebook Meta Tags -->
+<!-- <meta property="fb:app_id" content="dsrv labs." />       앱아이디 -->
+<meta property="og:title" content="dsrv labs." />
+<!-- 웹 사이트의 제목 -->
+<meta property="og:type" content="website" />
+<!-- 사이트 종류 -->
+<meta property="og:image" content="http://kksencha.com/assets/img/kksencha.png" />
+<!-- 대표 이미지 URL (이미지를 여러 개 지정할 수 있음) -->
+<meta property="og:site_name" content="dsrv labs." />
+<!-- 웹 사이트의 제목 -->
+<meta property="og:url" content="http://www.kksencha.com" />
+<!-- 표시하고싶은URL -->
+<meta property="og:description" content="Ext JS / Sencha Touch 전문 컨설팅 그룹. 컨설팅/기술지원/교육/개발을 실무경험이 많은 김종광/곽옥석 대표컨설턴트가 직접 수행합니다." />
+<!-- 페이지 설명 -->
+
+<!-- Google Font -->
+<link href='http://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+
+<!-- Bootstrap Core CSS -->
+<link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+
+<!-- Plugins CSS -->
+<link href="assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link href="assets/plugins/animate-css/animate.min.css" rel="stylesheet" type="text/css">
+<link href="assets/plugins/owl-carousel/owl.carousel.css" rel="stylesheet" type="text/css">
+<link href="assets/plugins/owl-carousel/owl.theme.css" rel="stylesheet" type="text/css">
+<link href="assets/plugins/jquery-magnificPopup/magnific-popup.css" rel="stylesheet" type="text/css">
+
+<!-- Component CSS -->
+<link href="assets/css/component/component.css" rel="stylesheet" type="text/css">
+
+<!-- Main CSS -->
+<link href="assets/css/rinjani.css" rel="stylesheet" type="text/css">
+
+<!-- Color CSS -->
+<link href="assets/css/colors/blue.css" rel="stylesheet" type="text/css">
+<link href="assets/css/component/colors/blue.css" rel="stylesheet" type="text/css">
+
+<style>
+	* {text-transform: none !important}
+</style>
+
+<!-- Modernizr JS for IE9 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+    <script src="assets/plugins/modernizr.min.js"></script>
+    <![endif]-->
+</head>
+
+<!-- The #page-top ID is part of the scrolling feature - the data-spy and data-target are part of the built-in Bootstrap scrollspy function -->
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" data-offset="51">
+
+	<!--[if lt IE 8]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+	<!-- Begin Page Loader -->
+	<div id="page-loader">
+		<div class="preload">
+			<img src="assets/img/preloader.gif" alt="Loading" />
+		</div>
+		<!-- //.preload -->
+	</div>
+	<!-- //End Page Loader -->
+
+
+	<!-- Begin Intro Section -->
+	<section id="intro" style="height: 100%;">
+		<div class="intro-body text-center">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 intro-content">
+						<!--<div class="logo">-->
+						<!--<h1></h1>-->
+						<!--</div>-->
+						<!-- //.logo -->
+
+						<div class="intro-text text-center" style="margin-top: 0; margin-bottom: 300px;">
+							<h2>dsrv labs</h2>
+
+							<p class="lead">Blockchain research labs.<BR>블록체인에 대한 가장 기술적인 이야기를 들을 수 있는 곳 - dsrvlabs.com</p>
+						</div>
+						<!-- //.intro-text -->
+
+						<!-- <div class="page-scroll">
+							<a href="#who-we-are" class="btn btn-lg btn-rj">More</a>
+						</div> -->
+						<!-- //.page-scroll -->
+					</div>
+					<!-- //.intro-content -->
+				</div>
+				<!-- //.row -->
+			</div>
+			<!-- //.container -->
+		</div>
+		<!-- //.intro-body -->
+	</section>
+	<!-- //End Intro Section -->
+
+
+	<!-- Begin Navbar -->
+	<nav id="navigation" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		<div class="container">
+			<div class="navbar-header page-scroll">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-rj-collapse">
+					<span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+				</button>
+
+				<a class="navbar-brand" href="#page-top" style="font-weight: 300;">dsrv labs.</a>
+			</div>
+			<!-- //.navbar-header -->
+
+			<div class="navbar-collapse collapse navbar-rj-collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li class="page-scroll"><a href="#who-we-are">About</a></li>
+
+					<li class="page-scroll"><a href="#our-main-skills">Skills</a></li>
+
+					<li class="page-scroll"><a href="#our-services">Services</a></li>
+
+					<li class="page-scroll"><a href="#our-latest-work">Portfolio</a></li>
+
+					<li class="page-scroll"><a href="#meet-the-team">Team</a></li>
+
+					<!--<li class="page-scroll">-->
+					<!--<a href="#our-pricing">Pricing</a>-->
+					<!--</li>-->
+
+					<li class="page-scroll"><a href="#contact-us">Contact</a></li>
+				</ul>
+			</div>
+			<!-- //.navbar-collapse -->
+		</div>
+		<!-- //.container -->
+	</nav>
+	<!-- //End Navbar -->
+
+
+	<!-- Begin Who We Are Section -->
+	<section id="who-we-are" class="section">
+		<div class="section-inner">
+			<div class="container section-content">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="section-title text-center">
+							<h2 class="main-title">Who We Are?</h2>
+
+							<h3 class="sub-title">Blockchain Research & Expert Laboratory</h3>
+
+							<span class="section-line"></span>
+						</div>
+						<!-- //.section-title -->
+					</div>
+					<!-- //.col-md-12 -->
+				</div>
+				<!-- //.row -->
+
+				<div class="row">
+					<div class="col-md-6">
+						<div id="carousel-who-we-are" class="owl-carousel owl-theme">
+							<div class="item">
+								<img src="assets/myimg/carousel1.jpg" alt="" class="img-responsive img-rounded" />
+							</div>
+							<!-- //.item -->
+
+							<div class="item">
+								<img src="assets/myimg/carousel2.jpg" alt="" class="img-responsive img-rounded" />
+							</div>
+							<!-- //.item -->
+
+							<div class="item">
+								<img src="assets/myimg/carousel3.jpg" alt="" class="img-responsive img-rounded" />
+							</div>
+							<!-- //.item -->
+
+							<div class="item">
+								<img src="assets/myimg/carousel4.jpg" alt="" class="img-responsive img-rounded" />
+							</div>
+							<!-- //.item -->
+
+						</div>
+						<!-- //.owl-carousel -->
+					</div>
+					<!-- //.col-md-6 -->
+
+					<div class="col-md-6">
+						<div class="who-we-are-text">
+							<h4>dsrv labs.</h4>
+
+							<p>
+								개발경력 도합 50년의 개발자 3명이서 블록체인 기술에 대한 연구와 컨설팅을 진행하는 연구소 입니다.
+								<br>
+								블록체인 기술 만큼 검증보다 투자가 먼저 몰리는 분야도 없을 것입니다. 그만큼 미래를 바꿀 기술이기도 하지만, 기술 검증이 필요한 분야 이기도 합니다.
+								<br>
+								저희 dsrv labs 에서는 블록체인 기술을 실제로 운영하며 코드를 분석하여 객관적인 정보를 전달하겠습니다. 누군가는 중립적인 그리고 개발자적인 레벨에서 분석과 연구가 필요하다고 생각하며 저희가 가장 잘 할 수 있는 일이기도 합니다.
+							</p>
+
+
+							<!-- //.page-scroll -->
+						</div>
+						<!-- //.who-we-are-text -->
+					</div>
+					<!-- //.col-md-6 -->
+				</div>
+				<!-- //.row -->
+			</div>
+			<!-- //.section-content -->
+		</div>
+		<!-- //.section-inner -->
+	</section>
+	<!-- //End Who We Are Section -->
+
+
+	<!-- Begin Fun Fact Section -->
+	<section id="fun-fact" class="section section-bgimage-yes">
+		<div class="section-inner">
+			<div class="section-overlay"></div>
+
+			<div class="container section-content">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="section-title text-center">
+							<h2 class="main-title">Our Major</h2>
+
+							<h3 class="sub-title">
+								Block Producer, Validator, Chain Monitoring, Core(Ethereum, Bitcoin), Masternode
+							</h3>
+
+							<span class="section-line"></span>
+						</div>
+						<!-- //.section-title -->
+					</div>
+					<!-- //.col-md-12 -->
+				</div>
+				<!-- //.row -->
+
+				<div class="row">
+					<div class="col-xs-4 col-sm-4 col-md-2 text-center">
+						<div class="counter-item not-right-column top-column">
+							<div class="our_major_logo" >
+								<img src="assets/myimg/icon_bp.png">
+							</div>
+
+							<p style="color: white; line-height: 35px; margin-top: 20px; font-size: 18px;">Block Producer</p>
+						</div>
+						<!-- //.counter-item -->
+					</div>
+					<!-- //.col-xs-4 col-sm-3 col-md-2 -->
+
+
+					<div class="col-xs-4 col-sm-4 col-md-2 text-center">
+						<div class="counter-item not-right-column top-column">
+							<div class="our_major_logo">
+								<img src="assets/myimg/icon_validator.png">
+							</div>
+
+							<p style="color: white; line-height: 35px; margin-top: 20px; font-size: 18px;">Validator</p>
+						</div>
+						<!-- //.counter-item -->
+					</div>
+					<!-- //.col-xs-4 col-sm-3 col-md-2 -->
+
+
+					<div class="col-xs-4 col-sm-4 col-md-2 text-center">
+						<div class="counter-item not-right-column top-column">
+							<div class="our_major_logo">
+								<img src="assets/myimg/icon_monitoring.png">
+							</div>
+
+							<p style="color: white; line-height: 35px; margin-top: 20px; font-size: 18px;">Chain Monitoring</p>
+						</div>
+						<!-- //.counter-item -->
+					</div>
+					<!-- //.col-xs-4 col-sm-3 col-md-2 -->
+
+
+					<div class="col-xs-4 col-sm-4 col-md-2 text-center">
+						<div class="counter-item not-right-column top-column">
+							<div class="our_major_logo">
+								<img src="assets/myimg/icon_ethereum.png">
+							</div>
+
+							<p style="color: white; line-height: 35px; margin-top: 20px; font-size: 18px;">
+								Ethereum Core
+							</p>
+						</div>
+						<!-- //.counter-item -->
+					</div>
+					<!-- //.col-xs-4 col-sm-3 col-md-2 -->
+
+
+					<div class="col-xs-4 col-sm-4 col-md-2 text-center">
+						<div class="counter-item not-right-column top-column">
+							<div class="our_major_logo">
+								<img src="assets/myimg/icon_bitcoin.png">
+							</div>
+
+							<p style="color: white; line-height: 35px; margin-top: 20px; font-size: 18px;">Bitcoin Core</p>
+						</div>
+						<!-- //.counter-item -->
+					</div>
+					<!-- //.col-xs-4 col-sm-3 col-md-2 -->
+
+
+					<div class="col-xs-4 col-sm-4 col-md-2 text-center">
+						<div class="counter-item not-right-column top-column">
+							<div class="our_major_logo">
+								<img src="assets/myimg/icon_chain.png">
+							</div>
+
+							<p style="color: white; line-height: 35px; margin-top: 20px; font-size: 18px;">Masternode</p>
+						</div>
+						<!-- //.counter-item -->
+					</div>
+					<!-- //.col-xs-4 col-sm-3 col-md-2 -->
+				</div>
+				<!-- //.row -->
+			</div>
+			<!-- //.section-content -->
+		</div>
+		<!-- //.section-inner -->
+	</section>
+	<!-- //End Fun Fact Section -->
+
+
+	<!-- Begin Why Us Section -->
+	<section id="why-us" class="section">
+		<div class="section-inner">
+			<div class="container section-content">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="section-title text-center">
+							<h2 class="main-title">Why Choose Us?</h2>
+
+							<h3 class="sub-title">6 Reasons Why We Are The Best</h3>
+
+							<span class="section-line"></span>
+						</div>
+						<!-- //.section-title -->
+					</div>
+					<!-- //.col-md-12 -->
+				</div>
+				<!-- //.row -->
+
+				<!-- Begin Content Boxes -->
+				<div class="row">
+					<div class="col-sm-4 col-md-4">
+						<div class="content-boxes style-two top-column clearfix">
+							<span class="content-boxes-icon"> <i class="fa fa-rocket"></i>
+							</span>
+
+							<div class="content-boxes-text">
+								<h4>기술력</h4>
+
+								<p>창업자 3명이 개발자로 도합 50년의 개발 경력을 자랑 합니다. 직접 체임을 사용 및 운영해보고 코드 레벨로 분석하여 기존에 없던 결과물을 만들어 나가고 있습니다.</p>
+							</div>
+							<!-- //.content-boxes-text -->
+						</div>
+						<!-- //.content-boxes -->
+					</div>
+					<!-- //.col-sm-4 col-md-4 -->
+
+					<div class="col-sm-4 col-md-4">
+						<div class="content-boxes style-two top-column clearfix">
+							<span class="content-boxes-icon"> <i class="fa fa-thumbs-o-up"></i>
+							</span>
+
+							<div class="content-boxes-text">
+								<h4>신뢰</h4>
+
+								<p>dsrv labs 는 말로만 떠들지 않습니다. 오히려 말주변이 없을지 모릅니다. 연구 결과를 인터넷에 공개하고 있고 많은 분들과 소통하고 있습니다. 또한 함께하고 있는 파트너들의 면면을 보시면 보다 높은 신뢰를 느끼실 수 있습니다.</p>
+							</div>
+							<!-- //.content-boxes-text -->
+						</div>
+						<!-- //.content-boxes -->
+					</div>
+					<!-- //.col-sm-4 col-md-4 -->
+
+					<div class="col-sm-4 col-md-4">
+						<div class="content-boxes style-two top-column clearfix">
+							<span class="content-boxes-icon"> <i class="fa fa-star-o"></i>
+							</span>
+
+							<div class="content-boxes-text">
+								<h4>교육/컨설팅</h4>
+
+								<p>연구 결과를 인터넷에 공개하고 있지만, 직접 찾아가 교육 및 컨설팅도 진행하고 있습니다. 실제로 구현/분석한 것을 토대로 교육과 컨설팅을 하고 있어 실무에 도움이 되실겁니다.</p>
+							</div>
+							<!-- //.content-boxes-text -->
+						</div>
+						<!-- //.content-boxes -->
+					</div>
+					<!-- //.col-sm-4 col-md-4 -->
+				</div>
+				<!-- //.row -->
+
+				<div class="row">
+					<div class="col-sm-4 col-md-4">
+						<div class="content-boxes style-two bottom-column not-right-column clearfix">
+							<span class="content-boxes-icon"> <i class="fa fa-shield"></i>
+							</span>
+							<div class="content-boxes-text">
+								<h4>노드 운영</h4>
+
+								<p>2018년 초 부터 마스터노드 운영(manoshare.com) 사업을 시작으로 여러 노드를 운영하고 있습니다. 특히, 몇몇 코인에는 Block Producer/Validator 등으로 참여하고 있어 실무적인 경험을 공유하고 있습니다.</p>
+							</div>
+							<!-- //.content-boxes-text -->
+						</div>
+						<!-- //.content-boxes -->
+					</div>
+					<!-- //.col-sm-4 col-md-4 -->
+
+					<div class="col-sm-4 col-md-4">
+						<div class="content-boxes style-two bottom-column not-right-column clearfix">
+							<span class="content-boxes-icon"> <i class="fa fa-send-o"></i>
+							</span>
+							<div class="content-boxes-text">
+								<h4>Core 연구</h4>
+
+								<p>블록체인의 핵심은 역시 Core 에 있습니다. 여러 블록체인들의 Core 를 연구 함으로써 장/단점을 찾아내고 실질적 블록체인 검증을 할 수 있습니다.</p>
+							</div>
+							<!-- //.content-boxes-text -->
+						</div>
+						<!-- //.content-boxes -->
+					</div>
+					<!-- //.col-sm-4 col-md-4 -->
+
+					<div class="col-sm-4 col-md-4">
+						<div class="content-boxes style-two bottom-column clearfix">
+							<span class="content-boxes-icon"> <i class="fa fa-support"></i>
+							</span>
+
+							<div class="content-boxes-text">
+								<h4>위치</h4>
+
+								<p>블록체인 성지인 논스(nonce)에 위치해 있습니다. 이곳에서 여러 개발자/기획자/스타트업 들과 소통하며 아이디어도 얻고 발전시키고 있습니다. 논스로 찾아오시면 저의 일하고 있는 모습을 보실 수 있습니다.</p>
+							</div>
+							<!-- //.content-boxes-text -->
+						</div>
+						<!-- //.content-boxes -->
+					</div>
+					<!-- //.col-sm-4 col-md-4 -->
+				</div>
+				<!-- //End Content Boxes -->
+			</div>
+			<!-- //.section-content -->
+		</div>
+		<!-- //.section-inner -->
+	</section>
+	<!-- //End Why Us Section -->
+
+
+	<!-- Begin Our Main Skills Section -->
+	<section id="our-main-skills" class="section section-bgimage-yes">
+		<div class="section-inner">
+			<div class="section-overlay"></div>
+
+			<div class="container section-content">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="section-title text-center">
+							<h3 class="main-title">Our Main Skills</h3>
+
+							<h3 class="sub-title">We Have Creativity And Knowledge To Development</h3>
+
+							<span class="section-line"></span>
+						</div>
+						<!-- //.section-title -->
+					</div>
+					<!-- //.col-md-12 -->
+				</div>
+				<!-- //.row -->
+
+				<div class="row">
+					<div class="col-md-5">
+						<div class="bar-chart-text">
+							<p class="lead">Ext JS, Sencha Touch 기술과 교육에 대해서는 자부심을 갖고 있습니다. 이를 통한 여러 서비스를 개발하면서 HTML5, PhoneGap(Cordova), Android/iOS Hybrid App, AWS를 비롯한 Cloud Server 에 대해 많은 경험과 노하우를 갖고 있습니다.</p>
+
+							<p>지식이 많다고 해서 교육이나 기술이전을 잘 하는 것은 아닙니다. 수년간의 교육/강의/발표 경험을 통해 여러분이 필요로 하시는 부분을 채워 드립니다. 또한, 사후에도 정기적인 기술지원을 통해 끝까지 책임져 드립니다.</p>
+						</div>
+						<!-- //.bar-chart-text -->
+					</div>
+					<!-- //.col-md-5 -->
+
+					<div class="col-md-7">
+
+						<!-- Begin Bar Chart -->
+						<div class="bar-chart">
+							<div class="bar-chart-item" data-percent="100">
+								<p>Ext JS</p>
+							</div>
+							<!-- //.bar-chart-item -->
+
+							<div class="bar-chart-item" data-percent="100">
+								<p>Sencha Touch</p>
+							</div>
+							<!-- //.bar-chart-item -->
+
+							<div class="bar-chart-item" data-percent="92">
+								<p>HTML5</p>
+							</div>
+							<!-- //.bar-chart-item -->
+
+							<div class="bar-chart-item" data-percent="86">
+								<p>PhoneGap / Cordova</p>
+							</div>
+							<!-- //.bar-chart-item -->
+
+							<div class="bar-chart-item" data-percent="83">
+								<p>Android / iOS, Hybrid App</p>
+							</div>
+							<!-- //.bar-chart-item -->
+
+							<div class="bar-chart-item" data-percent="70">
+								<p>Java JSP/Servlet</p>
+							</div>
+							<!-- //.bar-chart-item -->
+
+							<div class="bar-chart-item" data-percent="65">
+								<p>AWS & Cloud Server</p>
+							</div>
+							<!-- //.bar-chart-item -->
+
+							<div class="bar-chart-item" data-percent="85">
+								<p>교육 / 컨설팅</p>
+							</div>
+							<!-- //.bar-chart-item -->
+
+							<div class="bar-chart-legend clearfix">
+								<div class="legend legend-left">
+									<p>Newbie</p>
+								</div>
+								<!-- //.legend -->
+
+								<div class="legend legend-left">
+									<p>Decent</p>
+								</div>
+								<!-- //.legend -->
+
+								<div class="legend legend-right">
+									<p>Pretty Good</p>
+								</div>
+								<!-- //.legend -->
+
+								<div class="legend legend-right">
+									<p>Super Hero</p>
+								</div>
+								<!-- //.legend -->
+							</div>
+							<!-- //.bar-chart-legend -->
+						</div>
+						<!-- //End Bar Chart -->
+					</div>
+					<!-- //.col-md-7 -->
+				</div>
+				<!-- //.row -->
+			</div>
+			<!-- //.section-content -->
+		</div>
+		<!-- //.section-inner -->
+	</section>
+	<!-- //End Our Main Skills Section -->
+
+
+	<!-- Begin Our Services Section -->
+	<section id="our-services" class="section">
+		<div class="section-inner">
+			<div class="container section-content">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="section-title text-center">
+							<h3 class="main-title">Our Services</h3>
+
+							<h4 class="sub-title">We Are Experts In Developing Your Business</h4>
+
+							<span class="section-line"></span>
+						</div>
+						<!-- //.section-title -->
+					</div>
+					<!-- //.col-md-12 -->
+				</div>
+				<!-- //.row -->
+
+				<div class="row">
+					<div class="col-sm-4 col-md-4">
+						<div class="funny-boxes float-shadow not-right-column text-center">
+							<span class="funny-boxes-icon"> <i class="fa fa-lightbulb-o"></i>
+							</span>
+
+							<div class="funny-boxes-text">
+								<h4>컨설팅</h4>
+
+								<p>초반 설계의 방향을 잡는 일은 매우 중요합니다. 초반의 잘못된 선택은 프로젝트 기간을 2~3배 길게 만들어 버릴 수 있습니다. 저희 멤버와 상의 하세요. 하루만 상담 받으셔도 충분합니다.</p>
+							</div>
+							<!-- //.funny-boxes-text -->
+						</div>
+						<!-- //.funny-boxes -->
+					</div>
+					<!-- //.col-sm-4 col-md-4 -->
+
+					<div class="col-sm-4 col-md-4">
+						<div class="funny-boxes float-shadow not-right-column text-center">
+							<span class="funny-boxes-icon"> <i class="fa fa-heart-o"></i>
+							</span>
+
+							<div class="funny-boxes-text">
+								<h4>개발</h4>
+
+								<p>이미 수많은 개발 경험을 갖고 있고 그에 따른 Prototype 도 갖추고 있습니다. 검증되고 안정화된 Prototype을 제공해 드립니다. 개발기간이 훨씬 단축되고 비용도 절감됩니다.</p>
+							</div>
+							<!-- //.funny-boxes-text -->
+						</div>
+						<!-- //.funny-boxes -->
+					</div>
+					<!-- //.col-sm-4 col-md-4 -->
+
+					<div class="col-sm-4 col-md-4">
+						<div class="funny-boxes float-shadow text-center">
+							<span class="funny-boxes-icon"> <i class="fa fa-flask"></i>
+							</span>
+
+							<div class="funny-boxes-text">
+								<h4>교육/사후관리</h4>
+
+								<p>저희는 Prototype만 제공하고, 본 개발은 직접 하실 수 있도록 교육해 드립니다. 교육과 함께 직접 개발 하셔야 자기것으로 만들 수 있습니다. 또한, 주1회 또는 월1회 방문하여 사후 관리도 책임집니다.</p>
+							</div>
+							<!-- //.funny-boxes-text -->
+						</div>
+						<!-- //.funny-boxes -->
+					</div>
+					<!-- //.col-sm-4 col-md-4 -->
+				</div>
+				<!-- //.row -->
+			</div>
+			<!-- //.section-content -->
+		</div>
+		<!-- //.section-inner -->
+	</section>
+	<!-- //End Our Services Section -->
+
+
+	<!-- Begin Quote Section -->
+	<section id="quote" class="section section-bgimage-yes">
+		<div class="section-inner">
+			<div class="section-overlay"></div>
+
+			<div class="container section-content">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="quote-text text-center">
+							<span class="quote-icon"> <i class="fa fa-quote-right fa-4x"></i>
+							</span>
+
+							<h2  style="font-weight: 300;">"I'm convinced that the only thing that kept me going was that I loved what I did. You've got to find what you love. And that is as true for your work as it is for your lovers."</h2>
+
+							<h2 class="lead quote-by">(Steve Jobs)</h2>
+						</div>
+						<!-- //.quote-text -->
+					</div>
+					<!-- //.col-md-12 -->
+				</div>
+				<!-- //.row -->
+			</div>
+			<!-- //.section-content -->
+		</div>
+		<!-- //.section-inner -->
+	</section>
+	<!-- //End Quote Section -->
+
+
+	<!-- Begin Our Latest Work Section -->
+	<section id="our-latest-work" class="section">
+		<div class="section-inner">
+			<div class="container section-content">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="section-title text-center">
+							<h2 class="main-title">Our Latest Work</h2>
+
+							<h3 class="sub-title">You Can Judge Us By The Work We Have Done</h3>
+
+							<span class="section-line"></span>
+						</div>
+						<!-- //.section-title -->
+					</div>
+					<!-- //.col-md-12 -->
+				</div>
+				<!-- //.row -->
+
+				<div class="row">
+					<div class="col-md-12">
+						<div class="filter-portfolio">
+							<ul class="list-unstyled">
+								<li class="active"><a href="#" data-filter="*" class="btn btn-rj disabled">All</a></li>
+
+								<li><a href="#" data-filter=".identity" class="btn btn-rj">Identity</a></li>
+
+								<li><a href="#" data-filter=".logo" class="btn btn-rj">Logo</a></li>
+
+								<li><a href="#" data-filter=".illustration" class="btn btn-rj">Illustration</a></li>
+							</ul>
+						</div>
+						<!-- //.filter-portfolio -->
+					</div>
+					<!-- //.col-md-12 -->
+				</div>
+				<!-- //.row -->
+
+
+
+
+				<div class="row">
+
+					<div class="col-sm-6 col-md-3 portfolio-item grow-rotate">
+						<div class="inner-content">
+							<div class="portfolio-content">
+								<div class="portfolio-detail">
+									<a href="assets/img/portfolio/27.png" title="Project Title 1 - Lorem Ipsum">
+										<div class="portfolio-text">
+											<h4>Podo Clinic</h4>
+
+											<p>병원 커뮤니케이션 솔루션</p>
+										</div> <!-- //.portfolio-text -->
+									</a>
+								</div>
+								<!-- //.portfolio-detail -->
+							</div>
+							<!-- //.portfolio-content -->
+							<img src="assets/img/portfolio/27.png" alt="" class="img-responsive" />
+						</div>
+						<!-- //.inner-content -->
+					</div>
+					<!-- //.portfolio-item -->
+
+					<div class="col-sm-6 col-md-3 portfolio-item grow-rotate">
+						<div class="inner-content">
+							<div class="portfolio-content">
+								<div class="portfolio-detail">
+									<a href="assets/img/portfolio/26.png" title="Project Title 1 - Lorem Ipsum">
+										<div class="portfolio-text">
+											<h4>CJ 제일제당 - ERP</h4>
+
+											<p>Ext JS, ERP구축</p>
+										</div> <!-- //.portfolio-text -->
+									</a>
+								</div>
+								<!-- //.portfolio-detail -->
+							</div>
+							<!-- //.portfolio-content -->
+							<img src="assets/img/portfolio/26.png" alt="" class="img-responsive" />
+						</div>
+						<!-- //.inner-content -->
+					</div>
+					<!-- //.portfolio-item -->
+
+					<div class="col-sm-6 col-md-3 portfolio-item grow-rotate">
+						<div class="inner-content">
+							<div class="portfolio-content">
+								<div class="portfolio-detail">
+									<a href="assets/img/portfolio/25.jpg" title="Project Title 1 - Lorem Ipsum">
+										<div class="portfolio-text">
+											<h4>Kidsbook</h4>
+
+											<p>어린이집 커뮤니케이션 솔루션</p>
+										</div> <!-- //.portfolio-text -->
+									</a>
+								</div>
+								<!-- //.portfolio-detail -->
+							</div>
+							<!-- //.portfolio-content -->
+							<img src="assets/img/portfolio/25.jpg" alt="" class="img-responsive" />
+						</div>
+						<!-- //.inner-content -->
+					</div>
+					<!-- //.portfolio-item -->
+
+					<div class="col-sm-6 col-md-3 portfolio-item grow-rotate">
+						<div class="inner-content">
+							<div class="portfolio-content">
+								<div class="portfolio-detail">
+									<a href="assets/img/portfolio/23.png" title="Project Title 1 - Lorem Ipsum">
+										<div class="portfolio-text">
+											<h4>삼성SDS 의료부분 솔루션</h4>
+
+											<p>Ext JS 프로젝트</p>
+										</div> <!-- //.portfolio-text -->
+									</a>
+								</div>
+								<!-- //.portfolio-detail -->
+							</div>
+							<!-- //.portfolio-content -->
+							<img src="assets/img/portfolio/23.png" alt="" class="img-responsive" />
+						</div>
+						<!-- //.inner-content -->
+					</div>
+					<!-- //.portfolio-item -->
+				</div>
+				<!-- end of row -->
+
+
+
+
+				<div class="row">
+					<div class="col-sm-6 col-md-3 portfolio-item grow-rotate">
+						<div class="inner-content">
+							<div class="portfolio-content">
+								<div class="portfolio-detail">
+									<a href="assets/img/portfolio/22.png" title="Project Title 1 - Lorem Ipsum">
+										<div class="portfolio-text">
+											<h4>한솔오크밸리 예약시스템</h4>
+
+											<p>Ext JS 프로젝트</p>
+										</div> <!-- //.portfolio-text -->
+									</a>
+								</div>
+								<!-- //.portfolio-detail -->
+							</div>
+							<!-- //.portfolio-content -->
+							<img src="assets/img/portfolio/22.png" alt="" class="img-responsive" />
+						</div>
+						<!-- //.inner-content -->
+					</div>
+					<!-- //.portfolio-item -->
+					<div class="col-sm-6 col-md-3 portfolio-item grow-rotate">
+						<div class="inner-content">
+							<div class="portfolio-content">
+								<div class="portfolio-detail">
+									<a href="assets/img/portfolio/21.png" title="Project Title 1 - Lorem Ipsum">
+										<div class="portfolio-text">
+											<h4>한솔 Web Order Tracking</h4>
+
+											<p>Ext JS 프로젝트</p>
+										</div> <!-- //.portfolio-text -->
+									</a>
+								</div>
+								<!-- //.portfolio-detail -->
+							</div>
+							<!-- //.portfolio-content -->
+							<img src="assets/img/portfolio/21.png" alt="" class="img-responsive" />
+						</div>
+						<!-- //.inner-content -->
+					</div>
+					<!-- //.portfolio-item -->
+
+					<div class="col-sm-6 col-md-3 portfolio-item grow-rotate">
+						<div class="inner-content">
+							<div class="portfolio-content">
+								<div class="portfolio-detail">
+									<a href="assets/img/portfolio/20.png" title="Project Title 1 - Lorem Ipsum">
+										<div class="portfolio-text">
+											<h4>한솔 홈데코이마켓</h4>
+
+											<p>Ext JS 프로젝트</p>
+										</div> <!-- //.portfolio-text -->
+									</a>
+								</div>
+								<!-- //.portfolio-detail -->
+							</div>
+							<!-- //.portfolio-content -->
+							<img src="assets/img/portfolio/20.png" alt="" class="img-responsive" />
+						</div>
+						<!-- //.inner-content -->
+					</div>
+					<!-- //.portfolio-item -->
+
+					<div class="col-sm-6 col-md-3 portfolio-item grow-rotate">
+						<div class="inner-content">
+							<div class="portfolio-content">
+								<div class="portfolio-detail">
+									<a href="assets/img/portfolio/10.jpg" title="Project Title 1 - Lorem Ipsum">
+										<div class="portfolio-text">
+											<h4>Kidsbook</h4>
+
+											<p>미국 어린이집 커뮤니케이션 서비스</p>
+										</div> <!-- //.portfolio-text -->
+									</a>
+								</div>
+								<!-- //.portfolio-detail -->
+							</div>
+							<!-- //.portfolio-content -->
+							<img src="assets/img/portfolio/10.jpg" alt="" class="img-responsive" />
+						</div>
+						<!-- //.inner-content -->
+					</div>
+					<!-- //.portfolio-item -->
+				</div>
+				<!-- end of row -->
+
+
+
+
+				<div class="row">
+					<div class="col-sm-6 col-md-3 portfolio-item grow-rotate">
+						<div class="inner-content">
+							<div class="portfolio-content">
+								<div class="portfolio-detail">
+									<a href="assets/img/portfolio/08.jpg" title="Project Title 1 - Lorem Ipsum">
+										<div class="portfolio-text">
+											<h4>미주 삼성전자</h4>
+
+											<p>Mobile Intranet Project</p>
+										</div> <!-- //.portfolio-text -->
+									</a>
+								</div>
+								<!-- //.portfolio-detail -->
+							</div>
+							<!-- //.portfolio-content -->
+							<img src="assets/img/portfolio/08.jpg" alt="" class="img-responsive" />
+						</div>
+						<!-- //.inner-content -->
+					</div>
+					<!-- //.portfolio-item -->
+
+					<div class="col-sm-6 col-md-3 portfolio-item grow-rotate">
+						<div class="inner-content">
+							<div class="portfolio-content">
+								<div class="portfolio-detail">
+									<a href="assets/img/portfolio/07.jpg" title="Project Title 1 - Lorem Ipsum">
+										<div class="portfolio-text">
+											<h4>Maskchat</h4>
+
+											<p>채팅 솔루션 (Sencha Touch, Node.JS)</p>
+										</div> <!-- //.portfolio-text -->
+									</a>
+								</div>
+								<!-- //.portfolio-detail -->
+							</div>
+							<!-- //.portfolio-content -->
+							<img src="assets/img/portfolio/07.jpg" alt="" class="img-responsive" />
+						</div>
+						<!-- //.inner-content -->
+					</div>
+					<!-- //.portfolio-item -->
+
+					<div class="col-sm-6 col-md-3 portfolio-item grow-rotate">
+						<div class="inner-content">
+							<div class="portfolio-content">
+								<div class="portfolio-detail">
+									<a href="assets/img/portfolio/06.jpg" title="Project Title 1 - Lorem Ipsum">
+										<div class="portfolio-text">
+											<h4>Samsung SDS America</h4>
+
+											<p>Mobile SCM Project</p>
+										</div> <!-- //.portfolio-text -->
+									</a>
+								</div>
+								<!-- //.portfolio-detail -->
+							</div>
+							<!-- //.portfolio-content -->
+							<img src="assets/img/portfolio/06.jpg" alt="" class="img-responsive" />
+						</div>
+						<!-- //.inner-content -->
+					</div>
+					<!-- //.portfolio-item -->
+
+					<div class="col-sm-6 col-md-3 portfolio-item grow-rotate">
+						<div class="inner-content">
+							<div class="portfolio-content">
+								<div class="portfolio-detail">
+									<a href="assets/img/portfolio/05.jpg" title="Project Title 1 - Lorem Ipsum">
+										<div class="portfolio-text">
+											<h4>GARIGORI</h4>
+
+											<p>Garigori Project</p>
+										</div> <!-- //.portfolio-text -->
+									</a>
+								</div>
+								<!-- //.portfolio-detail -->
+							</div>
+							<!-- //.portfolio-content -->
+							<img src="assets/img/portfolio/05.jpg" alt="" class="img-responsive" />
+						</div>
+						<!-- //.inner-content -->
+					</div>
+					<!-- //.portfolio-item -->
+				</div>
+				<!-- end of row -->
+
+
+
+
+				<div class="row">
+					<div class="col-sm-6 col-md-3 portfolio-item grow-rotate">
+						<div class="inner-content">
+							<div class="portfolio-content">
+								<div class="portfolio-detail">
+									<a href="assets/img/portfolio/04.jpg" title="Project Title 1 - Lorem Ipsum">
+										<div class="portfolio-text">
+											<h4>Autistar</h4>
+
+											<p>디자인 회사 홍보 어플</p>
+										</div> <!-- //.portfolio-text -->
+									</a>
+								</div>
+								<!-- //.portfolio-detail -->
+							</div>
+							<!-- //.portfolio-content -->
+							<img src="assets/img/portfolio/04.jpg" alt="" class="img-responsive" />
+						</div>
+						<!-- //.inner-content -->
+					</div>
+					<!-- //.portfolio-item -->
+
+					<div class="col-sm-6 col-md-3 portfolio-item grow-rotate">
+						<div class="inner-content">
+							<div class="portfolio-content">
+								<div class="portfolio-detail">
+									<a href="assets/img/portfolio/03.jpg" title="Project Title 1 - Lorem Ipsum">
+										<div class="portfolio-text">
+											<h4>멜론 웹 for iPad</h4>
+
+											<p>멜론(아이패드용 웹) 프로젝트 참여</p>
+										</div> <!-- //.portfolio-text -->
+									</a>
+								</div>
+								<!-- //.portfolio-detail -->
+							</div>
+							<!-- //.portfolio-content -->
+							<img src="assets/img/portfolio/03.jpg" alt="" class="img-responsive" />
+						</div>
+						<!-- //.inner-content -->
+					</div>
+					<!-- //.portfolio-item -->
+
+					<div class="col-sm-6 col-md-3 portfolio-item grow-rotate">
+						<div class="inner-content">
+							<div class="portfolio-content">
+								<div class="portfolio-detail">
+									<a href="assets/img/portfolio/02.jpg" title="Project Title 1 - Lorem Ipsum">
+										<div class="portfolio-text">
+											<h4>멜론 for Android</h4>
+
+											<p>멜론 안드로이드 프로젝트 참여</p>
+										</div> <!-- //.portfolio-text -->
+									</a>
+								</div>
+								<!-- //.portfolio-detail -->
+							</div>
+							<!-- //.portfolio-content -->
+							<img src="assets/img/portfolio/02.jpg" alt="" class="img-responsive" />
+						</div>
+						<!-- //.inner-content -->
+					</div>
+					<!-- //.portfolio-item -->
+
+					<div class="col-sm-6 col-md-3 portfolio-item grow-rotate">
+						<div class="inner-content">
+							<div class="portfolio-content">
+								<div class="portfolio-detail">
+									<a href="assets/img/portfolio/01.png" title="Project Title 1 - Lorem Ipsum">
+										<div class="portfolio-text">
+											<h4>OKJSP - HTML5 Mobile</h4>
+
+											<p>OKJSP 모바일버전 개발</p>
+										</div> <!-- //.portfolio-text -->
+									</a>
+								</div>
+								<!-- //.portfolio-detail -->
+							</div>
+							<!-- //.portfolio-content -->
+							<img src="assets/img/portfolio/01.png" alt="" class="img-responsive" />
+						</div>
+						<!-- //.inner-content -->
+					</div>
+					<!-- //.portfolio-item -->
+				</div>
+				<!-- end of row -->
+
+
+
+
+			</div>
+			<!-- //.section-content -->
+		</div>
+		<!-- //.section-inner -->
+	</section>
+	<!-- //End Our Latest Work Section -->
+
+
+	<!-- Begin Keep In Touch Section -->
+	<section id="keep-in-touch" class="section section-bgimage-yes">
+		<div class="section-inner">
+			<div class="section-overlay"></div>
+
+			<div class="container section-content">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="section-title text-center">
+							<h3 class="main-title">Keep In Touch With Us</h3>
+
+							<h4 class="sub-title">We Would Love to Know From You</h4>
+
+							<span class="section-line"></span>
+						</div>
+						<!-- //.section-title -->
+					</div>
+					<!-- //.col-md-12 -->
+				</div>
+				<!-- //.row -->
+
+				<div class="row">
+					<div class="col-xs-6 col-sm-4 col-md-2">
+						<div class="social-icon-item text-center not-right-column top-column">
+							<a href="#facebook"> <span class="social-icon"> <i class="fa fa-facebook"></i>
+							</span>
+
+								<h4>Facebook</h4>
+							</a>
+						</div>
+						<!-- //.social-icon-item -->
+					</div>
+					<!-- //.col-xs-6 col-sm-4 col-md-2 -->
+
+					<div class="col-xs-6 col-sm-4 col-md-2">
+						<div class="social-icon-item text-center not-right-column top-column">
+							<a href="#twitter"> <span class="social-icon"> <i class="fa fa-twitter"></i>
+							</span>
+
+								<h4>Twitter</h4>
+							</a>
+						</div>
+						<!-- //.social-icon-item -->
+					</div>
+					<!-- //.col-xs-6 col-sm-4 col-md-2 -->
+
+					<div class="col-xs-6 col-sm-4 col-md-2">
+						<div class="social-icon-item text-center not-right-column top-column">
+							<a href="#google+"> <span class="social-icon"> <i class="fa fa-google-plus fa-5x"></i>
+							</span>
+
+								<h4>Google +</h4>
+							</a>
+						</div>
+						<!-- //.social-icon-item -->
+					</div>
+					<!-- //.col-xs-6 col-sm-4 col-md-2 -->
+
+					<div class="col-xs-6 col-sm-4 col-md-2">
+						<div class="social-icon-item text-center not-right-column">
+							<a href="#youtube"> <span class="social-icon"> <i class="fa fa-youtube fa-5x"></i>
+							</span>
+
+								<h4>Youtube</h4>
+							</a>
+						</div>
+						<!-- //.social-icon-item -->
+					</div>
+					<!-- //.col-xs-6 col-sm-4 col-md-2 -->
+
+					<div class="col-xs-6 col-sm-4 col-md-2">
+						<div class="social-icon-item text-center not-right-column">
+							<a href="#pinterest"> <span class="social-icon"> <i class="fa fa-pinterest fa-5x"></i>
+							</span>
+
+								<h4>Pinterest</h4>
+							</a>
+						</div>
+						<!-- //.social-icon-item -->
+					</div>
+					<!-- //.col-xs-6 col-sm-4 col-md-2 -->
+
+					<div class="col-xs-6 col-sm-4 col-md-2">
+						<div class="social-icon-item text-center">
+							<a href="#instagram"> <span class="social-icon"> <i class="fa fa-instagram fa-5x"></i>
+							</span>
+
+								<h4>Instagram</h4>
+							</a>
+						</div>
+						<!-- //.social-icon-item -->
+					</div>
+					<!-- //.col-xs-6 col-sm-4 col-md-2 -->
+				</div>
+				<!-- //.row -->
+			</div>
+			<!-- //.section-content -->
+		</div>
+		<!-- //.section-inner -->
+	</section>
+	<!-- //End Keep In Touch Section -->
+
+
+	<!-- Begin Meet The Team Section -->
+	<section id="meet-the-team" class="section">
+		<div class="section-inner">
+			<div class="container section-content">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="section-title text-center">
+							<h3 class="main-title">Meet The Team</h3>
+
+							<h4 class="sub-title">We Are Here For You</h4>
+
+							<span class="section-line"></span>
+						</div>
+						<!-- //.section-title -->
+					</div>
+					<!-- //.col-md-12 -->
+				</div>
+				<!-- //.row -->
+
+				<div class="row">
+					<div class="col-sm-6 col-md-3 team-item not-right-column top-column">&nbsp;</div>
+					<!-- //.team-item -->
+
+					<div class="col-sm-6 col-md-2 team-item not-right-column top-column">
+						<div class="img-rounded team-element">
+							<div class="team-inner">
+								<div class="team-detail">
+									<div class="team-content">
+										<h4 style="margin-bottom: 0px;">김종광</h4>
+										<p>
+											대표 컨설턴트<br>
+											<br>- 주식회사 종광, Founder & CTO<br>- 한국센차유저그룹 운영자<br>- 미래부/NIPA, SW 마에스트로 멘토
+										</p>
+									</div>
+									<!-- //.team-content -->
+								</div>
+								<!-- //.team-detail -->
+							</div>
+							<!-- //.team-inner -->
+
+							<img src="assets/myimg/member-jy.jpg" alt="" class="img-responsive img-rounded" />
+						</div>
+						<!-- //.team-element -->
+					</div>
+					<!-- //.team-item -->
+
+					<div class="col-sm-6 col-md-2 team-item not-right-column">
+						<div class="img-rounded team-element">
+							<div class="team-inner">
+								<div class="team-detail">
+									<div class="team-content">
+										<h4 style="margin-bottom: 0px;">곽옥석</h4>
+
+										<p>
+											대표 컨설턴트<br>
+											<br>- Ext JS 5 Ria 프로그래밍, 저자
+										</p>
+									</div>
+									<!-- //.team-content -->
+								</div>
+								<!-- //.team-detail -->
+							</div>
+							<!-- //.team-inner -->
+
+							<img src="assets/myimg/member-jh.png" alt="" class="img-responsive img-rounded" />
+						</div>
+						<!-- //.team-element -->
+					</div>
+					<!-- //.team-item -->
+
+					<div class="col-sm-6 col-md-2 team-item not-right-column">
+						<div class="img-rounded team-element">
+							<div class="team-inner">
+								<div class="team-detail">
+									<div class="team-content">
+										<h4 style="margin-bottom: 0px;">곽옥석</h4>
+
+										<p>
+											대표 컨설턴트<br>
+											<br>- Ext JS 5 Ria 프로그래밍, 저자
+										</p>
+									</div>
+									<!-- //.team-content -->
+								</div>
+								<!-- //.team-detail -->
+							</div>
+							<!-- //.team-inner -->
+
+							<img src="assets/img/team1.jpg" alt="" class="img-responsive img-rounded" />
+						</div>
+						<!-- //.team-element -->
+					</div>
+					<!-- //.team-item -->
+
+					<div class="col-sm-6 col-md-3 team-item">&nbsp;</div>
+					<!-- //.team-item -->
+				</div>
+				<!-- //.row -->
+			</div>
+			<!-- //.section-content -->
+		</div>
+		<!-- //.section-inner -->
+	</section>
+	<!-- //End Meet The Team Section -->
+
+
+	<!--&lt;!&ndash; Begin Testimonials Section &ndash;&gt;-->
+	<!--<section id="testimonials" class="section section-bgimage-yes">-->
+	<!--<div class="section-inner">-->
+	<!--<div class="section-overlay"></div>-->
+
+	<!--<div class="container section-content">-->
+	<!--<div class="row">-->
+	<!--<div class="col-md-12">-->
+	<!--<div class="section-title text-center">-->
+	<!--<h2 class="main-title">Testimonials</h2>-->
+
+	<!--<h3 class="sub-title">We Make Our Customers Happy</h3>-->
+
+	<!--<span class="section-line"></span>-->
+	<!--</div>-->
+	<!--&lt;!&ndash; //.section-title &ndash;&gt;-->
+	<!--</div>-->
+	<!--&lt;!&ndash; //.col-md-12 &ndash;&gt;-->
+	<!--</div>    -->
+	<!--&lt;!&ndash; //.row &ndash;&gt;-->
+
+	<!--<div class="row">-->
+	<!--<div class="col-md-4">-->
+	<!--<div class="testimonial-item not-right-column not-bottom-column">-->
+	<!--<div class="testimonial-content">-->
+	<!--<p class="testimonial-title">Lorem Ipsum Title</p>-->
+
+	<!--<blockquote>-->
+	<!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>-->
+	<!--</blockquote>-->
+	<!--</div>-->
+	<!--&lt;!&ndash; //.testimonial-content &ndash;&gt;-->
+
+	<!--<div class="testimonial-info clearfix">-->
+	<!--<img width="100" src="assets/img/testimonial-image-1.jpg" alt="" class="img-circle img-thumbnail"/>-->
+
+	<!--<p class="testimonial-author">-->
+	<!--@Jane Doe, Jakarta-->
+	<!--<br>-->
+	<!--<em>Co-Founder at Cisco</em>-->
+	<!--</p>-->
+	<!--</div>-->
+	<!--&lt;!&ndash; //.testimonial-info &ndash;&gt;-->
+	<!--</div>-->
+	<!--&lt;!&ndash; //.testimonial-item &ndash;&gt;-->
+	<!--</div>-->
+	<!--&lt;!&ndash; //.col-md-4 &ndash;&gt;-->
+
+	<!--<div class="col-md-4">-->
+	<!--<div class="testimonial-item not-right-column not-bottom-column">-->
+	<!--<div class="testimonial-content">-->
+	<!--<p class="testimonial-title">Lorem Ipsum Title</p>-->
+
+	<!--<blockquote>-->
+	<!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>-->
+	<!--</blockquote>-->
+	<!--</div>-->
+	<!--&lt;!&ndash; //.testimonial-content &ndash;&gt;-->
+
+	<!--<div class="testimonial-info clearfix">-->
+	<!--<img width="100" src="assets/img/testimonial-image-2.jpg" alt="" class="img-circle img-thumbnail"/>-->
+
+	<!--<p class="testimonial-author">-->
+	<!--@John Doe, Jakarta-->
+	<!--<br>-->
+	<!--<em>Creative Director at Apple</em>-->
+	<!--</p>-->
+	<!--</div>-->
+	<!--&lt;!&ndash; //.testimonial-info &ndash;&gt;-->
+	<!--</div>-->
+	<!--&lt;!&ndash; //.testimonial-item &ndash;&gt;-->
+	<!--</div>-->
+	<!--&lt;!&ndash; //.col-md-4 &ndash;&gt;-->
+
+	<!--<div class="col-md-4">-->
+	<!--<div class="testimonial-item not-bottom-column">-->
+	<!--<div class="testimonial-content">-->
+	<!--<p class="testimonial-title">Lorem Ipsum Title</p>-->
+
+	<!--<blockquote>-->
+	<!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>-->
+	<!--</blockquote>-->
+	<!--</div>-->
+	<!--&lt;!&ndash; //.testimonial-content &ndash;&gt;-->
+
+	<!--<div class="testimonial-info clearfix">-->
+	<!--<img width="100" src="assets/img/testimonial-image-3.jpg" alt="" class="img-circle img-thumbnail"/>-->
+
+	<!--<p class="testimonial-author">-->
+	<!--@John Doe, Jakarta-->
+	<!--<br>-->
+	<!--<em>Managet at Microsoft</em>-->
+	<!--</p>-->
+	<!--</div>-->
+	<!--&lt;!&ndash; //.testimonial-info &ndash;&gt;-->
+	<!--</div>-->
+	<!--&lt;!&ndash; //.testimonial-item &ndash;&gt;-->
+	<!--</div>-->
+	<!--&lt;!&ndash; //.col-md-4 &ndash;&gt;-->
+	<!--</div>-->
+	<!--&lt;!&ndash; //.row &ndash;&gt;-->
+	<!---->
+	<!--<div class="row">-->
+	<!--<div class="col-md-4">-->
+	<!--<div class="testimonial-item not-right-column">-->
+	<!--<div class="testimonial-content">-->
+	<!--<p class="testimonial-title">Lorem Ipsum Title</p>-->
+
+	<!--<blockquote>-->
+	<!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>-->
+	<!--</blockquote>-->
+	<!--</div>-->
+	<!--&lt;!&ndash; //.testimonial-content &ndash;&gt;-->
+
+	<!--<div class="testimonial-info clearfix">-->
+	<!--<img width="100" src="assets/img/testimonial-image-4.jpg" alt="" class="img-circle img-thumbnail"/>-->
+
+	<!--<p class="testimonial-author">-->
+	<!--@John Doe, Jakarta-->
+	<!--<br>-->
+	<!--<em>Co-Founder at Cisco</em>-->
+	<!--</p>-->
+	<!--</div>-->
+	<!--&lt;!&ndash; //.testimonial-info &ndash;&gt;-->
+	<!--</div>-->
+	<!--&lt;!&ndash; //.testimonial-item &ndash;&gt;-->
+	<!--</div>-->
+	<!--&lt;!&ndash; //.col-md-4 &ndash;&gt;-->
+
+	<!--<div class="col-md-4">-->
+	<!--<div class="testimonial-item not-right-column">-->
+	<!--<div class="testimonial-content">-->
+	<!--<p class="testimonial-title">Lorem Ipsum Title</p>-->
+
+	<!--<blockquote>-->
+	<!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>-->
+	<!--</blockquote>-->
+	<!--</div>-->
+	<!--&lt;!&ndash; //.testimonial-content &ndash;&gt;-->
+
+	<!--<div class="testimonial-info clearfix">-->
+	<!--<img width="100" src="assets/img/testimonial-image-5.jpg" alt="" class="img-circle img-thumbnail"/>-->
+
+	<!--<p class="testimonial-author">-->
+	<!--@Jane Doe, Jakarta-->
+	<!--<br>-->
+	<!--<em>Creative Director at Apple</em>-->
+	<!--</p>-->
+	<!--</div>-->
+	<!--&lt;!&ndash; //.testimonial-info &ndash;&gt;-->
+	<!--</div>-->
+	<!--&lt;!&ndash; //.testimonial-item &ndash;&gt;-->
+	<!--</div>-->
+	<!--&lt;!&ndash; //.col-md-4 &ndash;&gt;-->
+
+	<!--<div class="col-md-4">-->
+	<!--<div class="testimonial-item">-->
+	<!--<div class="testimonial-content">-->
+	<!--<p class="testimonial-title">Lorem Ipsum Title</p>-->
+
+	<!--<blockquote>-->
+	<!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>-->
+	<!--</blockquote>-->
+	<!--</div>-->
+	<!--&lt;!&ndash; //.testimonial-content &ndash;&gt;-->
+
+	<!--<div class="testimonial-info clearfix">-->
+	<!--<img width="100" src="assets/img/testimonial-image-6.jpg" alt="" class="img-circle img-thumbnail"/>-->
+
+	<!--<p class="testimonial-author">-->
+	<!--@Jane Doe, Jakarta-->
+	<!--<br>-->
+	<!--<em>Managet at Microsoft</em>-->
+	<!--</p>-->
+	<!--</div>-->
+	<!--&lt;!&ndash; //.testimonial-info &ndash;&gt;-->
+	<!--</div>-->
+	<!--&lt;!&ndash; //.testimonial-item &ndash;&gt;-->
+	<!--</div>-->
+	<!--&lt;!&ndash; //.col-md-4 &ndash;&gt;-->
+	<!--</div>-->
+	<!--&lt;!&ndash; //.row &ndash;&gt;-->
+	<!--</div>-->
+	<!--&lt;!&ndash; //.section-container &ndash;&gt;-->
+	<!--</div>-->
+	<!--&lt;!&ndash; //.section-inner &ndash;&gt;-->
+	<!--</section>-->
+	<!--&lt;!&ndash; //End Testimonials Section &ndash;&gt;-->
+
+
+
+
+	<!--&lt;!&ndash; Begin Coming Soon Section &ndash;&gt;-->
+	<!--<section id="coming-soon" class="section section-bgimage-yes">-->
+	<!--<div class="section-inner">-->
+	<!--<div class="section-overlay"></div>-->
+
+	<!--<div class="container section-content">-->
+	<!--<div class="row">-->
+	<!--<div class="col-md-12">-->
+	<!--<div class="section-title text-center">-->
+	<!--<h3 class="main-title">Coming Soon</h3>-->
+
+	<!--<h3 class="sub-title">We're Making Something Interesting and Awesome Products Amazing</h3>-->
+
+	<!--<span class="section-line"></span>-->
+	<!--</div>-->
+	<!--&lt;!&ndash; //.section-title &ndash;&gt;-->
+	<!--</div>-->
+	<!--&lt;!&ndash; //.col-md-12 &ndash;&gt;-->
+	<!--</div>-->
+	<!--&lt;!&ndash; //.row &ndash;&gt;-->
+
+	<!--<div class="row">-->
+	<!--<div class="col-md-12">-->
+	<!--<div class="countdown text-center">-->
+	<!--<div class="cd-content" data-year="2020" data-month="1" data-day="1"></div>-->
+	<!--</div>-->
+	<!--&lt;!&ndash; /.countdown &ndash;&gt;-->
+	<!--</div>-->
+	<!--&lt;!&ndash; //.col-md-12 &ndash;&gt;-->
+	<!--</div>-->
+	<!--&lt;!&ndash; //.row &ndash;&gt;-->
+
+	<!--<div class="row">-->
+	<!--<div class="col-md-4 col-md-offset-4">-->
+	<!--<div class="countdown-form">-->
+	<!--<form role="form">-->
+	<!--<div class="input-group">-->
+	<!--<input type="text" class="form-control input-lg" placeholder="example@rinjani.com">-->
+
+	<!--<span class="input-group-btn">-->
+	<!--<button type="submit" class="btn btn-lg btn-rj">Notify Me</button>-->
+	<!--</span>-->
+	<!--</div>-->
+	<!--&lt;!&ndash; //.input-group &ndash;&gt;-->
+	<!--</form>-->
+	<!--</div>-->
+	<!--&lt;!&ndash; //.countdown-form &ndash;&gt;-->
+	<!--</div>-->
+	<!--&lt;!&ndash; //.col-md-4 col-md-offset-4 &ndash;&gt;-->
+	<!--</div>-->
+	<!--&lt;!&ndash; //.row &ndash;&gt;-->
+
+	<!--<div class="row">-->
+	<!--<div class="col-md-8 col-md-offset-2">-->
+	<!--<div class="countdown-text text-center">-->
+	<!--<p class="lead">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>-->
+	<!--</div>-->
+	<!--&lt;!&ndash; //.countdown-text &ndash;&gt;-->
+	<!--</div>-->
+	<!--&lt;!&ndash; //.col-md-8 col-md-offset-2 &ndash;&gt;-->
+	<!--</div>-->
+	<!--&lt;!&ndash; //.row &ndash;&gt;-->
+	<!--</div>-->
+	<!--&lt;!&ndash; //.section-content &ndash;&gt;-->
+	<!--</div>-->
+	<!--&lt;!&ndash; //.section-inner &ndash;&gt;-->
+	<!--</section>-->
+	<!--&lt;!&ndash; //End Coming Soon Section &ndash;&gt;-->
+
+
+	<!-- Begin Quote Section -->
+	<section id="quote" class="section section-bgimage-yes">
+		<div class="section-inner">
+			<div class="section-overlay"></div>
+
+			<div class="container section-content">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="quote-text text-center">
+							<span class="quote-icon"> <i class="fa fa-quote-right fa-4x"></i>
+							</span>
+
+							<h2  style="font-weight: 300;">"I'm convinced that the only thing that kept me going was that I loved what I did. You've got to find what you love. And that is as true for your work as it is for your lovers."</h2>
+
+							<h2 class="lead quote-by">(Steve Jobs)</h2>
+						</div>
+						<!-- //.quote-text -->
+					</div>
+					<!-- //.col-md-12 -->
+				</div>
+				<!-- //.row -->
+			</div>
+			<!-- //.section-content -->
+		</div>
+		<!-- //.section-inner -->
+	</section>
+	<!-- //End Quote Section -->
+
+
+
+	<!-- Begin Our History Section -->
+	<section id="our-history" class="section">
+		<div class="section-inner">
+			<div class="container section-content">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="section-title text-center">
+							<h2 class="main-title">Our History</h2>
+
+							<h3 class="sub-title">Travel Through Time With Us!</h3>
+
+							<span class="section-line"></span>
+						</div>
+						<!-- //.section-title -->
+					</div>
+					<!-- //.col-md-12 -->
+				</div>
+				<!-- //.row -->
+
+				<div class="row">
+					<div class="col-md-12">
+
+						<!-- Begin Timeline -->
+						<ul class="timeline">
+
+							<li class="timeline-badge">
+								<div class="timeline-badge" data-toggle="tooltip" data-placement="left" title="" data-original-title="11 hours ago">
+									<i class="fa fa-dot-circle-o"></i>
+								</div> <!-- //.timeline-badge -->
+
+								<div class="timeline-panel">
+									<div class="timeline-heading">
+										<img src="assets/img/rj-timeline/confidential.jpg" alt="" class="img-responsive img-thumbnail img-rounded">
+										<h4 class="timeline-title">
+											<a>March.2015.<br>CJ 제일제당 차세대 ERP 구축
+											</a>
+										</h4>
+									</div>
+									<!-- //.timeline-heading -->
+
+									<div class="timeline-body">
+										<p>Ext JS 개발 및 공통모듈 구축</p>
+									</div>
+									<!-- //.timeline-body -->
+								</div> <!-- //.timeline-panel -->
+							</li>
+
+							<li class="timeline-badge">
+								<div class="timeline-badge" data-toggle="tooltip" data-placement="left" title="" data-original-title="11 hours ago">
+									<i class="fa fa-dot-circle-o"></i>
+								</div> <!-- //.timeline-badge -->
+
+								<div class="timeline-panel">
+									<div class="timeline-heading">
+										<img src="assets/img/rj-timeline/23.jpg" alt="" class="img-responsive img-thumbnail img-rounded">
+										<h4 class="timeline-title">
+											<a>Oct.2014. KidsBook</a>
+										</h4>
+									</div>
+									<!-- //.timeline-heading -->
+
+									<div class="timeline-body">
+										<p>
+											Oct.2014. 북미지역의 어린이집과 유치원을 대상으로 선생님과 학부모간의 커뮤니케이션 서비스 개발 <br>- Development source: <br>iOS/Android, HTML5, Sencha Touch, PhoneGap, CSS3, MySQL
+										</p>
+									</div>
+									<!-- //.timeline-body -->
+								</div> <!-- //.timeline-panel -->
+							</li>
+							<li class="timeline-badge">
+								<div class="timeline-badge" data-toggle="tooltip" data-placement="left" title="" data-original-title="11 hours ago">
+									<i class="fa fa-dot-circle-o"></i>
+								</div> <!-- //.timeline-badge -->
+
+								<div class="timeline-panel">
+									<div class="timeline-heading">
+										<img src="assets/img/rj-timeline/22.jpg" alt="" class="img-responsive img-thumbnail img-rounded">
+										<h4 class="timeline-title">
+											<a>July.2014. MaskChat App.</a>
+										</h4>
+									</div>
+									<!-- //.timeline-heading -->
+
+									<div class="timeline-body">
+										<p>
+											Sencha Touch 기반의 모바일 채팅 서비스로 Node.js, Socket.io 와 REDIS 기반으로 다수의 커넥션도 처리 할 수 있도록 설계되었다.<br>- HTML5, Sencha Touch, Node.js, MongoDB, Socket.io
+										</p>
+									</div>
+									<!-- //.timeline-body -->
+								</div> <!-- //.timeline-panel -->
+							</li>
+							<li class="timeline-inverted">
+								<div class="timeline-badge" data-toggle="tooltip" data-placement="left" title="" data-original-title="11 hours ago">
+									<i class="fa fa-dot-circle-o"></i>
+								</div> <!-- //.timeline-badge -->
+
+								<div class="timeline-panel">
+									<div class="timeline-heading">
+										<img src="assets/img/rj-timeline/19.jpg" alt="" class="img-responsive img-thumbnail img-rounded">
+										<h4 class="timeline-title">
+											<a>June.2014. Samsung Electronics America, New Jersey, USA </a>
+										</h4>
+									</div>
+									<!-- //.timeline-heading -->
+
+									<div class="timeline-body">
+										<p>
+											June.2014. Mobile SCM 프로젝트. 물류 시스템 개발 (2014.05~07) <br>- Android, Sencha Touch, PhoneGap, HTML5, CSS3
+										</p>
+									</div>
+									<!-- //.timeline-body -->
+								</div> <!-- //.timeline-panel -->
+							</li>
+							<li class="timeline-badge">
+								<div class="timeline-badge" data-toggle="tooltip" data-placement="left" title="" data-original-title="11 hours ago">
+									<i class="fa fa-dot-circle-o"></i>
+								</div> <!-- //.timeline-badge -->
+
+								<div class="timeline-panel">
+									<div class="timeline-heading">
+										<img src="assets/img/rj-timeline/17.jpg" alt="" class="img-responsive img-thumbnail img-rounded">
+										<h4 class="timeline-title">
+											<a>January.2014. <br>Samsung Electronics America, New Jersey, USA
+											</a>
+										</h4>
+									</div>
+									<!-- //.timeline-heading -->
+
+									<div class="timeline-body">
+										<p>
+											January.2014. 삼성전자 미주법인에서 사용하는 내부 물류 시스템 개발 (2013.12 ~ 2014.01) <br>- Android, Sencha Touch, PhoneGap, HTML5, CSS3
+										</p>
+									</div>
+									<!-- //.timeline-body -->
+								</div> <!-- //.timeline-panel -->
+							</li>
+
+							<li class="timeline-badge">
+								<div class="timeline-badge" data-toggle="tooltip" data-placement="left" title="" data-original-title="11 hours ago">
+									<i class="fa fa-dot-circle-o"></i>
+								</div> <!-- //.timeline-badge -->
+
+								<div class="timeline-panel">
+									<div class="timeline-heading">
+										<img src="assets/img/rj-timeline/confidential.jpg" alt="" class="img-responsive img-thumbnail img-rounded">
+										<h4 class="timeline-title">
+											<a>Dec.2013.<br>삼성SDS 의료부문 솔루션 개발
+											</a>
+										</h4>
+									</div>
+									<!-- //.timeline-heading -->
+
+									<div class="timeline-body">
+										<p>Ext JS 개발 및 공통모듈 구축</p>
+									</div>
+									<!-- //.timeline-body -->
+								</div> <!-- //.timeline-panel -->
+							</li>
+
+							<li class="timeline-inverted">
+								<div class="timeline-badge" data-toggle="tooltip" data-placement="left" title="" data-original-title="11 hours ago">
+									<i class="fa fa-dot-circle-o"></i>
+								</div> <!-- //.timeline-badge -->
+
+								<div class="timeline-panel">
+									<div class="timeline-heading">
+										<img src="assets/img/rj-timeline/16.jpg" alt="" class="img-responsive img-thumbnail img-rounded">
+										<h4 class="timeline-title">
+											<a>September.2013. <br> Award 3rd Place on Naver D2 Fest, by Naver Inc.
+											</a>
+										</h4>
+									</div>
+									<!-- //.timeline-heading -->
+
+									<div class="timeline-body">
+										<p>
+											September.2013. 네이버 D2 Fest 대회에 참가하여 장려상 수상. 웹서버 모니터링 솔루션 출품. <br>Developed "Hamlet"-bot Web-Server monitoring service <br>- Site URL : <a href="http://d2fest.sencha.or.kr">http://d2fest.sencha.or.kr</a>
+											<br>- Demo URL : <a href="http://hamlet.sencha.or.kr">http://hamlet.sencha.or.kr</a>
+										</p>
+									</div>
+									<!-- //.timeline-body -->
+								</div> <!-- //.timeline-panel -->
+							</li>
+
+							<li class="timeline-badge">
+								<div class="timeline-badge" data-toggle="tooltip" data-placement="left" title="" data-original-title="11 hours ago">
+									<i class="fa fa-dot-circle-o"></i>
+								</div> <!-- //.timeline-badge -->
+
+								<div class="timeline-panel">
+									<div class="timeline-heading">
+										<img src="assets/img/rj-timeline/maso.jpg" alt="" class="img-responsive img-thumbnail img-rounded">
+										<h4 class="timeline-title">
+											<a>September.2013.<br>마이크로소프트 Ext JS 연재
+											</a>
+										</h4>
+									</div>
+									<!-- //.timeline-heading -->
+
+									<div class="timeline-body">
+										<p>Ext JS 관련 5개월 연재</p>
+									</div>
+									<!-- //.timeline-body -->
+								</div> <!-- //.timeline-panel -->
+							</li>
+							<li class="timeline-badge">
+								<div class="timeline-badge" data-toggle="tooltip" data-placement="left" title="" data-original-title="11 hours ago">
+									<i class="fa fa-dot-circle-o"></i>
+								</div> <!-- //.timeline-badge -->
+
+								<div class="timeline-panel">
+									<div class="timeline-heading">
+										<img src="assets/img/rj-timeline/21.jpg" alt="" class="img-responsive img-thumbnail img-rounded">
+										<h4 class="timeline-title">
+											<a>September.2013. <br>ESTAR Design Company App.
+											</a>
+										</h4>
+									</div>
+									<!-- //.timeline-heading -->
+
+									<div class="timeline-body">
+										<p>한국센차유저그룹에서 재능기부 형식으로 디자인회사 앱 개발.</p>
+									</div>
+									<!-- //.timeline-body -->
+								</div> <!-- //.timeline-panel -->
+							</li>
+
+							<li class="timeline-badge">
+								<div class="timeline-badge" data-toggle="tooltip" data-placement="left" title="" data-original-title="11 hours ago">
+									<i class="fa fa-dot-circle-o"></i>
+								</div> <!-- //.timeline-badge -->
+
+								<div class="timeline-panel">
+									<div class="timeline-heading">
+										<img src="assets/img/rj-timeline/confidential.jpg" alt="" class="img-responsive img-thumbnail img-rounded">
+										<h4 class="timeline-title">
+											<a>July.2013.<br>삼성전자 빅데이터 솔루션 개발
+											</a>
+										</h4>
+									</div>
+									<!-- //.timeline-heading -->
+
+									<div class="timeline-body">
+										<p>Ext JS 개발 및 공통모듈 구축</p>
+									</div>
+									<!-- //.timeline-body -->
+								</div> <!-- //.timeline-panel -->
+							</li>
+							<li class="timeline-inverted">
+								<div class="timeline-badge" data-toggle="tooltip" data-placement="left" title="" data-original-title="11 hours ago">
+									<i class="fa fa-dot-circle-o"></i>
+								</div> <!-- //.timeline-badge -->
+
+								<div class="timeline-panel">
+									<div class="timeline-heading">
+										<img src="assets/img/rj-timeline/20.jpg" alt="" class="img-responsive img-thumbnail img-rounded">
+										<h4 class="timeline-title">
+											<a>July.2013. <br>GARIGORI App
+											</a>
+										</h4>
+									</div>
+									<!-- //.timeline-heading -->
+
+									<div class="timeline-body">
+										<p>한국센차유저그룹에서 재능기부 형식으로 앱 개발</p>
+									</div>
+									<!-- //.timeline-body -->
+								</div> <!-- //.timeline-panel -->
+							</li>
+							<li class="timeline-badge">
+								<div class="timeline-badge" data-toggle="tooltip" data-placement="left" title="" data-original-title="11 hours ago">
+									<i class="fa fa-dot-circle-o"></i>
+								</div> <!-- //.timeline-badge -->
+
+								<div class="timeline-panel">
+									<div class="timeline-heading">
+										<img src="assets/img/rj-timeline/15.jpg" alt="" class="img-responsive img-thumbnail img-rounded">
+										<h4 class="timeline-title">
+											<a>June.2013. <br>Sencha certificated official ‘Ext JS’ Instructor, Sencha Inc. in HongKong
+											</a>
+										</h4>
+									</div>
+									<!-- //.timeline-heading -->
+
+									<div class="timeline-body">
+										<p>Sencha Inc. 공식교육과정 수료.</p>
+									</div>
+									<!-- //.timeline-body -->
+								</div> <!-- //.timeline-panel -->
+							</li>
+
+
+							<li class="timeline-inverted">
+								<div class="timeline-badge" data-toggle="tooltip" data-placement="left" title="" data-original-title="11 hours ago">
+									<i class="fa fa-dot-circle-o"></i>
+								</div> <!-- //.timeline-badge -->
+
+								<div class="timeline-panel">
+									<div class="timeline-heading">
+										<img src="assets/img/rj-timeline/10.jpg" alt="" class="img-responsive img-thumbnail img-rounded">
+										<h4 class="timeline-title">
+											<a>December.2012. <br>Published Sencha E-Book, with Korea Sencha User Group
+											</a>
+										</h4>
+									</div>
+									<!-- //.timeline-heading -->
+
+									<div class="timeline-body">
+										<p>
+											한국센차유저그룹 활동으로 E-Book 출간 <br>• ISBN : 979-11-85077-52-9 95000 <br>• Apple iBooks Store: <a href="http://j.mp/Sencha_iBooks"><img src="assets/img/rj-timeline/31.png" width="35"
+												height="35"></a> <br>• Google PlayBooks Store: <a href="http://goo.gl/kCS3U"><img src="assets/img/rj-timeline/32.png" width="35" height="35"></a>
+										</p>
+									</div>
+									<!-- //.timeline-body -->
+								</div> <!-- //.timeline-panel -->
+							</li>
+
+							<li class="timeline-badge">
+								<div class="timeline-badge" data-toggle="tooltip" data-placement="left" title="" data-original-title="11 hours ago">
+									<i class="fa fa-dot-circle-o"></i>
+								</div> <!-- //.timeline-badge -->
+
+								<div class="timeline-panel">
+									<div class="timeline-heading">
+										<img src="assets/img/rj-timeline/confidential.jpg" alt="" class="img-responsive img-thumbnail img-rounded">
+										<h4 class="timeline-title">
+											<a>June.2012.<br>한솔오크밸리 예약 & 영업시스템
+											</a>
+										</h4>
+									</div>
+									<!-- //.timeline-heading -->
+
+									<div class="timeline-body">
+										<p>Ext JS 시스템 구축</p>
+									</div>
+									<!-- //.timeline-body -->
+								</div> <!-- //.timeline-panel -->
+							</li>
+							<li class="timeline-badge">
+								<div class="timeline-badge" data-toggle="tooltip" data-placement="left" title="" data-original-title="11 hours ago">
+									<i class="fa fa-dot-circle-o"></i>
+								</div> <!-- //.timeline-badge -->
+
+								<div class="timeline-panel">
+									<div class="timeline-heading">
+										<img src="assets/img/rj-timeline/7.jpg" alt="" class="img-responsive img-thumbnail img-rounded">
+										<h4 class="timeline-title">
+											<a>April.26th.2012 <br>HTML5 & Front-End Conference
+											</a>
+										</h4>
+									</div>
+									<!-- //.timeline-heading -->
+
+									<div class="timeline-body">
+										<p>HTML5 NOW Conference 발표</p>
+									</div>
+									<!-- //.timeline-body -->
+								</div> <!-- //.timeline-panel -->
+							</li>
+
+							<li class="timeline-badge">
+								<div class="timeline-badge" data-toggle="tooltip" data-placement="left" title="" data-original-title="11 hours ago">
+									<i class="fa fa-dot-circle-o"></i>
+								</div> <!-- //.timeline-badge -->
+
+								<div class="timeline-panel">
+									<div class="timeline-heading">
+										<img src="assets/img/rj-timeline/confidential.jpg" alt="" class="img-responsive img-thumbnail img-rounded">
+										<h4 class="timeline-title">
+											<a>April.2012.<br>한솔웹오더트래킹
+											</a>
+										</h4>
+									</div>
+									<!-- //.timeline-heading -->
+
+									<div class="timeline-body">
+										<p>Ext JS 개발 및 공통모듈 구축</p>
+									</div>
+									<!-- //.timeline-body -->
+								</div> <!-- //.timeline-panel -->
+							</li>
+							<li class="timeline-inverted">
+								<div class="timeline-badge" data-toggle="tooltip" data-placement="right" title="" data-original-title="7 hours ago">
+									<i class="fa fa-dot-circle-o"></i>
+								</div> <!-- //.timeline-badge -->
+
+								<div class="timeline-panel">
+									<div class="timeline-heading">
+										<img src="assets/img/rj-timeline/30.jpg" alt="" class="img-responsive img-thumbnail img-rounded">
+										<h4 class="timeline-title">
+											<a>February.2012 <br>Found Korea Sencha User Group
+											</a>
+										</h4>
+									</div>
+									<!-- //.timeline-heading -->
+
+									<div class="timeline-body">
+										<p>
+											한국센차유저그룹 커뮤니티 설립. 현재 회원수 1400+<br> - Site : <a href="http://www.sencha.or.kr">http://www.sencha.or.kr</a><br> - Forum : <a href="http://http://forum.sencha.or.kr">http://forum.sencha.or.kr</a>
+										</p>
+									</div>
+									<!-- //.timeline-body -->
+								</div> <!-- //.timeline-panel -->
+							</li>
+							<li class="timeline-badge">
+								<div class="timeline-badge" data-toggle="tooltip" data-placement="left" title="" data-original-title="4 hours ago">
+									<i class="fa fa-dot-circle-o"></i>
+								</div> <!-- //.timeline-badge -->
+
+								<div class="timeline-panel">
+									<div class="timeline-heading">
+										<img src="assets/img/rj-timeline/5.jpg" alt="" class="img-responsive img-thumbnail img-rounded">
+										<h4 class="timeline-title">
+											<a>July.2011. <br>차세대 모바일 App 기술동향 컨퍼런스
+											</a>
+										</h4>
+									</div>
+									<!-- //.timeline-heading -->
+
+									<div class="timeline-body">
+										<p>컨퍼런스 발표 about HTML5</p>
+									</div>
+									<!-- //.timeline-body -->
+								</div> <!-- //.timeline-panel -->
+							</li>
+							<li class="timeline-inverted">
+								<div class="timeline-badge" data-toggle="tooltip" data-placement="left" title="" data-original-title="11 hours ago">
+									<i class="fa fa-dot-circle-o"></i>
+								</div> <!-- //.timeline-badge -->
+
+								<div class="timeline-panel">
+									<div class="timeline-heading">
+										<img src="assets/img/rj-timeline/25.jpg" alt="" class="img-responsive img-thumbnail img-rounded">
+										<h4 class="timeline-title">
+											<a>March.2011. Melon Music App for Mobile</a>
+										</h4>
+									</div>
+									<!-- //.timeline-heading -->
+
+									<div class="timeline-body">
+										<p>Melon 모바일앱 개발 참여 (Hybrid App)</p>
+									</div>
+									<!-- //.timeline-body -->
+								</div> <!-- //.timeline-panel -->
+							</li>
+
+							<li class="timeline-badge">
+								<div class="timeline-badge" data-toggle="tooltip" data-placement="left" title="" data-original-title="11 hours ago">
+									<i class="fa fa-dot-circle-o"></i>
+								</div> <!-- //.timeline-badge -->
+
+								<div class="timeline-panel">
+									<div class="timeline-heading">
+										<img src="assets/img/rj-timeline/confidential.jpg" alt="" class="img-responsive img-thumbnail img-rounded">
+										<h4 class="timeline-title">
+											<a>March.2011.<br>한솔홈데코 이마켓
+											</a>
+										</h4>
+									</div>
+									<!-- //.timeline-heading -->
+
+									<div class="timeline-body">
+										<p>Ext JS 개발 및 공통모듈 구축</p>
+									</div>
+									<!-- //.timeline-body -->
+								</div> <!-- //.timeline-panel -->
+							</li>
+							<li class="timeline-badge">
+								<div class="timeline-badge" data-toggle="tooltip" data-placement="left" title="" data-original-title="2 hours ago">
+									<i class="fa fa-dot-circle-o"></i>
+								</div> <!-- //.timeline-badge -->
+
+								<div class="timeline-panel">
+									<div class="timeline-heading">
+										<img src="assets/img/rj-timeline/2.jpg" alt="" class="img-responsive img-thumbnail img-rounded">
+										<h4 class="timeline-title">
+											<a>Published "Sencha Touch" articles between 2011.01~2011.04 on Micro software</a>
+										</h4>
+									</div>
+									<!-- //.timeline-heading -->
+
+									<div class="timeline-body">
+										<p>
+											월간 마이크로소프트, Sencha Touch 연재<br> (Sencha Touch 주제로 최초 연재)
+										</p>
+									</div>
+									<!-- //.timeline-body -->
+								</div> <!-- //.timeline-panel -->
+							</li>
+							<li class="timeline-inverted">
+								<div class="timeline-badge" data-toggle="tooltip" data-placement="left" title="" data-original-title="11 hours ago">
+									<i class="fa fa-dot-circle-o"></i>
+								</div> <!-- //.timeline-badge -->
+
+								<div class="timeline-panel">
+									<div class="timeline-heading">
+										<img src="assets/img/rj-timeline/24.jpg" alt="" class="img-responsive img-thumbnail img-rounded">
+										<h4 class="timeline-title">
+											<a>November.2010. Melon Music App for iPad</a>
+										</h4>
+									</div>
+									<!-- //.timeline-heading -->
+
+									<div class="timeline-body">
+										<p>
+											멜론 웹(for iPad) 개발 참여 <br>
+											<a href="http://t.melon.com" target="_blank">http://t.melon.com (iPad only)</a>
+
+										</p>
+									</div>
+									<!-- //.timeline-body -->
+								</div> <!-- //.timeline-panel -->
+							</li>
+							<li class="timeline-badge">
+								<div class="timeline-badge" data-toggle="tooltip" data-placement="left" title="" data-original-title="2 hours ago">
+									<i class="fa fa-dot-circle-o"></i>
+								</div> <!-- //.timeline-badge -->
+
+								<div class="timeline-panel">
+									<div class="timeline-heading">
+										<img src="assets/img/rj-timeline/33.jpg" alt="" class="img-responsive img-thumbnail img-rounded">
+										<h4 class="timeline-title">
+											<a>April.2010. OKJSP HTML5/Mobile site.</a>
+										</h4>
+									</div>
+									<!-- //.timeline-heading -->
+
+									<div class="timeline-body">
+										<p>
+											OKJSP, HTML5/Mobile 버전 개발 <br>
+											<a href="http://www.okjsp.pe.kr/iui/#_home" target="_blank">http://www.okjsp.pe.kr/iui/#_home</a>
+										</p>
+									</div>
+									<!-- //.timeline-body -->
+								</div> <!-- //.timeline-panel -->
+							</li>
+
+
+						</ul>
+						<!-- //End Timeline -->
+					</div>
+					<!-- //.col-md-12 -->
+				</div>
+				<!-- //.row -->
+			</div>
+			<!-- //.section-content -->
+		</div>
+		<!-- //.section-inner -->
+	</section>
+	<!-- //End Our History Section -->
+
+
+	<!-- Begin Contact Us Section -->
+	<section id="contact-us" class="section section-bgimage-yes">
+		<div class="section-inner">
+			<div class="section-overlay"></div>
+
+			<div class="container section-content">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="section-title text-center">
+							<h3 class="main-title">Contact Us</h3>
+
+							<h4 class="sub-title">간단한 설명과 연락처 남겨주시면, 연락 드리겠습니다</h4>
+
+							<span class="section-line"></span>
+						</div>
+						<!-- //.section-title -->
+					</div>
+					<!-- //.col-md-12 -->
+				</div>
+				<!-- //.row -->
+
+				<div class="row">
+					<div class="col-md-12">
+						<div class="form-respond text-center"></div>
+					</div>
+					<!-- //.col-md-12 -->
+				</div>
+				<!-- //.row -->
+
+
+				<div class="row">
+					<div class="col-md-12">
+						<div class="section-title text-center">
+							<h3 class="main-title">jiyun.kim@dsrvlabs.com</h3>
+
+							<span class="section-line"></span>
+						</div>
+						<!-- //.section-title -->
+					</div>
+					<!-- //.col-md-12 -->
+				</div>
+				<!-- //.row -->
+
+
+			</div>
+			<!-- //.section-content -->
+		</div>
+		<!-- //.section-inner -->
+	</section>
+	<!-- //End Contact Us Section -->
+
+
+
+
+	<!-- Begin Footer -->
+	<footer class="footer">
+
+		<!-- Begin Footer Section -->
+		<section id="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-4 col-md-4 footer-column not-right-column">
+						<div class="footer-text">
+							<h4>Get In Touch</h4>
+
+							<p>dsrv labs.</p>
+
+							<ul class="icon-list list-unstyled">
+								<!--<li>-->
+								<!--<i class="fa fa-phone"></i> +622176811-->
+								<!--</li>-->
+
+								<li><i class="fa fa-envelope-o"></i> jiyun.kim@dsrvlabs.com</li>
+
+								<li><i class="fa fa-map-marker"></i> 서울 강남구 봉은사로22길 45-9</li>
+
+								<li><i class="fa fa-clock-o"></i> Monday to Friday - 9.30 PM to 18.30 PM</li>
+							</ul>
+
+							<ul class="social-icon-list list-unstyled list-inline">
+								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+
+								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+
+								<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+
+								<li><a href="#"><i class="fa fa-youtube"></i></a></li>
+
+								<li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+
+								<li class="hidden-xs"><a href="#"><i class="fa fa-instagram"></i></a></li>
+							</ul>
+						</div>
+						<!-- //.footer-text -->
+					</div>
+					<!-- //.footer-column -->
+
+					<div class="col-sm-4 col-md-4 footer-column not-right-column">
+						<div class="footer-text">
+							<h4>About Us</h4>
+
+							<p>
+								개발경력 도합 50년의 개발자 3명이서 블록체인 기술에 대한 연구와 컨설팅을 진행하는 연구소 입니다. 
+								블록체인 기술 만큼 검증보다 투자가 먼저 몰리는 분야도 없을 것입니다. 그만큼 미래를 바꿀 기술이기도 하지만, 기술 검증이 필요한 분야 이기도 합니다. 
+								저희 dsrv labs 에서는 블록체인 기술을 실제로 운영하며 코드를 분석하여 객관적인 정보를 전달하겠습니다. 누군가는 중립적인 그리고 개발자적인 레벨에서 분석과 연구가 필요하다고 생각하며 저희가 가장 잘 할 수 있는 일이기도 합니다.
+							</p>
+						</div>
+						<!-- //.footer-text -->
+					</div>
+					<!-- //.footer-column -->
+
+					<div class="col-sm-4 col-md-4 footer-column">&nbsp;</div>
+					<!-- //.footer-column -->
+				</div>
+				<!-- //.row -->
+			</div>
+			<!-- //.container -->
+		</section>
+		<!-- //End Footer Section -->
+
+		<!-- Begin Copyright -->
+		<div id="copyright">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<p>
+							<a href="#">dservlabs</a>
+						</p>
+					</div>
+					<!-- //.col-md-12 -->
+				</div>
+				<!-- //.row -->
+			</div>
+			<!-- //.container -->
+		</div>
+		<!-- //End Copyright -->
+	</footer>
+	<!-- //End Footer -->
+
+
+	<!-- Plugins JS -->
+	<script src="assets/plugins/jquery.min.js"></script>
+	<script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+	<script src="assets/plugins/detectmobilebrowser/detectmobilebrowser.js"></script>
+	<script src="assets/plugins/smartresize/smartresize.js"></script>
+	<script src="assets/plugins/jquery-easing/jquery.easing.min.js"></script>
+	<script src="assets/plugins/jquery-sticky/jquery.sticky.js"></script>
+	<script src="assets/plugins/jquery-inview/jquery.inview.min.js"></script>
+	<script src="assets/plugins/jquery-countTo/jquery.countTo.js"></script>
+	<script src="assets/plugins/jquery-easypiechart/jquery.easypiechart.min.js"></script>
+	<script src="assets/plugins/jquery-countdown/jquery.countdown.min.js"></script>
+	<script src="assets/plugins/owl-carousel/owl.carousel.min.js"></script>
+	<script src="assets/plugins/isotope/isotope.pkgd.min.js"></script>
+	<script src="assets/plugins/jquery-magnificPopup/jquery.magnific-popup.min.js"></script>
+	<script src="assets/plugins/jquery-validation/jquery.validate.min.js"></script>
+
+	<!-- Main JS -->
+	<script src="assets/js/main.js"></script>
+
+	<!-- Animation JS (Optional) -->
+	<script src="assets/js/animation.js"></script>
+
+	<!-- Component JS -->
+	<script src="assets/js/component/bar-chart.js"></script>
+	<script src="assets/js/component/countdown.js"></script>
+	<script src="assets/js/component/counters.js"></script>
+	<script src="assets/js/component/pie-chart.js"></script>
+	<script src="assets/js/component/portfolio.js"></script>
+	<script src="assets/js/component/animation.js"></script>
+
+	<!-- Map JS -->
+	<!-- <script src="https://maps.googleapis.com/maps/api/js"></script> -->
+	<!-- <script src="assets/js/component/map.js"></script> -->
+
+	<script>
+
+	</script>
+
+</body>
+
+</html>

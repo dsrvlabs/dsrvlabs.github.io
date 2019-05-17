@@ -1,0 +1,236 @@
+/*---------------------------------------*/
+/*  BUTTON
+/*---------------------------------------*/
+.btn.btn-rj {
+  background-color: #3996cc;
+  border-color: #4da1d1;
+}
+.btn.btn-rj:hover,
+.btn.btn-rj:focus {
+  background-color: #3088bb;
+}
+
+
+/*---------------------------------------*/
+/*  ACCORDION
+/*---------------------------------------*/
+.accordion.accordion-rj .panel-group > .panel {
+  border-color: #3996cc;
+}
+.accordion.accordion-rj .panel-group > .panel > .panel-heading {
+  background-color: #3996cc;
+  border-color: #3996cc;
+}
+.accordion.accordion-rj .panel-group > .panel > .panel-collapse > .panel-body {
+  border-color: #62acd6;
+}
+
+/*  ACCORDION STYLE THREE */
+.accordion.accordion-rj.style-three .panel-group {
+  border-top: 1px solid #3996cc;
+}
+.accordion.accordion-rj.style-three .panel-group > .panel {
+  border-bottom: 1px solid #3996cc;
+}
+.accordion.accordion-rj.style-three .panel-group > .panel > .panel-heading > .panel-title > a:after {
+  color: #3996cc;
+}
+
+/*  ACCORDION STYLE FOUR */
+.accordion.accordion-rj.style-four .panel-group {
+  border-top: 1px solid #3996cc;
+}
+.accordion.accordion-rj.style-four .panel-group > .panel {
+  border-bottom: 1px solid #3996cc;
+}
+.accordion.accordion-rj.style-four .panel-group > .panel > .panel-heading > .panel-title > a:before {
+  color: #3996cc;
+}
+
+
+/*---------------------------------------*/
+/*  BAR CHART
+/*---------------------------------------*/
+.bar-chart .bar-chart-item {
+  background: #3996cc;
+}
+
+
+/*---------------------------------------*/
+/*  CONTENT BOXES
+/*---------------------------------------*/
+.content-boxes > .content-boxes-icon > i {
+  color: #3996cc;
+}
+
+/* CONTENT BOXES STYLE TWO */
+.content-boxes.style-two > .content-boxes-icon > i {
+  background-color: #3996cc;
+}
+
+/* CONTENT BOXES STYLE THREE */
+.content-boxes.style-three > .content-boxes-icon > i {
+  background-color: #3996cc;
+}
+
+
+/*---------------------------------------*/
+/*  COUNTDOWN
+/*---------------------------------------*/
+.countdown .cd-content .cd-element {
+  border-bottom: 1px solid #3996cc;
+}
+.countdown .cd-content .cd-element > .cd-value {
+  color: #3996cc;
+}
+
+
+/*---------------------------------------*/
+/*  COUNTERS
+/*---------------------------------------*/
+.counter-item > i {
+  color: #3996cc;
+}
+.counter-item > p {
+  color: #3996cc;
+}
+.counter-item.bubble .inner-content {
+  background-color: #3996cc;
+}
+.counter-item.bubble .inner-content:before {
+  border-top-color: #3996cc;
+}
+.counter-item.bubble > p {
+  border-bottom: 1px solid #3996cc;
+}
+
+
+/*---------------------------------------*/
+/*  FANCY TABLE
+/*---------------------------------------*/
+.table.table-rj {
+  border-bottom: 2px solid #3996cc;
+}
+.table.table-rj > thead {
+  background-color: #3996cc;
+}
+.table.table-rj > thead > tr > th {
+  border-bottom: 2px solid #3088bb;
+}
+.table.table-bordered.table-rj > thead > tr > th {
+  border: 1px solid #59a7d4;
+}
+
+
+/*---------------------------------------*/
+/*  FUNNY BOXES
+/*---------------------------------------*/
+.funny-boxes:hover > .funny-boxes-icon {
+  background-color: #3996cc;
+}
+.funny-boxes > .funny-boxes-icon {
+  border: 1px solid #3996cc;
+  color: #3996cc;
+}
+.funny-boxes > .funny-boxes-text > h4:after {
+  background-color: #3996cc;
+}
+@media (min-width: 1023px) {
+  .funny-boxes.not-right-column:before {
+    background: -moz-linear-gradient(top, rgba(57, 150, 204, 0) 0%, rgba(57, 150, 204, 0.9) 15%, rgba(57, 150, 204, 0.9) 85%, rgba(57, 150, 204, 0) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(57, 150, 204, 0)), color-stop(15%, rgba(57, 150, 204, 0.9)), color-stop(85%, #dddddd), color-stop(100%, rgba(57, 150, 204, 0)));
+    background: -webkit-linear-gradient(top, rgba(57, 150, 204, 0) 0%, rgba(57, 150, 204, 0.9) 15%, rgba(57, 150, 204, 0.9) 85%, rgba(57, 150, 204, 0) 100%);
+    background: -o-linear-gradient(top, rgba(57, 150, 204, 0) 0%, rgba(57, 150, 204, 0.9) 15%, rgba(57, 150, 204, 0.9) 85%, rgba(57, 150, 204, 0) 100%);
+    background: -ms-linear-gradient(top, rgba(57, 150, 204, 0) 0%, rgba(57, 150, 204, 0.9) 15%, rgba(57, 150, 204, 0.9) 85%, rgba(57, 150, 204, 0) 100%);
+    background: linear-gradient(to bottom, rgba(57, 150, 204, 0) 0%, rgba(57, 150, 204, 0.9) 15%, rgba(57, 150, 204, 0.9) 85%, rgba(57, 150, 204, 0) 100%);
+  }
+}
+
+/* FUNNY BOXES OUTLINE INWARD EFFECT */
+.funny-boxes.outline-inward > .funny-boxes-icon:before {
+  border: #3996cc solid 4px;
+}
+
+/* FUNNY BOXES OUTLINE OUTWARD EFFECT */
+.funny-boxes.outline-outward > .funny-boxes-icon:before {
+  border: #3996cc solid 4px;
+}
+
+
+/*---------------------------------------*/
+/*  PIE CHART
+/*---------------------------------------*/
+.pie-chart-item .pie-chart-text > h4 {
+  color: #3996cc;
+}
+
+
+/*---------------------------------------*/
+/*  PRICING TABLES
+/*---------------------------------------*/
+.pricing-table .pricing-wrapper > .pricing-column > .plan-title > h2 {
+  background-color: #3996cc;
+}
+.pricing-table .pricing-wrapper > .pricing-column > .plan-title > .pricing-box {
+  border-bottom: 3px solid #3996cc;
+}
+
+/* PRICING TABLES STYLE FOUR */
+.pricing-table.style-four .pricing-wrapper.features > .pricing-column > .item-list {
+  border-top: 3px solid #3996cc;
+}
+
+/* PRICING TABLES STYLE FIVE */
+.pricing-table.style-five .pricing-wrapper > .pricing-column {
+  border-top: 6px solid #3996cc;
+}
+.pricing-table.style-five .pricing-wrapper > .pricing-column > .plan-footer {
+  background-color: #3996cc;
+  border-right: 1px solid #3391c7;
+  border-bottom: 1px solid #3391c7;
+  border-left: 1px solid #3391c7;
+}
+
+/* PRICING TABLES STYLE SIX */
+.pricing-table.style-six .pricing-wrapper > .pricing-column {
+  border-top: 6px solid #3996cc;
+}
+.pricing-table.style-six .pricing-wrapper > .pricing-column > .plan-footer {
+  background-color: #3996cc;
+  border-right: 1px solid #3391c7;
+  border-bottom: 1px solid #3391c7;
+  border-left: 1px solid #3391c7;
+}
+
+
+/*---------------------------------------*/
+/*  TABULAR CONTENT
+/*---------------------------------------*/
+.tabular-content > ul.nav-tabs > li.active > a {
+  border-top: 5px solid #3996cc;
+}
+
+
+/*---------------------------------------*/
+/*  TESTIMONIALS
+/*---------------------------------------*/
+.testimonial-item > .testimonial-content {
+  background: #3996cc;
+}
+.testimonial-item > .testimonial-content:after {
+  border-top-color: #3996cc;
+}
+
+
+/*---------------------------------------*/
+/*  TIMELINE
+/*---------------------------------------*/
+@media (min-width: 767px) {
+  .timeline > li > .timeline-panel:after {
+    border-right: 0 solid #ffffff;
+    border-left: 14px solid #ffffff;
+  }
+}
+.timeline > li > .timeline-panel > .timeline-heading > .timeline-title {
+  background: none;
+}

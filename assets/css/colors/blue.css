@@ -1,0 +1,72 @@
+/*---------------------------------------*/
+/*  NAVBAR
+/*---------------------------------------*/
+.navbar.navbar-fixed-top .navbar-toggle {
+  background-color: #3996cc;
+}
+.navbar.navbar-fixed-top .navbar-nav > li > a:hover {
+  color: #3996cc;
+}
+.navbar.navbar-fixed-top .navbar-nav > li.active a,
+.navbar.navbar-fixed-top .navbar-nav > li.active a:hover {
+  background-color: #3996cc;
+}
+@media (min-width: 992px) {
+  .navbar.navbar-fixed-top .navbar-nav > li.active a,
+  .navbar.navbar-fixed-top .navbar-nav > li.active a:hover {
+    background-color: #3996cc;
+  }
+}
+.navbar-trigger-open a {
+  background-color: #3996cc;
+}
+
+
+/*---------------------------------------*/
+/*  QUOTE SECTION
+/*---------------------------------------*/
+#quote > .section-inner > .section-content .quote-text > .quote-icon > i {
+  color: #3996cc;
+}
+#quote > .section-inner > .section-content .quote-text > h2.quote-by {
+  color: #3996cc;
+}
+
+
+/*---------------------------------------*/
+/*  KEEP IN TOUCH SECTION
+/*---------------------------------------*/
+#keep-in-touch .social-icon-item > a:hover {
+  color: #3996cc;
+}
+#keep-in-touch .social-icon-item > a:hover .social-icon > i {
+  color: #3996cc;
+}
+
+
+/*---------------------------------------*/
+/*  CONTACT US SECTION
+/*---------------------------------------*/
+#contact-us > .section-inner > .section-content .content-message {
+  background-color: #3996cc;
+}
+#contact-us > .section-inner > .section-content .form-group input,
+#contact-us > .section-inner > .section-content .form-group textarea {
+  border-left-color: #3996cc;
+}
+#contact-us > .section-inner > .section-content .form-group span {
+  background-color: #3996cc;
+  border-color: #3996cc;
+}
+#contact-us > .section-inner > .section-content .social-icon-text > h2 {
+  background-color: #3996cc;
+  border: 1px solid #2b79a7;
+}
+
+
+/*---------------------------------------*/
+/*  FOOTER
+/*---------------------------------------*/
+footer.footer {
+	border-top: 1px solid #555555;
+}
