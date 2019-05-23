@@ -1227,28 +1227,40 @@ author_profile: true
 		<!-- //.section-inner -->
 
 
-		<p>Hello</p>
-		<div>
+		<div class="section-inner">
+			<div class="container section-content">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="section-title text-center">
+							<h2 class="main-title">Our History</h2>
+
+							<h3 class="sub-title">Travel Through Time With Us!</h3>
+
+							<span class="section-line"></span>
+						</div>
+						<!-- //.section-title -->
+					</div>
+					<!-- //.col-md-12 -->
+				</div>
+				<!-- //.row -->
+
+				<div class="row">
 
 
 			  
-			  {% assign postsByYear = site.posts | group_by_exp: 'post', 'post.date | date: "%Y"' %}
-			  {% for year in postsByYear %}
-				<section id="{{ year.name }}" class="taxonomy__section">
-				  <h2 class="archive__subtitle">{{ year.name }}</h2>
-				  <div class="entries-{{ page.entries_layout | default: 'list' }}">
-					{% for post in year.items %}
-					  {% include archive-single.html type=page.entries_layout %}
+					{% for year in postsByYear %}
+					<section id="{{ year.name }}" class="taxonomy__section" style="text-align: center">
+						<h2 class="archive__subtitle">{{ year.name }}</h2>
+						<div class="entries-{{ page.entries_layout | default: 'list' }}">
+							{% for post in year.items %}
+							{% include archive-single.html type=page.entries_layout %}
+							{% endfor %}
+						</div>
+					</section>
 					{% endfor %}
-				  </div>
-				  <a href="#page-title" class="back-to-top">{{ site.data.ui-text[site.locale].back_to_top | default: 'Back to Top' }} &uarr;</a>
-				</section>
-			  {% endfor %}
-			  
-
+				</div>
+			</div>
 		</div>
-		<p>end</p>
-
 
 	</section>
 	<!-- //End Our History Section -->
