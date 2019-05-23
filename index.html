@@ -1227,12 +1227,17 @@ author_profile: true
 		<!-- //.section-inner -->
 
 
-		<div class="section-inner">
+		<style>
+			#blogSection h2.archive__item-title {
+				margin-bottom: 0px;
+			}
+		</style>
+		<div class="section-inner" id="blogSection">
 			<div class="container section-content">
 				<div class="row">
 					<div class="col-md-12">
 						<div class="section-title text-center">
-							<h2 class="main-title" id="blogSection" >Blog1</h2>
+							<h2 class="main-title" >Blog2</h2>
 
 							<h3 class="sub-title">Visit out blog!</h3>
 
@@ -1250,7 +1255,7 @@ author_profile: true
 			  
 					{% assign postsByYear = site.posts | group_by_exp: 'post', 'post.date | date: "%Y"' %}
 					{% for year in postsByYear %}
-					<section id="{{ year.name }}" class="taxonomy__section">
+					<section id="{{ year.name }}" class="taxonomy__section" style="text-align: center;">
 						<div class="entries-{{ page.entries_layout | default: 'list' }}">
 						{% for post in year.items %}
 							{% include archive-single.html type=page.entries_layout %}
