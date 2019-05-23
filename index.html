@@ -1232,7 +1232,7 @@ author_profile: true
 				<div class="row">
 					<div class="col-md-12">
 						<div class="section-title text-center">
-							<h2 class="main-title" id="blogSection" >Blog</h2>
+							<h2 class="main-title" id="blogSection" >Blog1</h2>
 
 							<h3 class="sub-title">Visit out blog!</h3>
 
@@ -1251,13 +1251,11 @@ author_profile: true
 					{% assign postsByYear = site.posts | group_by_exp: 'post', 'post.date | date: "%Y"' %}
 					{% for year in postsByYear %}
 					<section id="{{ year.name }}" class="taxonomy__section">
-						<h2 class="archive__subtitle">{{ year.name }}</h2>
 						<div class="entries-{{ page.entries_layout | default: 'list' }}">
 						{% for post in year.items %}
 							{% include archive-single.html type=page.entries_layout %}
 						{% endfor %}
 						</div>
-						<a href="#page-title" class="back-to-top">{{ site.data.ui-text[site.locale].back_to_top | default: 'Back to Top' }} &uarr;</a>
 					</section>
 					{% endfor %}
 				</div>
@@ -1277,7 +1275,7 @@ author_profile: true
 				<div class="row">
 					<div class="col-md-12">
 						<div class="section-title text-center">
-							<h3 class="main-title">Contact Us2</h3>
+							<h3 class="main-title">Contact Us</h3>
 
 							<h4 class="sub-title">간단한 설명과 연락처 남겨주시면, 연락 드리겠습니다</h4>
 
