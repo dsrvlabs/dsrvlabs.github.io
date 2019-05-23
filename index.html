@@ -161,7 +161,7 @@ author_profile: true
 
 			<div class="navbar-collapse collapse navbar-rj-collapse">
 				<ul class="nav navbar-nav navbar-right">
-					<li class="page-scroll"><a href="/blog/" target="_self">Blog</a></li>
+					<li class="page-scroll"><a href="https://www.dsrvlabs.com/blog/" target="_self">Blog</a></li>
 					<li class="page-scroll"><a href="#who-we-are">About</a></li>
 					<li class="page-scroll"><a href="#meet-the-team">Team</a></li>
 					<li class="page-scroll"><a href="#our-main-skills">Skills</a></li>
@@ -1225,6 +1225,40 @@ author_profile: true
 			<!-- //.section-content -->
 		</div>
 		<!-- //.section-inner -->
+
+
+		<p>Hello</p>
+		<div>
+
+			<ul class="taxonomy__index">
+				{% assign postsInYear = site.posts | group_by_exp: 'post', 'post.date | date: "%Y"' %}
+				{% for year in postsInYear %}
+				  <li>
+					<a href="#{{ year.name }}">
+					  <strong>{{ year.name }}</strong> <span class="taxonomy__count">{{ year.items | size }}</span>
+					</a>
+				  </li>
+				{% endfor %}
+			  </ul>
+			  
+			  {% assign postsByYear = site.posts | group_by_exp: 'post', 'post.date | date: "%Y"' %}
+			  {% for year in postsByYear %}
+				<section id="{{ year.name }}" class="taxonomy__section">
+				  <h2 class="archive__subtitle">{{ year.name }}</h2>
+				  <div class="entries-{{ page.entries_layout | default: 'list' }}">
+					{% for post in year.items %}
+					  {% include archive-single.html type=page.entries_layout %}
+					{% endfor %}
+				  </div>
+				  <a href="#page-title" class="back-to-top">{{ site.data.ui-text[site.locale].back_to_top | default: 'Back to Top' }} &uarr;</a>
+				</section>
+			  {% endfor %}
+			  
+
+		</div>
+		<p>end</p>
+
+
 	</section>
 	<!-- //End Our History Section -->
 
@@ -1238,7 +1272,7 @@ author_profile: true
 				<div class="row">
 					<div class="col-md-12">
 						<div class="section-title text-center">
-							<h3 class="main-title">Contact Us</h3>
+							<h3 class="main-title">Contact Us1</h3>
 
 							<h4 class="sub-title">간단한 설명과 연락처 남겨주시면, 연락 드리겠습니다</h4>
 
