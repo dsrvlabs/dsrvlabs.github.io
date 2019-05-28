@@ -2,6 +2,7 @@
 title: "컨퍼런스 발표 - ethcon : Universal Login - 김종광 CTO"
 date: 2019-05-26 23:26:28 +0900
 categories: blog news
+comments: true
 ---
 dsrv labs 의 김종광(CTO)가 [ethcon](https://ethcon.kr/)에서 Universal Login 으로 발표를 합니다.
 

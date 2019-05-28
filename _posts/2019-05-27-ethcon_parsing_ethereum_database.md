@@ -2,6 +2,7 @@
 title: "컨퍼런스 발표 - ethcon : Parsing Ethereum Database - 김지윤 CEO"
 date: 2019-05-27 01:45:28 +0900
 categories: blog news
+comments: true
 ---
 dsrv labs 의 김지윤(CEO)가 [ethcon](https://ethcon.kr/)에서 Parsing Ethereum Database 으로 발표를 합니다.
 
