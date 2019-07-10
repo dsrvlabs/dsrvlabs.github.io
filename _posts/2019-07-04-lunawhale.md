@@ -5,8 +5,6 @@ categories: blog news
 comments: true
 ---
 
-# [서비스 오픈] LunaWhale.com - 고래를 찾아서
-
 안녕하세요, dsrv labs 입니다.
 
 저희 연구소의 첫번째 서비스 프로젝트이자,  Terra validator 로서의 첫번째 기여 프로젝트인 
