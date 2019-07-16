@@ -5,10 +5,10 @@ categories: blog news
 comments: true
 ---
 
-> 2019-07-16
-> nonce - LunaWhale.com
-> English : 
-> Korean : 
+> 2019-07-16  
+> nonce - LunaWhale.com  
+> English : [Doc](https://www.dsrvlabs.com/blog/news/Luna_Report_of_double-Sign_Flashing_in_Terra_network/) | [Github](https://github.com/dsrvlabs/dsrvlabs.github.io/blob/master/_posts/2019-07-16-Luna_Report_of_double-Sign_Flashing_in_Terra_network.md)  
+> Korean : [Doc](https://www.dsrvlabs.com/blog/news/Luna_Report_of_double-Sign_Flashing_in_Terra_network/) | [Github](https://github.com/dsrvlabs/dsrvlabs.github.io/blob/master/_posts/2019-07-16-Luna_Report_of_double-Sign_Flashing_in_Terra_network.md) 
 
 ## 1. Summary
 
