@@ -5,6 +5,8 @@ categories: blog news
 comments: true
 ---
 
+# [Luna] Report of double-Sign Slashing in Terra network
+
 > 2019-07-16  
 > nonce - LunaWhale.com  
 > English : [Doc](https://www.dsrvlabs.com/blog/news/Luna_Report_of_double-Sign_Flashing_in_Terra_network/) | [Github](https://github.com/dsrvlabs/dsrvlabs.github.io/blob/master/_posts/2019-07-16-Luna_Report_of_double-Sign_Flashing_in_Terra_network.md)  
