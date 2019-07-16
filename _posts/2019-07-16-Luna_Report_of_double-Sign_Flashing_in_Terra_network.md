@@ -53,7 +53,7 @@ We detected an abnormal node failure at July 8 2019.
 
 
 
-## 3. 문제 발생(Accident history)
+## 3. Accident history
 
 #### 3-1. Take Internal tech-review for new data node to prevent accident
 
