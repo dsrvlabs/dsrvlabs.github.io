@@ -29,7 +29,9 @@ NVT Ratio란 *Network Value to Transaction Ratio*의 약자로, 특정 기간의
 
 NVT Ratio가 소개된 아래의 [Forbes](https://www.forbes.com/sites/wwoo/2017/09/29/is-bitcoin-in-a-bubble-check-the-nvt-ratio/#29692dc66a23) 글에서 NVT Ratio를 되었을 때 기존 주식시장의 PER(Price-earnings ratio)과 유사한 지표로 소개되어 지금도 PER과 유사한 지표로 널리 여겨지고 있습니다.
 
-![image](../posts_attachment/20190904-bitcoin_onchain-fig1.png)
+
+<img alt="Is Bitcoin In A Bubble? Check The NVT Ratio" src="https://raw.githubusercontent.com/dsrvlabs/dsrvlabs.github.io/master/posts_attachment/20190904-bitcoin_onchain-fig1.png" width="50%">
+
 <출처: [Is Bitcoin In A Bubble? Check The NVT Ratio](https://www.forbes.com/sites/wwoo/2017/09/29/is-bitcoin-in-a-bubble-check-the-nvt-ratio/#70a5cb036a23)>
 
 > 그런데 과연 NVT Ratio가 기존 PER과 유사한 방식으로 계산될까?
@@ -37,34 +39,33 @@ NVT Ratio가 소개된 아래의 [Forbes](https://www.forbes.com/sites/wwoo/2017
 NVT Ratio가 계산되는 방식을 살펴보겠습니다.
 NVT Ratio는 정의에 따라서 다음과 같은 방식으로 계산됩니다.
 
-![image](../posts_attachment/20190904-eq-NVT1.png)
+<img src="https://raw.githubusercontent.com/dsrvlabs/dsrvlabs.github.io/master/posts_attachment/20190904-eq-NVT1.png">
 
 분모의 Network Value는 Bitcoin의 소위 Market Cap과 같은 것으로 아래와 같이 계산되고 있습니다.
 
-![image](../posts_attachment/20190904-eq-NV.png)
+<img src="https://raw.githubusercontent.com/dsrvlabs/dsrvlabs.github.io/master/posts_attachment/20190904-eq-NV.png">
 
 그리고 분자의 값은 blockchain에 기록되어 있는 특정 날짜에 거래된 bitcoin의 USD 기준 가치를 뜻합니다.
 
-![image](../posts_attachment/20190904-eq-bitcoin-transmitted.png)
-
+<img src="https://raw.githubusercontent.com/dsrvlabs/dsrvlabs.github.io/master/posts_attachment/20190904-eq-bitcoin-transmitted.png">
 
 위에서 정의된 `Network Value`와 `Daily USD volume transmitted through the blockchain`를 적용해보면 `NTV Ratio`는 아래와 같이 표현됩니다.
 
-![image](../posts_attachment/20190904-eq-NVT2.png)
+<img src="https://raw.githubusercontent.com/dsrvlabs/dsrvlabs.github.io/master/posts_attachment/20190904-eq-NVT2.png">
 
 결과적으로 `NVT Ratio`는 아래와 같이 단순화 되어 매우 간단하게 표현되며, 가격과는 관련 없이 총 Bitcoin 숫자와 거래된 Bitcoin 숫자만으로 계산될 수 있습니다.
 
-![image](../posts_attachment/20190904-eq-NVT3.png)
+<img src="https://raw.githubusercontent.com/dsrvlabs/dsrvlabs.github.io/master/posts_attachment/20190904-eq-NVT3.png">
 
 이렇게 계산해놓고 보면 `NVT Ratio`는 기존 주식시장의 `PER`보다는 소위 거래량 회전율라고 불리우는 유동성 지표와 유사한 방식으로 계산되고 있습니다.
 
 아래는 기존 증권시장에서 사용되는 소위 `Stock Market Turnover Ratio`라는 지표이며, `NVT Ratio`과 비교하였을 때 분모와 분자가 뒤바뀌었을 뿐 매우 유사하게 계산됨을 알 수 있습니다.
 
-![image](../posts_attachment/20190904-eq-turnover.png)
+<img src="https://raw.githubusercontent.com/dsrvlabs/dsrvlabs.github.io/master/posts_attachment/20190904-eq-turnover.png">
 
 참고로 `PER`은 아래와 같이 주식 가격과 회사의 주당 순이익으로 계산됩니다.
 
-![image](../posts_attachment/20190904-eq-PER.png)
+<img src="https://raw.githubusercontent.com/dsrvlabs/dsrvlabs.github.io/master/posts_attachment/20190904-eq-PER.png">
 
 그러므로 `NVT Ratio`를 기존 증권 시장의 `PER`과 같은 투자 지표로 활용하더라도, 그 값의 본질은 유동성 지표라는 것을 기억하며 활용하는 것이 필요합니다.
 
@@ -74,13 +75,13 @@ NVT Ratio는 위와 같이 on-chain data로 부터 계산된다면 여러 업체
 
 하지만 아쉽게도 아래와 같이 여러 업체에서 제공하는 `NVT Ratio`는 제각각이다. 심지어 하나의 업체에서도 두 가지 이상의 `NVT Ratio`를 제공하는 경우도 있다. 아래는 Woobull과 Coinmetrics의 `NVT Ratio`만 표시한 차트이며 좌측의 Y축이 `NVT Ratio`이다.
 
-![NVT from woobull](../posts_attachment/20190904-nvt-woobull.png)
+<img alt="NVT from woobull" src="https://raw.githubusercontent.com/dsrvlabs/dsrvlabs.github.io/master/posts_attachment/20190904-nvt-woobull.png">
 
-![NVT from coinmetrics](../posts_attachment/20190904-nvt-coinmetrics.png)
+<img alt="NVT from coinmetrics" src="https://raw.githubusercontent.com/dsrvlabs/dsrvlabs.github.io/master/posts_attachment/20190904-nvt-coinmetrics.png">
 
 그리고 dsrv labs에서 수집한 on-chain data를 가지고 `NVT Ratio`를 계산해 보았더니 아래와 같은 차트가 나왔습니다.
 
-![NVT from dsrv labs](../posts_attachment/20190904-nvt-noncedata.png)
+<img alt="NVT from noncedata" src="https://raw.githubusercontent.com/dsrvlabs/dsrvlabs.github.io/master/posts_attachment/20190904-nvt-noncedata.png">
 
 > 왜 이러한 차이가 발생한 것일까?
 
