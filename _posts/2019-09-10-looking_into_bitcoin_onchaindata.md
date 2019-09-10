@@ -64,6 +64,8 @@ NVT Ratio는 정의에 따라서 다음과 같은 방식으로 계산됩니다.
 
 <img src="https://raw.githubusercontent.com/dsrvlabs/dsrvlabs.github.io/master/posts_attachment/20190904-eq-NVT3.png">
 
+> `NVT Ratio`는 전체 Bitcoin 공급량과 거래량 만으로 계산됩니다.
+
 이렇게 계산해놓고 보면 `NVT Ratio`는 기존 주식시장의 `PER`보다는 소위 거래량 회전율이라고 불리우는 유동성 지표와 유사한 방식으로 계산되고 있습니다.
 
 아래는 기존 증권시장에서 사용되는 소위 `Stock Market Turnover Ratio`라는 지표이며, `NVT Ratio`과 비교하였을 때 분모와 분자가 뒤바뀌었을 뿐 매우 유사하게 계산됨을 알 수 있습니다.
@@ -95,9 +97,10 @@ NVT Ratio는 위와 같이 on-chain data로 부터 계산된다면 여러 업체
 > 왜 이러한 차이가 발생한 것일까?
 
 실제로 업체들이 제공하는 `NVT Ratio`에서는 여러가지 추정(estimation)이 들어가기 때문입니다. 
-각 업체들은 noise라고 판단되는 거래 내역을 제거하는 등 실제 거래량의 의미를 왜곡할 수 있는 거래를 고려하여 더욱 의미있는 `NVT Ratio`를 계산하려는 노력을 기울이고 있습니다.
+기본적으로 거래량은 블록체인에 해당 날짜에 사용된 TXO (Transacation output)을 기반으로 계산합니다.
+각 업체들은 사용된 TXO 중에서 noise라고 판단되는 거래 내역을 제거하는 등 실제 거래량의 의미를 왜곡할 수 있는 거래를 고려하여 더욱 의미있는 `NVT Ratio`를 계산하려고 노력하고 있습니다.
 
-또한 차트를 제공할 때 daily 값이 아닌 이동 평균 값으로 제공하는 등 표현하는 방법도 다양합니다. 참고로 위에서 Woobull은 14일 평균 값으로 차트를 제공하였으며, coinmetrics와 dsrv labs의 경우는 일별 값으로 차트를 제공하고 있습니다.
+또한 차트를 제공할 때 daily 값이 아닌 이동 평균 값으로 제공하는 등 표현하는 방법도 다양합니다. 참고로 위에서 Woobull은 14일 평균 값으로 차트를 제공하였으며, coinmetrics와 dsrv labs의 경우는 일별 값으로 `NVT Ratio` 차트를 제공하고 있습니다.
 
 그렇다보니 현재 여러 업체에서 제공하는 `NVT Ratio`는 on-chain data의 값만을 가지고 객관적으로 계산된 값이 아닌, 특정 기준에 의해서 조정(adjust)된 주관적인 값인 경우가 많습니다.
 
