@@ -4,19 +4,19 @@ date: 2019-09-10 14:11:08 +0900
 categories: blog news
 comments: true
 ---
-## dsrv labs 데이터 이야기 시리즈 2 - Bitcoin 블록체인에서 얻을 수 있는 NVT Ratio 란?
-
 ## dsrv labs, 데이터 이야기 시리즈
 
 1. [비트코인 매수는 Upbit 에서, 매도는 Bithumb 에서 팔아라](https://www.dsrvlabs.com/blog/news/%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8_%ED%98%B8%EA%B0%80%EC%B0%A8%EC%9D%B4/)
 2. [Bitcoin 블록체인에서 우리가 알 수 있는 것들은?](https://www.dsrvlabs.com/blog/news/looking_into_bitcoin_onchaindata/)
 
-안녕하세요 dsrv labs입니다.
+## 부제: Bitcoin 블록체인에서 얻을 수 있는 NVT Ratio 란?
 
 ## 1. Bitcoin on-chain data
 
+안녕하세요 dsrv labs입니다.
+
 블록체인의 대표적인 성공적인 use case로 여겨지는 Bitcoin은 현재 10년 넘게 쌓아온 방대한 on-chain data를 가지고 있습니다.
-하지만 일반대중들과 많은 블록체인 관련 종사자들은 블록체인에 저장되어 있는 on-chain data 보다는 거래소에서 거래되는 Bitcoin의 가격에 더욱 많은 관심을 가지고 있습니다.
+하지만 일반 대중들과 많은 블록체인 관련 종사자들은 블록체인에 저장되어 있는 on-chain data 보다는 거래소에서 거래되는 Bitcoin의 가격에 더욱 많은 관심을 가지고 있습니다.
 현실적으로 Bitcoin의 가격은 현실에 기반한 모든 스테이크홀더들에게 매우 중요한 정보이긴 합니다.
 
 > 그렇다면 Bitcoin에 저장된 데이터는 중요하지 않을까요?
