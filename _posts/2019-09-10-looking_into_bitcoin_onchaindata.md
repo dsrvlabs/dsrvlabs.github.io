@@ -64,7 +64,7 @@ NVT Ratio는 정의에 따라서 다음과 같은 방식으로 계산됩니다.
 
 <img src="https://raw.githubusercontent.com/dsrvlabs/dsrvlabs.github.io/master/posts_attachment/20190904-eq-NVT3.png">
 
-이렇게 계산해놓고 보면 `NVT Ratio`는 기존 주식시장의 `PER`보다는 소위 거래량 회전율라고 불리우는 유동성 지표와 유사한 방식으로 계산되고 있습니다.
+이렇게 계산해놓고 보면 `NVT Ratio`는 기존 주식시장의 `PER`보다는 소위 거래량 회전율이라고 불리우는 유동성 지표와 유사한 방식으로 계산되고 있습니다.
 
 아래는 기존 증권시장에서 사용되는 소위 `Stock Market Turnover Ratio`라는 지표이며, `NVT Ratio`과 비교하였을 때 분모와 분자가 뒤바뀌었을 뿐 매우 유사하게 계산됨을 알 수 있습니다.
 
