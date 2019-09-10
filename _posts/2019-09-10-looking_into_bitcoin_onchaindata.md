@@ -36,10 +36,9 @@ Bitcoin on-chain data로 얻을 수 있는 정보 중 대표적인 것으로 `NV
 
 `NVT Ratio`란 *Network Value to Transaction Ratio*의 약자로, 특정 기간의 블록체인 네트워크의 총 가치와 이전된 가치의 비율입니다.
 
-`NVT Ratio`가 소개된 아래의 [Forbes](https://www.forbes.com/sites/wwoo/2017/09/29/is-bitcoin-in-a-bubble-check-the-nvt-ratio/#29692dc66a23) 글에서 NVT Ratio를 되었을 때 기존 주식시장의 PER(Price-earnings ratio)과 유사한 지표로 소개되어 지금도 PER과 유사한 지표로 널리 여겨지고 있습니다.
+`NVT Ratio`가 소개된 아래의 [Forbes](https://www.forbes.com/sites/wwoo/2017/09/29/is-bitcoin-in-a-bubble-check-the-nvt-ratio/#29692dc66a23) 글에서 NVT Ratio를 기존 주식시장의 PER (Price-earnings ratio)과 유사한 지표로 소개하여 지금도 PER과 유사한 지표로 널리 여겨지고 있습니다.
 
-
-<img alt="Is Bitcoin In A Bubble? Check The NVT Ratio" src="https://raw.githubusercontent.com/dsrvlabs/dsrvlabs.github.io/master/posts_attachment/20190904-bitcoin_onchain-fig1.png" width="50%"> 
+<img alt="Is Bitcoin In A Bubble? Check The NVT Ratio" src="https://raw.githubusercontent.com/dsrvlabs/dsrvlabs.github.io/master/posts_attachment/20190904-bitcoin_onchain-fig1.png" width="50%">
 
 <Source: [Is Bitcoin In A Bubble? Check The NVT Ratio](https://www.forbes.com/sites/wwoo/2017/09/29/is-bitcoin-in-a-bubble-check-the-nvt-ratio/#70a5cb036a23)>
 
