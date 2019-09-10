@@ -11,7 +11,7 @@ comments: true
 
 블록체인의 대표적인 성공적인 use case로 여겨지는 Bitcoin은 현재 10년 넘게 쌓아온 방대한 on-chain data를 가지고 있습니다.
 하지만 일반대중들과 많은 블록체인 관련 종사자들은 블록체인에 저장되어 있는 on-chain data 보다는 거래소에서 거래되는 Bitcoin의 가격에 더욱 많은 관심을 가지고 있습니다.
-현실적으로 Bitcoin의 가격은 현실에 기반한 모든 스테이크홀더들에게 메우 중요한 정보이긴 합니다.
+현실적으로 Bitcoin의 가격은 현실에 기반한 모든 스테이크홀더들에게 매우 중요한 정보이긴 합니다.
 
 > 그렇다면 Bitcoin에 저장된 데이터는 중요하지 않을까요?
 
@@ -25,7 +25,7 @@ dsrv labs는 Bitcoin의 블록체인에 저장되어 있는 정보로부터 의�
 # 2. NVT Ratio
 Bitcoin on-chain data로 계산할 수 있는 것 중에 대표적인 것이, NVT Ratio이 있습니다.
 
-NVT Ratio란 *Network Value to Tranaction Ratio*의 약자로, 특정 기간의 블록체인 네트워크의 총 가치와 이전된 가치의 비율입니다.
+NVT Ratio란 *Network Value to Transaction Ratio*의 약자로, 특정 기간의 블록체인 네트워크의 총 가치와 이전된 가치의 비율입니다.
 
 NVT Ratio가 소개된 아래의 [Forbes](https://www.forbes.com/sites/wwoo/2017/09/29/is-bitcoin-in-a-bubble-check-the-nvt-ratio/#29692dc66a23) 글에서 NVT Ratio를 되었을 때 기존 주식시장의 PER(Price-earnings ratio)과 유사한 지표로 소개되어 지금도 PER과 유사한 지표로 널리 여겨지고 있습니다.
 
@@ -85,7 +85,7 @@ NVT Ratio는 위와 같이 on-chain data로 부터 계산된다면 여러 업체
 > 왜 이러한 차이가 발생한 것일까?
 
 실제로 업체들이 제공하는 `NVT Ratio`에서는 여러가지 추정(estimation)이 들어가기 때문입니다. 
-각 업체들은 noise라고 판단되는 거래 내역을 제거하는 등 실제 거래량의 의미를 외곡할 수 있는 거래를 고려하여 더욱 의미있는 `NVT Ratio`를 계산하려는 노력을 기울이고 있습니다.
+각 업체들은 noise라고 판단되는 거래 내역을 제거하는 등 실제 거래량의 의미를 왜곡할 수 있는 거래를 고려하여 더욱 의미있는 `NVT Ratio`를 계산하려는 노력을 기울이고 있습니다.
 
 그렇다보니 현재 여러 업체에서 제공하는 `NVT Ratio`는 on-chain data의 값만을 가지고 객관적으로 계산된 값이 아닌, 특정 기준에 의해서 조정(adjust)된 주관적인 값인 경우가 많습니다.
 
