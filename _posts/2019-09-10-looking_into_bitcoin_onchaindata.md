@@ -53,7 +53,7 @@ NVT Ratio는 정의에 따라서 다음과 같은 방식으로 계산됩니다.
 
 <img src="https://raw.githubusercontent.com/dsrvlabs/dsrvlabs.github.io/master/posts_attachment/20190904-eq-NVT2.png">
 
-결과적으로 `NVT Ratio`는 아래와 같이 단순화 되어 매우 간단하게 표현되며, 가격과는 관련 없이 총 Bitcoin 숫자와 거래된 Bitcoin 숫자만으로 계산될 수 있습니다.
+결과적으로 `NVT Ratio`는 아래와 같이 단순화 되어 매우 간단하게 표현되며, 가격과는 관련 없이 총 Bitcoin 공급량과 Bitcoin 거래량 만으로 계산될 수 있습니다.
 
 <img src="https://raw.githubusercontent.com/dsrvlabs/dsrvlabs.github.io/master/posts_attachment/20190904-eq-NVT3.png">
 
