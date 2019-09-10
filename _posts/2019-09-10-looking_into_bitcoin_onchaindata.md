@@ -4,10 +4,11 @@ date: 2019-09-10 14:11:08 +0900
 categories: blog news
 comments: true
 ---
+# Part 1 - Bitcoin 블록체인에서 얻을 수 있는 NVT Ratio 란?
 
 안녕하세요 dsrv labs입니다.
 
-# 1. Bitcoin on-chain data
+## 1. Bitcoin on-chain data
 
 블록체인의 대표적인 성공적인 use case로 여겨지는 Bitcoin은 현재 10년 넘게 쌓아온 방대한 on-chain data를 가지고 있습니다.
 하지만 일반대중들과 많은 블록체인 관련 종사자들은 블록체인에 저장되어 있는 on-chain data 보다는 거래소에서 거래되는 Bitcoin의 가격에 더욱 많은 관심을 가지고 있습니다.
@@ -22,7 +23,7 @@ dsrv labs는 Bitcoin의 블록체인에 저장되어 있는 정보로부터 의�
 
 그 첫 걸음으로 현재 널리 사용되고 있는 Bitcoin on-chain data에서 얻을 수 있는 정보들을 살펴보려고 합니다.
 
-# 2. NVT Ratio
+## 2. NVT Ratio
 Bitcoin on-chain data로 계산할 수 있는 것 중에 대표적인 것이, NVT Ratio이 있습니다.
 
 NVT Ratio란 *Network Value to Transaction Ratio*의 약자로, 특정 기간의 블록체인 네트워크의 총 가치와 이전된 가치의 비율입니다.
@@ -30,9 +31,8 @@ NVT Ratio란 *Network Value to Transaction Ratio*의 약자로, 특정 기간의
 NVT Ratio가 소개된 아래의 [Forbes](https://www.forbes.com/sites/wwoo/2017/09/29/is-bitcoin-in-a-bubble-check-the-nvt-ratio/#29692dc66a23) 글에서 NVT Ratio를 되었을 때 기존 주식시장의 PER(Price-earnings ratio)과 유사한 지표로 소개되어 지금도 PER과 유사한 지표로 널리 여겨지고 있습니다.
 
 
-<img alt="Is Bitcoin In A Bubble? Check The NVT Ratio" src="https://raw.githubusercontent.com/dsrvlabs/dsrvlabs.github.io/master/posts_attachment/20190904-bitcoin_onchain-fig1.png" width="50%">
-
-<출처: [Is Bitcoin In A Bubble? Check The NVT Ratio](https://www.forbes.com/sites/wwoo/2017/09/29/is-bitcoin-in-a-bubble-check-the-nvt-ratio/#70a5cb036a23)>
+<img alt="Is Bitcoin In A Bubble? Check The NVT Ratio" src="https://raw.githubusercontent.com/dsrvlabs/dsrvlabs.github.io/master/posts_attachment/20190904-bitcoin_onchain-fig1.png" width="50%"> 
+<Source: [Is Bitcoin In A Bubble? Check The NVT Ratio](https://www.forbes.com/sites/wwoo/2017/09/29/is-bitcoin-in-a-bubble-check-the-nvt-ratio/#70a5cb036a23)>
 
 > 그런데 과연 NVT Ratio가 기존 PER과 유사한 방식으로 계산될까?
 
@@ -69,7 +69,7 @@ NVT Ratio는 정의에 따라서 다음과 같은 방식으로 계산됩니다.
 
 그러므로 `NVT Ratio`를 기존 증권 시장의 `PER`과 같은 투자 지표로 활용하더라도, 그 값의 본질은 유동성 지표라는 것을 기억하며 활용하는 것이 필요합니다.
 
-# 3. NVT Ratio 는 객관적인 값일까?
+## 3. NVT Ratio 는 객관적인 값일까?
 
 NVT Ratio는 위와 같이 on-chain data로 부터 계산된다면 여러 업체에서 제공되는 NVT Ratio는 같은 값을 가질 것이다.
 
@@ -90,7 +90,7 @@ NVT Ratio는 위와 같이 on-chain data로 부터 계산된다면 여러 업체
 
 그렇다보니 현재 여러 업체에서 제공하는 `NVT Ratio`는 on-chain data의 값만을 가지고 객관적으로 계산된 값이 아닌, 특정 기준에 의해서 조정(adjust)된 주관적인 값인 경우가 많습니다.
 
-# 4. dsrv labs
+## 4. dsrv labs
 
 지금까지 on-chain data로부터 계산할 수 있다고 알려진 `NVT Ratio`를 살펴보았습니다. 
 
