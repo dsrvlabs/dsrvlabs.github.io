@@ -37,37 +37,23 @@ NVT Ratio가 소개된 아래의 [Forbes](https://www.forbes.com/sites/wwoo/2017
 NVT Ratio가 계산되는 방식을 살펴보겠습니다.
 NVT Ratio는 정의에 따라서 다음과 같은 방식으로 계산됩니다.
 
-<!--
-NVT Ratio = \frac{Network\ Value}{Daily\ USD\ volume\ transmitted\ through\ the\ blockchain}
--->
 ![image](../posts_attachment/20190904-eq-NVT1.png)
 
 분모의 Network Value는 Bitcoin의 소위 Market Cap과 같은 것으로 아래와 같이 계산되고 있습니다.
-<!--
-Network\ Value = {(the\ current\ supply\ of\ bitcoins)} \cdot {(price\ of\ bitcoin)}
--->
+
 ![image](../posts_attachment/20190904-eq-NV.png)
 
 그리고 분자의 값은 blockchain에 기록되어 있는 특정 날짜에 거래된 bitcoin의 USD 기준 가치를 뜻합니다.
-<!--
-Daily\ USD\ volume\ transmitted\ through\ the\ blockchain = {(number\ of\ bitcoin\ transmitted\ through\ the\ blokchain)} \cdot {(price\ of\  bitcoin)}
--->
+
 ![image](../posts_attachment/20190904-eq-bitcoin-transmitted.png)
 
 
 위에서 정의된 `Network Value`와 `Daily USD volume transmitted through the blockchain`를 적용해보면 `NTV Ratio`는 아래와 같이 표현됩니다.
 
-<!--
-NVT Ratio\quad\quad\quad\quad =\frac{Network\ Value}{Daily\ USD\ volume\ transmitted\ through\ the\ blockchain}\\
-=\frac{{(the\ current\ supply\ of\ bitcoins)} \cdot {(price\ of\ bitcoin)}}{{(number\ of\ bitcoin\ transmitted\ through\ the\ blockchain)} \cdot {(price\ of\  bitcoin)}}
--->
 ![image](../posts_attachment/20190904-eq-NVT2.png)
 
 결과적으로 `NVT Ratio`는 아래와 같이 단순화 되어 매우 간단하게 표현되며, 가격과는 관련 없이 총 Bitcoin 숫자와 거래된 Bitcoin 숫자만으로 계산될 수 있습니다.
 
-<!--
-NVT Ratio = \frac{(the\ current\ supply\ of\ bitcoins)}{(number\ of\ bitcoin\ transmitted\ through\ the\ blockchain)}
--->
 ![image](../posts_attachment/20190904-eq-NVT3.png)
 
 이렇게 계산해놓고 보면 `NVT Ratio`는 기존 주식시장의 `PER`보다는 소위 거래량 회전율라고 불리우는 유동성 지표와 유사한 방식으로 계산되고 있습니다.
