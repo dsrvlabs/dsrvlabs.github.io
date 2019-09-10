@@ -36,7 +36,7 @@ Bitcoin on-chain data로 얻을 수 있는 정보 중 대표적인 것으로 `NV
 
 `NVT Ratio`란 *Network Value to Transaction Ratio*의 약자로, 특정 기간의 블록체인 네트워크의 총 가치와 이전된 가치의 비율입니다.
 
-`NVT Ratio`가 소개된 아래의 [Forbes](https://www.forbes.com/sites/wwoo/2017/09/29/is-bitcoin-in-a-bubble-check-the-nvt-ratio/#29692dc66a23) 글에서 NVT Ratio를 기존 주식시장의 PER (Price-earnings ratio)과 유사한 지표로 소개하여 지금도 PER과 유사한 지표로 널리 여겨지고 있습니다.
+`NVT Ratio`가 소개된 아래의 [Forbes](https://www.forbes.com/sites/wwoo/2017/09/29/is-bitcoin-in-a-bubble-check-the-nvt-ratio/#29692dc66a23) 글에서 `NVT Ratio`를 기존 주식시장의 PER (Price-earnings ratio)과 유사한 지표로 소개하여 지금도 PER과 유사한 지표로 널리 여겨지고 있습니다.
 
 <img alt="Is Bitcoin In A Bubble? Check The NVT Ratio" src="https://raw.githubusercontent.com/dsrvlabs/dsrvlabs.github.io/master/posts_attachment/20190904-bitcoin_onchain-fig1.png" width="50%">
 
@@ -99,7 +99,7 @@ NVT Ratio는 위와 같이 on-chain data로 부터 계산된다면 여러 업체
 
 실제로 업체들이 제공하는 `NVT Ratio`에서는 여러가지 추정(estimation)이 들어가기 때문입니다. 
 
-기본적으로 거래량은 블록체인에 해당 날짜에 사용된 TXO (Transacation output)을 기반으로 계산합니다.
+기본적으로 거래량은 블록체인에 기록된 해당 기간 동안 사용된 TXO (Transacation output)을 기반으로 계산합니다.
 각 업체들은 사용된 TXO 중에서 noise라고 판단되는 거래 내역을 제거하는 등 실제 거래량의 의미를 왜곡할 수 있는 거래를 고려하여 더욱 의미있는 `NVT Ratio`를 계산하려고 노력하고 있습니다.
 
 또한 차트를 제공할 때 daily 값이 아닌 이동 평균 값으로 제공하는 등 표현하는 방법도 다양합니다. 참고로 위에서 Woobull은 14일 평균 값으로 차트를 제공하였으며, coinmetrics와 dsrv labs의 경우는 일별 값으로 `NVT Ratio` 차트를 제공하고 있습니다.
