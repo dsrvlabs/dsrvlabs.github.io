@@ -4,7 +4,12 @@ date: 2019-09-10 14:11:08 +0900
 categories: blog news
 comments: true
 ---
-# Part 1 - Bitcoin 블록체인에서 얻을 수 있는 NVT Ratio 란?
+# dsrv labs 데이터 이야기 시리즈 2 - Bitcoin 블록체인에서 얻을 수 있는 NVT Ratio 란?
+
+## dsrv labs, 데이터 이야기 시리즈
+
+1. [비트코인 매수는 Upbit 에서, 매도는 Bithumb 에서 팔아라](https://www.dsrvlabs.com/blog/news/%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8_%ED%98%B8%EA%B0%80%EC%B0%A8%EC%9D%B4/)
+2. [Bitcoin 블록체인에서 우리가 알 수 있는 것들은?](https://www.dsrvlabs.com/blog/news/looking_into_bitcoin_onchaindata/)
 
 안녕하세요 dsrv labs입니다.
 
@@ -71,9 +76,11 @@ NVT Ratio는 정의에 따라서 다음과 같은 방식으로 계산됩니다.
 
 ## 3. NVT Ratio 는 객관적인 값일까?
 
-NVT Ratio는 위와 같이 on-chain data로 부터 계산된다면 여러 업체에서 제공되는 NVT Ratio는 같은 값을 가질 것이다.
+NVT Ratio는 위와 같이 on-chain data로 부터 계산된다면 여러 업체에서 제공되는 NVT Ratio는 같은 값이어야 할 것입니다.
 
-하지만 아쉽게도 아래와 같이 여러 업체에서 제공하는 `NVT Ratio`는 제각각이다. 심지어 하나의 업체에서도 두 가지 이상의 `NVT Ratio`를 제공하는 경우도 있다. 아래는 Woobull과 Coinmetrics의 `NVT Ratio`만 표시한 차트이며 좌측의 Y축이 `NVT Ratio`이다.
+하지만 아쉽게도 아래와 같이 여러 업체에서 제공하는 `NVT Ratio`는 서로 다른 값을 보여주고 있습니다.
+심지어 하나의 업체에서도 두 가지 이상의 `NVT Ratio`를 제공하는 경우도 있습니다.
+아래는 Woobull과 Coinmetrics의 `NVT Ratio`만 표시한 차트이며 좌측의 Y축이 `NVT Ratio`입니다.
 
 <img alt="NVT from woobull" src="https://raw.githubusercontent.com/dsrvlabs/dsrvlabs.github.io/master/posts_attachment/20190904-nvt-woobull.png">
 
