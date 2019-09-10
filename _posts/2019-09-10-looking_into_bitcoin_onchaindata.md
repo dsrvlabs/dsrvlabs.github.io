@@ -1,5 +1,5 @@
 ---
-title: "Bitcoin의 블록에서 우리가 알 수 있는 것들은?"
+title: "Bitcoin 블록체인에서 우리가 알 수 있는 것들은?"
 date: 2019-09-10 14:11:08 +0900
 categories: blog news
 comments: true
