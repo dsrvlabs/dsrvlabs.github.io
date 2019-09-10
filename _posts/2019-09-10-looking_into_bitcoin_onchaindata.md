@@ -4,12 +4,14 @@ date: 2019-09-10 14:11:08 +0900
 categories: blog news
 comments: true
 ---
-## dsrv labs, 데이터 이야기 시리즈
+## dsrv labs 데이터 이야기 시리즈 (2) - 부제: Bitcoin 블록체인에서 얻을 수 있는 NVT Ratio 란?
 
+**dsrv labs 데이터 이야기 시리즈 목록**
 1. [비트코인 매수는 Upbit 에서, 매도는 Bithumb 에서 팔아라](https://www.dsrvlabs.com/blog/news/%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8_%ED%98%B8%EA%B0%80%EC%B0%A8%EC%9D%B4/)
 2. [Bitcoin 블록체인에서 우리가 알 수 있는 것들은?](https://www.dsrvlabs.com/blog/news/looking_into_bitcoin_onchaindata/)
 
-## 부제: Bitcoin 블록체인에서 얻을 수 있는 NVT Ratio 란?
+> dsrv labs 에서는 On-chain, Off-chain 데이터를 수집/분석하여  
+> 흥미로운 데이터를 시리즈로 연재하고 있습니다
 
 ## 1. Bitcoin on-chain data
 
