@@ -31,29 +31,30 @@ dsrv labs는 Bitcoin의 블록체인에 저장되어 있는 정보로부터 의�
 그 첫 걸음으로 현재 널리 사용되고 있는 Bitcoin on-chain data에서 얻을 수 있는 정보들을 살펴보려고 합니다.
 
 ## 2. NVT Ratio
-Bitcoin on-chain data로 계산할 수 있는 것 중에 대표적인 것이, NVT Ratio이 있습니다.
 
-NVT Ratio란 *Network Value to Transaction Ratio*의 약자로, 특정 기간의 블록체인 네트워크의 총 가치와 이전된 가치의 비율입니다.
+Bitcoin on-chain data로 얻을 수 있는 정보 중 대표적인 것으로 `NVT Ratio`이 있습니다.
 
-NVT Ratio가 소개된 아래의 [Forbes](https://www.forbes.com/sites/wwoo/2017/09/29/is-bitcoin-in-a-bubble-check-the-nvt-ratio/#29692dc66a23) 글에서 NVT Ratio를 되었을 때 기존 주식시장의 PER(Price-earnings ratio)과 유사한 지표로 소개되어 지금도 PER과 유사한 지표로 널리 여겨지고 있습니다.
+`NVT Ratio`란 *Network Value to Transaction Ratio*의 약자로, 특정 기간의 블록체인 네트워크의 총 가치와 이전된 가치의 비율입니다.
+
+`NVT Ratio`가 소개된 아래의 [Forbes](https://www.forbes.com/sites/wwoo/2017/09/29/is-bitcoin-in-a-bubble-check-the-nvt-ratio/#29692dc66a23) 글에서 NVT Ratio를 되었을 때 기존 주식시장의 PER(Price-earnings ratio)과 유사한 지표로 소개되어 지금도 PER과 유사한 지표로 널리 여겨지고 있습니다.
 
 
 <img alt="Is Bitcoin In A Bubble? Check The NVT Ratio" src="https://raw.githubusercontent.com/dsrvlabs/dsrvlabs.github.io/master/posts_attachment/20190904-bitcoin_onchain-fig1.png" width="50%"> 
 
 <Source: [Is Bitcoin In A Bubble? Check The NVT Ratio](https://www.forbes.com/sites/wwoo/2017/09/29/is-bitcoin-in-a-bubble-check-the-nvt-ratio/#70a5cb036a23)>
 
-> 그런데 과연 NVT Ratio가 기존 PER과 유사한 방식으로 계산될까?
+> 그런데 과연 `NVT Ratio`가 기존 PER과 유사한 방식으로 계산될까?
 
-NVT Ratio가 계산되는 방식을 살펴보겠습니다.
-NVT Ratio는 정의에 따라서 다음과 같은 방식으로 계산됩니다.
+`NVT Ratio`가 계산되는 방식을 살펴보겠습니다.
+`NVT Ratio`는 정의에 따라서 다음과 같은 방식으로 계산됩니다.
 
 <img src="https://raw.githubusercontent.com/dsrvlabs/dsrvlabs.github.io/master/posts_attachment/20190904-eq-NVT1.png">
 
-분모의 Network Value는 Bitcoin의 소위 Market Cap과 같은 것으로 아래와 같이 계산되고 있습니다.
+분모의 Network Value는 Bitcoin의 소위 Market Cap으로 알려진 개념과 같은 것으로 아래와 같이 계산되고 있습니다.
 
 <img src="https://raw.githubusercontent.com/dsrvlabs/dsrvlabs.github.io/master/posts_attachment/20190904-eq-NV.png">
 
-그리고 분자의 값은 blockchain에 기록되어 있는 특정 날짜에 거래된 bitcoin의 USD 기준 가치를 뜻합니다.
+그리고 분자의 값은 blockchain에 기록되어 있는 특정 날짜에 거래된 Bitcoin의 USD 기준 가치를 뜻합니다.
 
 <img src="https://raw.githubusercontent.com/dsrvlabs/dsrvlabs.github.io/master/posts_attachment/20190904-eq-bitcoin-transmitted.png">
 
@@ -61,7 +62,7 @@ NVT Ratio는 정의에 따라서 다음과 같은 방식으로 계산됩니다.
 
 <img src="https://raw.githubusercontent.com/dsrvlabs/dsrvlabs.github.io/master/posts_attachment/20190904-eq-NVT2.png">
 
-결과적으로 `NVT Ratio`는 아래와 같이 단순화 되어 매우 간단하게 표현되며, 가격과는 관련 없이 총 Bitcoin 공급량과 Bitcoin 거래량 만으로 계산될 수 있습니다.
+그리고 이를 단순화해보면 `NVT Ratio`는 아래와 같이 매우 간단하게 표현되며, 가격과는 관련 없이 총 Bitcoin 공급량과 Bitcoin 거래량 만으로 계산될 수 있음을 알 수 있습니다.
 
 <img src="https://raw.githubusercontent.com/dsrvlabs/dsrvlabs.github.io/master/posts_attachment/20190904-eq-NVT3.png">
 
