@@ -4,7 +4,7 @@ date: 2019-09-10 14:11:08 +0900
 categories: blog news
 comments: true
 ---
-# dsrv labs 데이터 이야기 시리즈 2 - Bitcoin 블록체인에서 얻을 수 있는 NVT Ratio 란?
+## dsrv labs 데이터 이야기 시리즈 2 - Bitcoin 블록체인에서 얻을 수 있는 NVT Ratio 란?
 
 ## dsrv labs, 데이터 이야기 시리즈
 
