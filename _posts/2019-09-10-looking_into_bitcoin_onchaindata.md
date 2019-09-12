@@ -49,11 +49,11 @@ Bitcoin on-chain data로 얻을 수 있는 정보 중 대표적인 것으로 `NV
 
 <img src="https://raw.githubusercontent.com/dsrvlabs/dsrvlabs.github.io/master/posts_attachment/20190904-eq-NVT1.png">
 
-분모의 Network Value는 Bitcoin의 소위 Market Cap으로 알려진 개념과 같은 것으로 아래와 같이 계산되고 있습니다.
+분자의 Network Value는 Bitcoin의 소위 Market Cap으로 알려진 개념과 같은 것으로 아래와 같이 계산되고 있습니다.
 
 <img src="https://raw.githubusercontent.com/dsrvlabs/dsrvlabs.github.io/master/posts_attachment/20190904-eq-NV.png">
 
-그리고 분자의 값은 blockchain에 기록되어 있는 특정 날짜에 거래된 Bitcoin의 USD 기준 가치를 뜻합니다.
+그리고 분모의 값은 blockchain에 기록되어 있는 특정 날짜에 거래된 Bitcoin의 USD 기준 가치를 뜻합니다.
 
 <img src="https://raw.githubusercontent.com/dsrvlabs/dsrvlabs.github.io/master/posts_attachment/20190904-eq-bitcoin-transmitted.png">
 
