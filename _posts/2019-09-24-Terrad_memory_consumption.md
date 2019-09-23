@@ -1,5 +1,5 @@
 ---
-title: "Cosmos의 rest server 및 go-amino 패키지의 메모리 사용량 이슈"
+title: "Cosmos의 Rest Server 및 go-amino 패키지의 메모리 사용량 이슈"
 date: 2019-09-24 11:00:00 +0900
 categories: blog news
 comments: true
@@ -36,28 +36,32 @@ dsrv labs에서 운영중인 Terra Validator 노드에서 위 시간이 포함�
 
 ## 메모리 사용량은 왜 늘었을까?
 
-메모리 사용량이 단시간 내에 갑자기 늘었으므로, 처음에는 Terra 블록체인 처리를 위하여 메모리가 늘었을 것으로 생각하였습니다.
+메모리 사용량이 단시간 내에 늘었으므로, 처음에는 Terra 블록체인 처리를 위하여 메모리가 늘었을 것으로 생각하였습니다.
 하지만 Validator 노드와 다른 Terra node의 메모리 사용량은 큰 변화를 보이지 않아 Terra 블록체인 때문은 아닌 것으로 판단하였습니다.
 
-문제 재현을 위하여 해당 노드를 다시 시작한 후 메모리 프로파일링을 병행하며 메모리 사용량을 확인해 보았습니다.
+또한 memory leak이 있는지 간단하게 확인해 보았지만, memory leak으로 의심되는 상황은 있었지만 위와 같이 수백MB의 큰 크기는 아니었습니다.
 
-그랬더니 아래와 같은 프로파일링 결과가 나왔습니다.
+그래서 해당 노드를 다시 시작한 후 메모리 프로파일링을 병행하며 메모리 사용량을 확인해 보았으며, 해당 노드가 다시 OOM이 발생하는 상황을 재현해 보았습니다.
+
+그 결과 아래와 같은 프로파일링 결과를 얻어볼 수 있었습니다.
 
 <img src="../posts_attachment/20190924-memprofile.png">
 
 ## Rest call 이 많은 메모리를 사용하고 있다!
 
-위 프로파일링 결과의 제일 위를 살펴보면, Rest Server가 노드에게 보낸 요청을 처리하는 과정에서 600MB 이상의 메모리를 점유하며 사용하고 있는 것이 보입니다.
+위 프로파일링 결과의 제일 위를 살펴보면, 노드가 RPC로 들어온 요청을 처리하는 과정에서 600MB 이상의 메모리를 점유하며 사용하고 있는 것이 보이며, 해당 요청은 Rest Server가 외부의 요청을 받아 생성한 것으로 확인되었습니다.
 
-그리고 그 처리 과정 중 `go-amino` 패키지에서 약 358MB의 메모리를 사용하고 있는 것을 확인 할 수 있습니다.
+그리고 RPC 요청 처리 과정 중 `go-amino` 패키지에서 약 358MB의 메모리를 사용하고 있는 것을 확인 할 수 있습니다.
 
 ## go-amino 패키지란?
 
-[go-amino](https://github.com/tendermint/go-amino)은 Tendermint에서 사용하고 있는 object encoding specification인 Amino의 go 구현체 패키지이다.
+[go-amino](https://github.com/tendermint/go-amino)은 Tendermint에서 사용하고 있는 object encoding specification인 Amino의 go 구현체 패키지입니다.
 
-그리고 해당 `go-amino` repo에서 [go-amino#211](https://github.com/tendermint/go-amino/issues/211), [go-amino#254](https://github.com/tendermint/go-amino/issues/254)에서도 많은 메모리 사용량에 대한 issue가 있었다. 위 이슈들은 각각 decoding과 encoding에서의 많은 메모리 사욜양에 대한 내용을 이야기 하고 있었다.
+그리고 go-amino Github repo에서도 [go-amino#211](https://github.com/tendermint/go-amino/issues/211), [go-amino#254](https://github.com/tendermint/go-amino/issues/254)와 같이 많은 메모리 사용량에 대한 issue가 있었습니다.
 
-우리 dsrv labs의 노드에서는 현재 decode 시에 많은 메모리가 사용된 현상이 관찰되고 있어 위 이슈와의 관련성이 있을 것으로 예상되었습니다.
+위 이슈들은 decoding과 encoding 중 많은 메모리 사욜량에 대하여 논의하고 있었습니다.
+
+dsrv labs의 노드에서 발생한 out-of-memory 상황에서도 decode 시에 많은 메모리가 사용된 현상이 관찰되고 있어 위 이슈와의 관련성이 있을 것으로 생각됩니다.
 
 (TBD)
 
