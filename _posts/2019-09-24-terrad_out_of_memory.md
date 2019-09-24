@@ -4,7 +4,7 @@ date: 2019-09-24 17:00:00 +0900
 categories: blog news
 comments: true
 ---
-# Cosmos, Terra, Tendermint의 go-amino 패키지의 메모리 사용량 이슈
+# Cosmos, Terra, Tendermint의 go-amino 메모리 사용량 이슈
 
 안녕하세요. dsrv labs입니다.
 
