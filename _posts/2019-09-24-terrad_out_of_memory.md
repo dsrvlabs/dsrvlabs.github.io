@@ -9,7 +9,7 @@ comments: true
 안녕하세요. dsrv labs입니다.
 
 dsrv labs는 Terra Validator로 활동하고 있으며 Terra 관련 서비스인 [Luna Whale](https://www.lunawhale.com)을 운영하고 있습니다.
-그리고 이를 위하여 Terra Valiadtor 노드를 포함하여 여러 Terra 노드를 운영하고 있습니다.
+그리고 이를 위하여 Terra Validator 노드를 포함하여 여러 Terra 노드를 운영하고 있습니다.
 
 오늘은 Terra 관련 서비스를 제공할 때 활용될 수 있는 Terra의 Rest Server 관련된 이야기를 하려고 합니다.
 
@@ -85,7 +85,7 @@ Terra 노드는 HTTP를 이용하여 RPC 요청을 받아들이고 있으며, �
 <p align="center">
 <img src="https://raw.githubusercontent.com/dsrvlabs/dsrvlabs.github.io/master/posts_attachment/20190924-amino.png">
 
-Source: [go-amino](https://github.com/tendermint/go-amino/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+memory+)
+Source: [tendermint/go-amino](https://github.com/tendermint/go-amino/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+memory)
 </p>
 
 <br>
