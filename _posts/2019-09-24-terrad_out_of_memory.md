@@ -89,7 +89,7 @@ Terra 노드는 HTTP를 이용하여 RPC 요청을 받아들이고 있으며, �
 </p>
 
 <br>
-위 이슈들은 decoding과 encoding 중 많은 메모리 사욜량에 대하여 논의하고 있었습니다.
+위 이슈들은 decoding과 encoding 중 많은 메모리 사용량에 대하여 논의하고 있었습니다.
 
 dsrv labs의 노드에서 발생한 out-of-memory 상황도 unmarshalling 과정 중 decode 시에 많은 메모리가 사용된 현상이기에 위 이슈와의 관련성이 있을 것으로 생각되었습니다.
 
