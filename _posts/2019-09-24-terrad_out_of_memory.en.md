@@ -16,7 +16,7 @@ We are going to talk about Rest server of Terra which is frequently used when pr
 
 Cosmos SDK provides [Rest Server](https://cosmos.network/docs/clients/service-providers.html#setting-up-the-rest-server) as a separated process in addition to node, i.e. Rest server and node are different processes.
 
-Rest Server accepts external queries and responds result from a node using PRC (Remote Procedure Call).
+Rest Server accepts external queries and responds result from a node using RPC (Remote Procedure Call).
 By doing this, we can handle external requests using a separate Rest Server and prevent a node from malicious requests. As a result, we can protect and run a node in more stable environment.
 
 [Terra](https://terra.money/), which is built using the Cosmos SDK and Tendermint, also provides REST server as [Light Client Daemon](https://docs.terra.money/guide/light-client) using `terracli`.
@@ -27,7 +27,7 @@ And several features of [Luna Whale](https://www.lunawhale.com/) make use of thi
 
 A few days ago, Terra node used by Luna Whale service is crashed unexpectedly due to out-of-memory, aka OOM, after ever increasing memory use as below.
 
-<img alt="Process resient memory of lunawhale node" src="https://raw.githubusercontent.com/dsrvlabs/dsrvlabs.github.io/master/posts_attachment/20190924-lunawhale.png">
+<img alt="Process resident memory of lunawhale node" src="https://raw.githubusercontent.com/dsrvlabs/dsrvlabs.github.io/master/posts_attachment/20190924-lunawhale.png">
 
 [Source: *dsrv labs monitoring system*]
 
@@ -43,7 +43,7 @@ Because memory is consumed within a short time, we listed possible causes of hig
 - Hugh memory is required to handle REST call
 
 First, we investigate memory usage required to process Terra blocks.
-We take a look into memory usage of our validator node during 24 hrs including time window of the crash. Memory usage of validator node is under 300 MB during 24 hrs and there is no significant change at the time of node crash as below.
+We take a look into memory usage of our validator node during 24hrs including time window of the crash. Memory usage of validator node is under 300 MB during 24 hrs and there is no significant change at the time of node crash as below.
 
 <img alt="Process resident memory of validator nodes" src="https://raw.githubusercontent.com/dsrvlabs/dsrvlabs.github.io/master/posts_attachment/20190924-validator-normal.png">
 
@@ -92,7 +92,9 @@ Source: [tendermint/go-amino](https://github.com/tendermint/go-amino/issues?utf8
 <br>
 We are not sure but consider above issues are somewhat related to the cause of out-of-memory in Terra node, because the node is running out of memory during unmarshalling and decoding objects too.
 
-Of course, there are more possible root cause of memory consumption including inefficient implementations as below.
+<br>
+<br>
+Of course, there are more possible root causes of memory consumption including inefficient implementations as below.
 
 - Some REST call itself may require huge memory
 - Implementation of Some REST call may be inefficient
