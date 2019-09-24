@@ -4,7 +4,7 @@ date: 2019-09-24 17:00:00 +0900
 categories: blog news
 comments: true
 ---
-# Cosmos, Terra, Tendermint의 go-amino 메모리 사용량 이슈
+## Cosmos, Terra, Tendermint의 go-amino 메모리 사용량 이슈
 
 안녕하세요. dsrv labs입니다.
 
@@ -85,7 +85,7 @@ Terra 노드는 HTTP를 이용하여 RPC 요청을 받아들이고 있으며, �
 <p align="center">
 <img src="https://raw.githubusercontent.com/dsrvlabs/dsrvlabs.github.io/master/posts_attachment/20190924-amino.png">
 
-Source: [tendermint/go-amino](https://github.com/tendermint/go-amino/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+memory+)
+Source: [go-amino](https://github.com/tendermint/go-amino/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+memory+)
 </p>
 
 <br>
