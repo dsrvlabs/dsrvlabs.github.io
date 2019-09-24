@@ -1,10 +1,10 @@
 ---
-title: "Cosmos의 Rest Server 및 go-amino 패키지의 메모리 사용량 이슈"
+title: "go-amino 패키지의 메모리 사용량 이슈"
 date: 2019-09-24 17:00:00 +0900
 categories: blog news
 comments: true
 ---
-# Cosmos의 rest server 및 go-amino 패키지의 메모리 사용량 이슈
+# go-amino 패키지의 메모리 사용량 이슈
 
 안녕하세요. dsrv labs입니다.
 
