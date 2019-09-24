@@ -1,6 +1,6 @@
 ---
 title: "Cosmos의 Rest Server 및 go-amino 패키지의 메모리 사용량 이슈"
-date: 2019-09-24 11:00:00 +0900
+date: 2019-09-24 17:00:00 +0900
 categories: blog news
 comments: true
 ---
@@ -8,16 +8,17 @@ comments: true
 
 안녕하세요. dsrv labs입니다.
 
-dsrv labs는 Terra Validator노드를 돌리고 있습니다.
-그와 더불어 Terra 관련 서비스를 구현하기 위하여 Validator노드가 아닌 일반 노드도 운영하고 있습니다. 
+dsrv labs는 Terra Validator로 활동하고 있으며 Terra 관련 서비스인 [Luna Whale](https://www.lunawhale.com)을 운영하고 있습니다.
+그리고 이를 위하여 Terra Valiadtor 노드에 추가적으로 일반 노드도 운영하고 있습니다.
 
-오늘은 서비스를 제공하기 위한 Terra의 Rest Server 관련된 이야기를 하려고 합니다.
+오늘은 Terra 관련 서비스를 제공할 때 활용될 수 있는 Terra의 Rest Server 관련된 이야기를 하려고 합니다.
 
 ## Cosmos와 Terra의 Rest Server
 
 Cosmos SDK는 노드와 별개의 Process로 동작하는 [Rest Server](https://cosmos.network/docs/clients/service-providers.html#setting-up-the-rest-server)를 제공하고 있습니다. 
+
 Rest Server는 외부의 요청을 받으면, RPC (Remote Procedure Call)을 이용하여 노드에게 요청을 보내 결과를 받아 외부에 돌려주는 역할을 담당하고 있습니다.
-노드가 외부의 요청을 직접적으로 받지 않고 별도의 Process로 동작하는 Rest Server가 외부의 요청을 받도록하여 노드가 더욱 안정적으로 동작할 수 있게됩니다.
+이렇게 구성되면 노드가 외부의 요청을 직접적으로 받지 않고 별도의 Process로 동작하는 Rest Server가 외부의 요청을 받도록하여 노드가 더욱 안정적으로 동작할 수 있게됩니다.
 
 그리고 Cosmos SDK를 이용하여 구현된 Terra도 `terracli`를 통하여 Rest Server를 [Light Client Daemon](https://docs.terra.money/guide/light-client)으로 제공하고 있습니다.
 
@@ -27,43 +28,76 @@ dsrv labs에서 제공하는 서비스 중 하나인 [Luna Whale](https://www.lu
 
 어느 날 저희가 서비스를 구현하기 위하여 동작시키고 있던 Terra 노드가 아래와 같은 메모리 사용량을 보이면서 소위 OOM (out of memory)으로 의도하지 않게 종료되었습니다.
 
-<img src="../posts_attachment/20190924-lunawhale.png">
+<img alt="Process resient memory of lunawhale node" src="../posts_attachment/20190924-lunawhale.png">
+
+<Source: dsrv labs monitoring system>
 
 Rest Server는 정상적으로 동작하고 있었으며, 노드만 메모리 부족으로 종료되었습니다.
 
 dsrv labs에서 운영중인 Terra Validator 노드에서 위 시간이 포함된 24시간 기록을 살펴보니, 아래와 같이  일정한 메모리 사용량을 보여주고 있었습니다.
-<img src="../posts_attachment/20190924-validator-normal.png">
+
+<img alt="Process resident memory of validator nodes" src="../posts_attachment/20190924-validator-normal.png">
+
+<Source: dsrv labs monitoring system>
 
 ## 메모리 사용량은 왜 늘었을까?
 
-메모리 사용량이 단시간 내에 늘었으므로, 처음에는 Terra 블록체인 처리를 위하여 메모리가 늘었을 것으로 생각하였습니다.
+메모리 사용량이 단시간 내에 늘었으므로, 다음과 같은 가능한 원인들을 확인해보기로 하였습니다.
+
+- Terra 블록체인 처리를 위하여 많은 메모리가 필요했을 것이다.
+- Memory leak
+- REST 요청 처리
+
+제일 먼저 Terra 블록체인 처리를 위하여 메모리가 늘었을 것으로 생각하였습니다.
 하지만 Validator 노드와 다른 Terra node의 메모리 사용량은 큰 변화를 보이지 않아 Terra 블록체인 때문은 아닌 것으로 판단하였습니다.
 
-또한 memory leak이 있는지 간단하게 확인해 보았지만, memory leak으로 의심되는 상황은 있었지만 위와 같이 수백MB의 큰 크기는 아니었습니다.
+다음으로 memory leak이 있는지 빠르게 확인해 보았습니다. 확인 결과 memory leak으로 의심되는 상황은 있었지만 위와 같이 수백 MB의 큰 크기는 아니었습니다.
 
-그래서 해당 노드를 다시 시작한 후 메모리 프로파일링을 병행하며 메모리 사용량을 확인해 보았으며, 해당 노드가 다시 OOM이 발생하는 상황을 재현해 보았습니다.
+그래서 해당 노드를 다시 시작한 후 REST 요청를 수행하면서, 해당 노드가 다시 OOM이 발생하는 상황을 재현할 수 있었습니다.
 
-그 결과 아래와 같은 프로파일링 결과를 얻어볼 수 있었습니다.
+위 작업을 진행하는 동시에 메모리 프로파일링을 병행하여 메모리 사용량을 확인해 보았으며, 그 결과 아래와 같은 프로파일링 결과를 얻어볼 수 있었습니다.
 
-<img src="../posts_attachment/20190924-memprofile.png">
+<img src="../posts_attachment/20190924-memprofile-1.png">
 
 ## Rest call 이 많은 메모리를 사용하고 있다!
 
-위 프로파일링 결과의 제일 위를 살펴보면, 노드가 RPC로 들어온 요청을 처리하는 과정에서 600MB 이상의 메모리를 점유하며 사용하고 있는 것이 보이며, 해당 요청은 Rest Server가 외부의 요청을 받아 생성한 것으로 확인되었습니다.
+프로파일링 결과를 살펴보면 아래와 같이 노드의 HTTP handler가 600MB 이상의 메모리를 점유하고 있는 것을 확인할 수 있다.
 
-그리고 RPC 요청 처리 과정 중 `go-amino` 패키지에서 약 358MB의 메모리를 사용하고 있는 것을 확인 할 수 있습니다.
+<img src="../posts_attachment/20190924-memprofile-2.png">
+
+Terra 노드는 HTTP를 이용하여 RPC 요청을 받아들이고 있으며, 위 HTTP handler는 이렇게 들어온 RPC 요청을 처리하는 로직이었습니다.
+확인 결과 HTTP handler들은 Rest Server에서 들어온 요청들을 처리하는 과정 중에 생성된 것들이이었으며, 그 과정에서 600 MB 이상의 메모리를 사용됨을 확인하였습니다.
+
+그리고 이 RPC 요청을 처리하는 과정을 따라가 보면 아래와 같이  `go-amino` 패키지에서 약 358MB의 메모리를 사용하고 있는 것을 확인 할 수 있었습니다.
+<img src="../posts_attachment/20190924-memprofile-3.png">
 
 ## go-amino 패키지란?
 
 [go-amino](https://github.com/tendermint/go-amino)은 Tendermint에서 사용하고 있는 object encoding specification인 Amino의 go 구현체 패키지입니다.
 
-그리고 go-amino Github repo에서도 [go-amino#211](https://github.com/tendermint/go-amino/issues/211), [go-amino#254](https://github.com/tendermint/go-amino/issues/254)와 같이 많은 메모리 사용량에 대한 issue가 있었습니다.
+살펴보니 go-amino Github repo에서도 [Further investigate recursion depth and associated mem-consumption (#211)](https://github.com/tendermint/go-amino/issues/211)와 [Investigate amino performance/mem usage (#254)](https://github.com/tendermint/go-amino/issues/254) 같이 많은 메모리 사용량에 대한 issue가 있었습니다.
+
+<img src="../posts_attachment/20190924-amino.png">
+
+<Source: [tendermint/go-amino](https://github.com/tendermint/go-amino/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+memory+)>
 
 위 이슈들은 decoding과 encoding 중 많은 메모리 사욜량에 대하여 논의하고 있었습니다.
 
-dsrv labs의 노드에서 발생한 out-of-memory 상황에서도 decode 시에 많은 메모리가 사용된 현상이 관찰되고 있어 위 이슈와의 관련성이 있을 것으로 생각됩니다.
+dsrv labs의 노드에서 발생한 out-of-memory 상황에서도 unmarshalling 과정 중 decode 시에 많은 메모리가 사용된 현상이 관찰되고 있어 위 이슈와의 관련성이 있을 것으로 생각되었습니다.
 
-(TBD)
+그리그 그 외에도 아래와 같이 근본적인 문제부터 비효율적인 구현까지 여러가지 레벨에서 원인들이 있을 것 같습니다.
 
-## 결론?
-(TBD)
+- 해당 Rest call이 많은 메모리를 필요로 하는 요청일 수 있다
+- 해당 RPC 요청을 처리하는 구현이 많은 메모리를 필요로 할 수 있다
+- amino의 해당 decoding specification이 많은 메모리를 필요로 할 수 있다
+- go-amino의 구현이 많은 메모리를 필요로 할 수 있다
+- 그 외 ?
+
+## Rest server 대신 LevelDB를 직접 이용하기로..
+
+현재 dsrv labs는 현재 Terra 관련 서비스의 일부 기능에서 Rest server를 이용하고 있었습니다.
+
+하지만 운영 중 위와 같이 많은 메모리를 사용하는 경우가 발생하고 있으며,
+해당 요청이 많은 메모리를 요구할 수도 있거나 구현이 비효율 적일 수도 있을 것이라 생각되었습니다.
+
+그래서 dsrv labs는 Rest server 외에 직접 LevelDB에 접근하여 정보를 얻어오는 방식으로 구현을 추가하려고 하고 있습니다.
