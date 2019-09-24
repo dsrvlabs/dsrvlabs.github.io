@@ -33,7 +33,7 @@ dsrv labs에서 제공하는 서비스 중 하나인 [Luna Whale](https://www.lu
 [Source: *dsrv labs monitoring system*]
 
 <br>
-Rest Server는 정상적으로 동작하고 있었으며, Terra 노드만 메모리 부족으로 crash 되었습니다. Rest Server는 살아있는데 더욱 안정적으로 동작해야하는 Terr 노드만 crash 되었기에 당황스러운 상황이었습니다.
+Rest Server는 정상적으로 동작하고 있었으며, Terra 노드만 메모리 부족으로 crash 되었습니다. Rest Server는 살아있는데 더욱 안정적으로 동작해야하는 Terra 노드만 crash 되었기에 당황스러운 상황이었습니다.
 
 ## 메모리 사용량은 왜 늘었을까?
 
