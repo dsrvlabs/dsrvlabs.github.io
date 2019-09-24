@@ -30,10 +30,10 @@ dsrv labs에서 제공하는 서비스 중 하나인 [Luna Whale](https://www.lu
 
 <img alt="Process resient memory of lunawhale node" src="../posts_attachment/20190924-lunawhale.png">
 
-<Source: *dsrv labs monitoring system*>
+[Source: *dsrv labs monitoring system*]
 
-Rest Server는 정상적으로 동작하고 있었으며, 노드만 메모리 부족으로 종료되었습니다.
-
+<br>
+Rest Server는 정상적으로 동작하고 있었으며, Terra 노드만 메모리 부족으로 crash 되었습니다. Rest Server는 살아있는데 더욱 안정적으로 동작해야하는 Terr 노드만 crash 되었기에 당황스러운 상황이었습니다.
 
 ## 메모리 사용량은 왜 늘었을까?
 
@@ -49,8 +49,9 @@ Rest Server는 정상적으로 동작하고 있었으며, 노드만 메모리 �
 
 <img alt="Process resident memory of validator nodes" src="../posts_attachment/20190924-validator-normal.png">
 
-<Source: *dsrv labs monitoring system*>
+[Source: *dsrv labs monitoring system*]
 
+<br>
 다음으로 memory leak이 있는지 빠르게 확인해 보았습니다. 확인 결과 memory leak으로 의심되는 상황은 있었지만 위와 같이 수백 MB의 큰 크기는 아니었습니다.
 
 마지막으로 해당 노드를 다시 시작한 후 REST 요청를 수행하면서 노드가 다시 out-of-memory로 종료되는 상황을 재현해 보았습니다.
@@ -68,7 +69,7 @@ Rest Server는 정상적으로 동작하고 있었으며, 노드만 메모리 �
 </p>
 
 Terra 노드는 HTTP를 이용하여 RPC 요청을 받아들이고 있으며, 위 HTTP handler들은 이렇게 들어온 RPC 요청을 처리하는 로직이었습니다.
-확인 결과 HTTP handler들은 Rest Server에서 들어온 요청들을 처리하는 과정 중에 생성된 것들이이었으며, 그 과정에서 600 MB 이상의 메모리를 사용됨을 확인하였습니다.
+확인 결과 HTTP handler들은 Rest Server에서 들어온 요청들을 처리하는 과정 중에 생성된 것들이었으며, 그 과정에서 600 MB 이상의 메모리를 사용됨을 확인하였습니다.
 
 그리고 이 RPC 요청을 처리하는 과정을 따라가 보면 아래와 같이  `go-amino` 패키지에서 약 358MB의 메모리를 사용하고 있는 것을 확인 할 수 있었습니다.
 <p align="center">
@@ -84,9 +85,10 @@ Terra 노드는 HTTP를 이용하여 RPC 요청을 받아들이고 있으며, �
 <p align="center">
 <img src="../posts_attachment/20190924-amino.png">
 
-<Source: [tendermint/go-amino](https://github.com/tendermint/go-amino/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+memory+)>
+[Source: [tendermint/go-amino](https://github.com/tendermint/go-amino/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+memory+)]
 </p>
 
+<br>
 위 이슈들은 decoding과 encoding 중 많은 메모리 사욜량에 대하여 논의하고 있었습니다.
 
 dsrv labs의 노드에서 발생한 out-of-memory 상황도 unmarshalling 과정 중 decode 시에 많은 메모리가 사용된 현상이기에 위 이슈와의 관련성이 있을 것으로 생각되었습니다.
@@ -99,9 +101,12 @@ dsrv labs의 노드에서 발생한 out-of-memory 상황도 unmarshalling 과정
 - go-amino의 구현이 많은 메모리를 필요로 할 수 있다
 - 그 외 ?
 
-## Rest server 대신 LevelDB를 직접 들여다보기로..
+## Rest server 대신 LevelDB에 직접 접근하자!
 
 현재 dsrv labs는 현재 Terra 관련 서비스의 일부 기능에서 Rest server를 이용하고 있었습니다.
 
-하지만 운영 중 위와 같이 많은 메모리를 사용하는 경우가 발생하고 있으며,
-해당 요청이 많은 메모리를 요구할 수도 있거나 구현이 비효율 적일 수도 있을 것이라 생각되어, dsrv labs는 Rest server 외에 직접 LevelDB에 접근하여 정보를 얻어오는 방식으로 구현을 추가하려고 하고 있습니다.
+하지만 운영 중 위와 같이 많은 메모리를 사용하는 경우가 발생하여 안정적으로 동장해야하는 Terra 노드가 crash되는 상황이 발생하고 있었습니다.
+
+이에 dsrv labs는 위와 같은 분석을 진행하였으며, 분석 결과 해당 요청이 많은 메모리를 요구할 수도 있거나 구현이 비효율 적일 수도 있을 것이라 생각되어, Rest server 외에 직접 LevelDB에 접근하여 정보를 얻어오는 방식을 추가적으로 구현하려고 합니다.
+
+이 글을 읽으시는 독자분들도 Terra관련 서비스 구축 시 Rest server를 활용하고 있다면 메모리 사용량을 고려하면 좋을 것 같습니다.
