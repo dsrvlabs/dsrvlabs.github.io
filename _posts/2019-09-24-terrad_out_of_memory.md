@@ -28,7 +28,7 @@ dsrv labs에서 제공하는 서비스 중 하나인 [Luna Whale](https://www.lu
 
 며칠 전 Luna Whale 서비스에서 이용하고 있던 Terra 노드가 아래와 같은 메모리 사용량을 보이면서 소위 OOM (out of memory)으로 의도하지 않게 종료되었습니다.
 
-<img alt="Process resient memory of lunawhale node" src="../posts_attachment/20190924-lunawhale.png">
+<img alt="Process resient memory of lunawhale node" src="https://raw.githubusercontent.com/dsrvlabs/dsrvlabs.github.io/master/posts_attachment/20190924-lunawhale.png">
 
 [Source: *dsrv labs monitoring system*]
 
@@ -47,7 +47,7 @@ Rest Server는 정상적으로 동작하고 있었으며, Terra 노드만 메모
 
 하지만 dsrv labs에서 운영중인 Terra Validator 노드에서 위 시간이 포함된 24시간 기록을 살펴보니, 아래와 같이 300 MB 이하의 메모리 사용량을 보여주고 있었습니다.
 
-<img alt="Process resident memory of validator nodes" src="../posts_attachment/20190924-validator-normal.png">
+<img alt="Process resident memory of validator nodes" src="https://raw.githubusercontent.com/dsrvlabs/dsrvlabs.github.io/master/posts_attachment/20190924-validator-normal.png">
 
 [Source: *dsrv labs monitoring system*]
 
@@ -58,14 +58,14 @@ Rest Server는 정상적으로 동작하고 있었으며, Terra 노드만 메모
 
 위 REST 요청을 진행함과 동시에 프로파일링을 병행하여 메모리 사용량을 확인해 보았으며, 그 결과 아래와 같은 프로파일링 결과를 얻어볼 수 있었습니다.
 
-<img src="../posts_attachment/20190924-memprofile-1.png">
+<img src="https://raw.githubusercontent.com/dsrvlabs/dsrvlabs.github.io/master/posts_attachment/20190924-memprofile-1.png">
 
 ## Rest call 이 많은 메모리를 사용하고 있다!
 
 프로파일링 결과를 살펴보면 아래와 같이 노드의 HTTP handler가 600MB 이상의 메모리를 점유하고 있는 것을 확인할 수 있습니다.
 
 <p align="center">
-<img src="../posts_attachment/20190924-memprofile-2.png">
+<img src="https://raw.githubusercontent.com/dsrvlabs/dsrvlabs.github.io/master/posts_attachment/20190924-memprofile-2.png">
 </p>
 
 Terra 노드는 HTTP를 이용하여 RPC 요청을 받아들이고 있으며, 위 HTTP handler들은 이렇게 들어온 RPC 요청을 처리하는 로직이었습니다.
@@ -73,7 +73,7 @@ Terra 노드는 HTTP를 이용하여 RPC 요청을 받아들이고 있으며, �
 
 그리고 이 RPC 요청을 처리하는 과정을 따라가 보면 아래와 같이  `go-amino` 패키지에서 약 358MB의 메모리를 사용하고 있는 것을 확인 할 수 있었습니다.
 <p align="center">
-<img src="../posts_attachment/20190924-memprofile-3.png">
+<img src="https://raw.githubusercontent.com/dsrvlabs/dsrvlabs.github.io/master/posts_attachment/20190924-memprofile-3.png">
 </p>
 
 ## go-amino 패키지란?
@@ -83,7 +83,7 @@ Terra 노드는 HTTP를 이용하여 RPC 요청을 받아들이고 있으며, �
 살펴보니 go-amino Github repo에서도 [Further investigate recursion depth and associated mem-consumption (#211)](https://github.com/tendermint/go-amino/issues/211)와 [Investigate amino performance/mem usage (#254)](https://github.com/tendermint/go-amino/issues/254) 같이 많은 메모리 사용량에 대한 issue가 있었습니다.
 
 <p align="center">
-<img src="../posts_attachment/20190924-amino.png">
+<img src="https://raw.githubusercontent.com/dsrvlabs/dsrvlabs.github.io/master/posts_attachment/20190924-amino.png">
 
 [Source: [tendermint/go-amino](https://github.com/tendermint/go-amino/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+memory+)]
 </p>
