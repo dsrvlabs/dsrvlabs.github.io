@@ -6,6 +6,9 @@ comments: true
 ---
 ## Cosmos, Terra, Tendermint의 go-amino 메모리 사용량 이슈
 
+> English : https://www.dsrvlabs.com/blog/news/terrad_out_of_memory.en/  
+> Korean : https://www.dsrvlabs.com/blog/news/terrad_out_of_memory/
+
 안녕하세요. dsrv labs입니다.
 
 dsrv labs는 Terra Validator로 활동하고 있으며 Terra 관련 서비스인 [Luna Whale](https://www.lunawhale.com)을 운영하고 있습니다.
