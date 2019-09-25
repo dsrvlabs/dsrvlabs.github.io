@@ -6,6 +6,9 @@ comments: true
 ---
 ## Memory consumption of go-amino in Cosmos, Terra and Tendermint
 
+> English : https://www.dsrvlabs.com/blog/news/terrad_out_of_memory.en/  
+> Korean : https://www.dsrvlabs.com/blog/news/terrad_out_of_memory/
+
 Hello, this is dsrv labs.
 
 [dsrv labs](https://www.dsrvlabs.com/) runs a Terra validator node and also runs several non-validator nodes to provide Terra related services such as [Luna Whale](https://www.lunawhale.com).
