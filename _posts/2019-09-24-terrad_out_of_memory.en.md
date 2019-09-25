@@ -1,6 +1,6 @@
 ---
 title: "Memory consumption issue of go-amino package"
-date: 2019-09-24 17:00:00 +0900
+date: 2019-09-24 22:00:00 +0900
 categories: blog news
 comments: true
 ---
