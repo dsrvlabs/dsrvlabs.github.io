@@ -110,4 +110,4 @@ However we encountered above memory consumption issue and concluded that REST se
 
 Therefore we are considering accessing levelDB of Terra blockchain directly instead of using REST server when developing services for Terra network.
 
-If you plan to use or already make use of REST server for Terra nodes, please be aware of memory usage of nodes when processing REST requests. :)
+If you plan to use or already make use of REST server for Terra nodes, please be aware of memory usage of nodes when handling REST requests. :)
