@@ -12,9 +12,16 @@ Hello, this is dsrv labs.
 [dsrv labs](https://www.dsrvlabs.com/) runs several Terra nodes including a Terra validator node, i.e. [nonce - LunaWhale.com](https://terra.stake.id/#/validator/884C3AFE32027177FFB522403654223B4587F60E).
 In addition to nodes, we setup monitoring and alerting system for Terra nodes to manage those nodes more efficiently.
 
+<p align="center">
+<img src="../posts_attachment/20190927-dashboard-final.png" width="50%">
+</p>
+
 We also created a template of Grafana dashboard for Terra node
 at https://grafana.com/grafana/dashboards/10905 as below.
-<img src="../posts_attachment/20190927-dashboard-3.png">
+
+<p align="center">
+<img src="../posts_attachment/20190927-dashboard-3.png" width="50%">
+</p>
 
 This article will describe how to setup simple monitoring/alerting system for Terra nodes conveniently using [Prometheus](https://prometheus.io/) and [Grafana](https://grafana.com/) by exploiting [Docker](https://www.docker.com/) and [Terra Network Dashboard](https://grafana.com/grafana/dashboards/10905).
 
