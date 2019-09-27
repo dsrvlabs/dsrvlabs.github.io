@@ -1,6 +1,6 @@
 ---
 title: "Monitoring/Alerting for Terra nodes with Prometheus and Grafana"
-date: 2019-09-24 22:00:00 +0900
+date: 2019-09-27 22:00:00 +0900
 categories: blog news
 comments: true
 ---
@@ -12,8 +12,13 @@ Hello, this is dsrv labs.
 [dsrv labs](https://www.dsrvlabs.com/) runs several Terra nodes including a Terra validator node, i.e. [nonce - LunaWhale.com](https://terra.stake.id/#/validator/884C3AFE32027177FFB522403654223B4587F60E).
 In addition to nodes, we setup monitoring and alerting system for Terra nodes to manage those nodes more efficiently.
 
-This article will describe how to setup simple monitoring/alerting system for Terra nodes conveniently using [Prometheus](https://prometheus.io/) and [Grafana](https://grafana.com/) by exploiting [docker](https://www.docker.com/).
-This article is for readers who have never setup monitoring system using Prometheus and Grafana.
+We also created a template of Grafana dashboard for Terra node
+at https://grafana.com/grafana/dashboards/10905 as below.
+<img src="../posts_attachment/20190927-dashboard-3.png">
+
+This article will describe how to setup simple monitoring/alerting system for Terra nodes conveniently using [Prometheus](https://prometheus.io/) and [Grafana](https://grafana.com/) by exploiting [Docker](https://www.docker.com/) and [Terra Network Dashboard](https://grafana.com/grafana/dashboards/10905).
+
+This article is for readers who have not setup monitoring system using Prometheus and Grafana before and helps to start monitoring Terra node.
 
 ## Pre-requisite
 
@@ -46,19 +51,20 @@ prometheus = true
 # Address to listen for Prometheus collector(s) connections
 prometheus_listen_addr = ":26660"
 ```
-Above `config.toml` enables Terra node to export metrics to Prometheus using port `26660`.
+Above `config.toml` enables Terra node to export metrics for Prometheus using port `26660`.
 
-After editing configuration file, please restart your terra node.
+After configuring Terra node, please restart your terra node.
 
 ## Start Prometheus server
 
-First, you have to prepare a directory to store metrics collected by Prometheus.
+First we have to prepare configuration file, e.g. `~/prometheus/prometheus.yml`, for Prometheus.
 
+Let's create a prometheus directory and a `prometheus.yml` file.
 ```
-$ mkdir -p ~/prometheus/
+$ mkdir ~/prometheus/
 ```
 
-Then let's prepare configuration file, i.e. `~/prometheus/prometheus.yml`, for Prometheus. And an example of `prometheus.yml` is as below.
+And an example of `prometheus.yml` is as below.
 
 ```
 global:
@@ -94,17 +100,18 @@ scrape_configs:
           hostname: 'lunawhale'
 ```
 
-You have to edit `targets` at the end of this file with IP address and Prometheus port of your Terra node.
+You have to edit `targets` at the end with IP address and Prometheus port of your Terra node.
 
-`hostname` is a label to identify target easily later at Grafana and you can use your own label.
+`hostname` is a label to identify target easily later at Grafana dashboard and you can use your own name for `hostname`.
 
-Let's assume `prometheus.yml` is available at `~/prometheus/prometheus.yml` and your file system may look like below.
+We created `~/prometheus/prometheus.yml` and your file system may look like below.
 
 ```
-$ cd ~/prometheus
-$ tree
+$ cd ~
+$ $ tree
 .
-└── prometheus.yml
+└── prometheus
+    └── prometheus.yml
 ```
 
 Now you can start Prometheus daemon with a following command.
@@ -121,7 +128,7 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 
 ## Start Grafana server
 
-Let's start Garafana using below command without configuration, because we will configure grafana using GUI later.
+You can start Garafana using below command without configuration, because we will configure grafana using GUI later.
 ```
 $ docker run -d --name=grafana-terra -p 3000:3000 grafana/grafana
 ```
@@ -216,5 +223,4 @@ Although this monitoring system is very naive and simple, we hope this helps you
 [dsrv labs](https://www.dsrvlabs.com) will update [Terra Network Dashboard Template](https://grafana.com/grafana/dashboards/10905) continuously.
 
 ## References
-
 (TBD)
