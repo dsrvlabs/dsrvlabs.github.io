@@ -183,7 +183,7 @@ Choose `Import` to use a downloaded `JSON` file.
 <img src="../posts_attachment/20190927-dashboard-2.png">
 
 
-Choose `Update .json file` to upload a downloaded `JSON` file.
+You can import a dashboard by choosing `Update .json file` to upload a downloaded `JSON` file or by putting id `10905` and press "Load" button.
 <img src="../posts_attachment/20190927-dashboard-4.png">
 
 
