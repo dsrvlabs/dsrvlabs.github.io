@@ -246,7 +246,7 @@ This article shows how to setup a monitoring system using Prometheus and Grafana
 
 Although this monitoring system is very naive and simple, we hope this helps you to start setting up a well-structured monitoring system for your Terra node.
 
-[dsrv labs](https://www.dsrvlabs.com) will update [Terra Network Dashboard Template](https://grafana.com/grafana/dashboards/10905) continuously.
+[dsrv labs](https://www.dsrvlabs.com) will update [Terra Network Dashboard](https://grafana.com/grafana/dashboards/10905) continuously.
 
 ## References
 [1] Prometheus. Prometheus: Installation. (2019, SEptember 27). Retrieved from https://prometheus.io/docs/prometheus/latest/installation/ <br>
