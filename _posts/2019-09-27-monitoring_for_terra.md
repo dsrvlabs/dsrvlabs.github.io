@@ -144,7 +144,9 @@ This command will start Grafana and Grafana service will be provided at port 300
 
 Now let's connect to Grafana using your preferred web browser by connecting to `http://<IP address of Grafana server>:3000/`.
 
-<img src="../posts_attachment/20190927-grafana-1.png">
+<p align="center">
+<img src="../posts_attachment/20190927-grafana-1.png" width="90%">
+</p>
 
 > If you can't connect to Grafana server, please make sure port, i.e. 3000 in this article, for Granana is allowed to accept incoming traffic from your computer.
 
@@ -156,15 +158,21 @@ You can login to Grafana with ID `admin` and password `admin`.
 
 After login, click `Data Sources` in `Configuration` of left menu.
 
-<img src="../posts_attachment/20190927-grafana-3-2.png">
+<p align="center">
+<img src="../posts_attachment/20190927-grafana-3-2.png" width="90%">
+</p>
 
 Click "Add data source".
 
-<img src="../posts_attachment/20190927-grafana-3-3.png">
+<p align="center">
+<img src="../posts_attachment/20190927-grafana-3-3.png" width="90%">
+</p>
 
 Choose "Prometheus".
 
-<img src="../posts_attachment/20190927-grafana-3-4.png">
+<p align="center">
+<img src="../posts_attachment/20190927-grafana-3-4.png" width="90%">
+</p>
 
 Please put URL of your Prometheus server information and press `Save and Test` button below.
 If it works, it will shows "Data source is working" as above.
@@ -177,28 +185,40 @@ Let's setup dashboard to monitor Terra node using template we prepared.
 
 Please visit https://grafana.com/grafana/dashboards/10905 to download a template for Terra node monitoring as below.
 
-<img src="../posts_attachment/20190927-dashboard-3.png">
+<p align="center">
+<img src="../posts_attachment/20190927-dashboard-3.png" width="90%">
+</p>
 
 Press `Download JSON` to download a JSON file.
 
 
 Now come back to Grafana page and choose `Manage` in `Dashboards` menu as below.
-<img src="../posts_attachment/20190927-dashboard-1.png">
+<p align="center">
+<img src="../posts_attachment/20190927-dashboard-1.png" width="90%">
+</p>
 
 Choose `Import` to use a downloaded `JSON` file.
-<img src="../posts_attachment/20190927-dashboard-2.png">
+<p align="center">
+<img src="../posts_attachment/20190927-dashboard-2.png" width="90%">
+</p>
 
 
 You can import a dashboard by choosing `Update .json file` to upload a downloaded `JSON` file or by putting id `10905` and press "Load" button.
-<img src="../posts_attachment/20190927-dashboard-4.png">
+<p align="center">
+<img src="../posts_attachment/20190927-dashboard-4.png" width="90%">
+</p>
 
 
 In below screen, you can set name of dashboard and choose data source we just setup in above. Then press `import` button to finish the setup.
-<img src="../posts_attachment/20190927-dashboard-5.png">
+<p align="center">
+<img src="../posts_attachment/20190927-dashboard-5.png" width="90%">
+</p>
 
 
 Now you can see a dashboard like below one.
-<img src="../posts_attachment/20190927-dashboard-final.png">
+<p align="center">
+<img src="../posts_attachment/20190927-dashboard-final.png" width="90%">
+</p>
 
 > If no metric is shown, then please check port for Prometheus, i.e. `prometheus_listen_addr` 26660 in above `config.toml` of Terra node, is accessible from Prometheus server.
 
