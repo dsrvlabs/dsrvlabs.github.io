@@ -10,24 +10,23 @@ comments: true
 Hello, this is dsrv labs.
 
 [dsrv labs](https://www.dsrvlabs.com/) runs several Terra nodes including a Terra validator node, i.e. [nonce - LunaWhale.com](https://terra.stake.id/#/validator/884C3AFE32027177FFB522403654223B4587F60E).
-In addition to nodes, we setup monitoring and alerting system for Terra nodes to manage those nodes more efficiently.
+In addition to nodes, we setup monitoring and alerting system for Terra nodes to manage those nodes more efficiently as below.
 
 <p align="center">
 <img src="../posts_attachment/20190927-dashboard-final.png" width="50%">
 </p>
 
-We also created a template of Grafana dashboard for Terra node
-at https://grafana.com/grafana/dashboards/10905 as below.
+We also created a template of Grafana dashboard from above dashboard and published it at https://grafana.com/grafana/dashboards/10905 as below.
 
 <p align="center">
-<img src="../posts_attachment/20190927-dashboard-3.png" width="50%">
+<img src="../posts_attachment/20190927-dashboard-3.png" width="70%">
 </p>
 
-This article will describe how to setup simple monitoring/alerting system for Terra nodes conveniently using [Prometheus](https://prometheus.io/) and [Grafana](https://grafana.com/) by exploiting [Docker](https://www.docker.com/) and [Terra Network Dashboard](https://grafana.com/grafana/dashboards/10905).
+This article will describe how to setup simple monitoring/alerting system for Terra nodes as above conveniently using [Prometheus](https://prometheus.io/) and [Grafana](https://grafana.com/) by exploiting [Docker](https://www.docker.com/) and [Terra Network Dashboard](https://grafana.com/grafana/dashboards/10905).
 
 This article is for readers who have not setup monitoring system using Prometheus and Grafana before and helps to start monitoring Terra node.
 
-## Pre-requisite
+## Prerequisites
 
 - A monitoring server for Prometheus and Grafana
 - docker installed on monitoring server
@@ -230,4 +229,7 @@ Although this monitoring system is very naive and simple, we hope this helps you
 [dsrv labs](https://www.dsrvlabs.com) will update [Terra Network Dashboard Template](https://grafana.com/grafana/dashboards/10905) continuously.
 
 ## References
-(TBD)
+[1] Prometheus. Prometheus: Installation. (2019, SEptember 27). Retrieved from https://prometheus.io/docs/prometheus/latest/installation/ <br>
+[2] Grafana Labs. Grafana Documentation: Installing using Docker. (2019, September 27). Retrieved from https://grafana.com/docs/installation/docker/ <br>
+[3] dsrv labs. Terra Network Dashboard. (2019, September 27). Retrieved from https://grafana.com/grafana/dashboards/10905 <br>
+[4] Tendermint. Tendermint Documentation: Metrics. (2019, September 27). Retrieved from https://tendermint.com/docs/tendermint-core/metrics.html <br>
