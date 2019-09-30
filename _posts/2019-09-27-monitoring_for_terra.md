@@ -1,6 +1,6 @@
 ---
 title: "Monitoring/Alerting for Terra nodes with Prometheus and Grafana"
-date: 2019-09-27 22:00:00 +0900
+date: 2019-09-30 12:00:00 +0900
 categories: blog news
 comments: true
 ---
@@ -13,13 +13,13 @@ Hello, this is dsrv labs.
 In addition to nodes, we setup monitoring and alerting system for Terra nodes to manage those nodes more efficiently as below.
 
 <p align="center">
-<img src="../posts_attachment/20190927-dashboard-final.png" width="50%">
+<img src="https://raw.githubusercontent.com/dsrvlabs/dsrvlabs.github.io/master/posts_attachment/20190927-dashboard-final.png" width="50%">
 </p>
 
 We also created a template of Grafana dashboard from above dashboard and published it at https://grafana.com/grafana/dashboards/10905 as below.
 
 <p align="center">
-<img src="../posts_attachment/20190927-dashboard-3.png" width="70%">
+<img src="https://raw.githubusercontent.com/dsrvlabs/dsrvlabs.github.io/master/posts_attachment/20190927-dashboard-3.png" width="70%">
 </p>
 
 This article will describe how to setup simple monitoring/alerting system for Terra nodes as above conveniently using [Prometheus](https://prometheus.io/) and [Grafana](https://grafana.com/) by exploiting [Docker](https://www.docker.com/) and [Terra Network Dashboard](https://grafana.com/grafana/dashboards/10905).
@@ -145,7 +145,7 @@ This command will start Grafana and Grafana service will be provided at port 300
 Now let's connect to Grafana using your preferred web browser by connecting to `http://<IP address of Grafana server>:3000/`.
 
 <p align="center">
-<img src="../posts_attachment/20190927-grafana-1.png" width="90%">
+<img src="https://raw.githubusercontent.com/dsrvlabs/dsrvlabs.github.io/master/posts_attachment/20190927-grafana-1.png" width="90%">
 </p>
 
 > If you can't connect to Grafana server, please make sure port, i.e. 3000 in this article, for Granana is allowed to accept incoming traffic from your computer.
@@ -153,25 +153,25 @@ Now let's connect to Grafana using your preferred web browser by connecting to `
 You can login to Grafana with ID `admin` and password `admin`.
 
 <p align="center">
-<img src="../posts_attachment/20190927-grafana-3-1.png" width="50%">
+<img src="https://raw.githubusercontent.com/dsrvlabs/dsrvlabs.github.io/master/posts_attachment/20190927-grafana-3-1.png" width="50%">
 </p>
 
 After login, click `Data Sources` in `Configuration` of left menu.
 
 <p align="center">
-<img src="../posts_attachment/20190927-grafana-3-2.png" width="90%">
+<img src="https://raw.githubusercontent.com/dsrvlabs/dsrvlabs.github.io/master/posts_attachment/20190927-grafana-3-2.png" width="90%">
 </p>
 
 Click "Add data source".
 
 <p align="center">
-<img src="../posts_attachment/20190927-grafana-3-3.png" width="90%">
+<img src="https://raw.githubusercontent.com/dsrvlabs/dsrvlabs.github.io/master/posts_attachment/20190927-grafana-3-3.png" width="90%">
 </p>
 
 Choose "Prometheus".
 
 <p align="center">
-<img src="../posts_attachment/20190927-grafana-3-4.png" width="90%">
+<img src="https://raw.githubusercontent.com/dsrvlabs/dsrvlabs.github.io/master/posts_attachment/20190927-grafana-3-4.png" width="90%">
 </p>
 
 Please put URL of your Prometheus server information and press `Save and Test` button below.
@@ -186,7 +186,7 @@ Let's setup dashboard to monitor Terra node using template we prepared.
 Please visit https://grafana.com/grafana/dashboards/10905 to download a template for Terra node monitoring as below.
 
 <p align="center">
-<img src="../posts_attachment/20190927-dashboard-3.png" width="90%">
+<img src="https://raw.githubusercontent.com/dsrvlabs/dsrvlabs.github.io/master/posts_attachment/20190927-dashboard-3.png" width="90%">
 </p>
 
 Press `Download JSON` to download a JSON file.
@@ -194,30 +194,30 @@ Press `Download JSON` to download a JSON file.
 
 Now come back to Grafana page and choose `Manage` in `Dashboards` menu as below.
 <p align="center">
-<img src="../posts_attachment/20190927-dashboard-1.png" width="90%">
+<img src="https://raw.githubusercontent.com/dsrvlabs/dsrvlabs.github.io/master/posts_attachment/20190927-dashboard-1.png" width="90%">
 </p>
 
 Choose `Import` to use a downloaded `JSON` file.
 <p align="center">
-<img src="../posts_attachment/20190927-dashboard-2.png" width="90%">
+<img src="https://raw.githubusercontent.com/dsrvlabs/dsrvlabs.github.io/master/posts_attachment/20190927-dashboard-2.png" width="90%">
 </p>
 
 
 You can import a dashboard by choosing `Update .json file` to upload a downloaded `JSON` file or by putting id `10905` and press "Load" button.
 <p align="center">
-<img src="../posts_attachment/20190927-dashboard-4.png" width="90%">
+<img src="https://raw.githubusercontent.com/dsrvlabs/dsrvlabs.github.io/master/posts_attachment/20190927-dashboard-4.png" width="90%">
 </p>
 
 
 In below screen, you can set name of dashboard and choose data source we just setup in above. Then press `import` button to finish the setup.
 <p align="center">
-<img src="../posts_attachment/20190927-dashboard-5.png" width="90%">
+<img src="https://raw.githubusercontent.com/dsrvlabs/dsrvlabs.github.io/master/posts_attachment/20190927-dashboard-5.png" width="90%">
 </p>
 
 
 Now you can see a dashboard like below one.
 <p align="center">
-<img src="../posts_attachment/20190927-dashboard-final.png" width="90%">
+<img src="https://raw.githubusercontent.com/dsrvlabs/dsrvlabs.github.io/master/posts_attachment/20190927-dashboard-final.png" width="90%">
 </p>
 
 > If no metric is shown, then please check port for Prometheus, i.e. `prometheus_listen_addr` 26660 in above `config.toml` of Terra node, is accessible from Prometheus server.
@@ -229,13 +229,13 @@ You can also add alert to any metrics by configuring each panel.
 For example, let's click `Liveness` panel and choose `Edit` as below.
 
 <p align="center">
-<img src="../posts_attachment/20190927-alerting-1.png" width="50%">
+<img src="https://raw.githubusercontent.com/dsrvlabs/dsrvlabs.github.io/master/posts_attachment/20190927-alerting-1.png" width="50%">
 </p>
 
 Choose `Alert` in the left menu, i.e. bell-like icon, and you can add alert and this alert can send notification to various channel, such as Email, Slack, Discord and etc.
 
 <p align="center">
-<img src="../posts_attachment/20190927-alerting-2.png" width="50%">
+<img src="https://raw.githubusercontent.com/dsrvlabs/dsrvlabs.github.io/master/posts_attachment/20190927-alerting-2.png" width="50%">
 </p>
 
 For more information, please visit official [Grafana Alerting](https://grafana.com/docs/alerting/rules/) document.
