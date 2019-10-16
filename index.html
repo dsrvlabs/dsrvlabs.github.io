@@ -21,7 +21,7 @@ author_profile: true
 
 <!-- 기본 사이트 설정 -->
 <meta content="블록체인 연구소 - dsrv labs. Block Validator, Block Producer, Analysis, Zero-knowledge proof" name="description">
-<meta content="dsrvlabs, 블록체인, blockchain, 이더리움, ethereum, factom, 팩텀, 블록체인 연구소, 블록체인 코어, blockchain core" name="keywords">
+<meta content="dsrvlabs, 블록체인, blockchain, 이더리움, ethereum, 블록체인 연구소, 블록체인 코어, blockchain core" name="keywords">
 
 
 <!-- Twitter Meta Tags -->
@@ -68,12 +68,6 @@ author_profile: true
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 <!-- <link href="assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
 <link href="assets/plugins/animate-css/animate.min.css" rel="stylesheet" type="text/css">
-<link href="assets/plugins/owl-carousel/owl.carousel.css" rel="stylesheet" type="text/css">
-<link href="assets/plugins/owl-carousel/owl.theme.css" rel="stylesheet" type="text/css">
-<link href="assets/plugins/jquery-magnificPopup/magnific-popup.css" rel="stylesheet" type="text/css">
-
-<!-- Component CSS -->
-<link href="assets/css/component/component.css" rel="stylesheet" type="text/css">
 
 <!-- Main CSS -->
 <link href="assets/css/rinjani.css" rel="stylesheet" type="text/css">
@@ -98,19 +92,6 @@ author_profile: true
 	<!--[if lt IE 8]>
         <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-
-	<!-- Begin Page Loader -->
-	<div id="page-loader">
-		<div class="preload">
-			<img src="assets/img/preloader.gif" alt="Loading" />
-		</div>
-		<!-- //.preload -->
-	</div>
-	<!-- //End Page Loader -->
-
-
-
-
 
 	<!-- Begin Navbar -->
 	<nav id="navigation" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -160,7 +141,7 @@ author_profile: true
 								
 							</h2>
 
-							<h2 class="lead quote-by">dsrv labs <small>[/dɪˈzɜ:rv læbs/]</small></h2>
+							<h2 class="lead quote-by">dsrv labs <br><small>[/dɪˈzɜ:rv læbs/]</small></h2>
 						</div>
 						<!-- //.quote-text -->
 					</div>
@@ -183,6 +164,47 @@ author_profile: true
 			padding-top: 130px;
 			padding-bottom: 130px;
 		}
+		#services .serviceTextDiv{
+			margin-top: 150px;
+		}
+		#services .serviceTextDiv h4{
+			margin: 0 0 5px;
+			padding: 0;
+			font-size: 22px;
+		}
+		#services .serviceTextDiv .serviceTextDiv_link {
+			margin: 0;
+			padding: 0;
+		}
+		#services .serviceTextDiv .serviceTextDiv_link small {
+			font-size: 100%;
+			color: #777;
+		}
+		#services .serviceTextDiv .serviceTextDiv_link a {
+			margin: 0;
+			padding: 0;
+			font-size: 15px;
+		}
+		@media screen and (max-width: 992px) { 
+			#services .mdHidden1 { 
+				display: none; 
+			}
+			#services .alignRight {
+				text-align: left;
+			}
+		}
+		@media screen and (min-width: 992px) { 
+			#services .mdHidden2 { 
+				display: none; 
+			} 
+			#services .alignRight {
+				text-align: right;
+				padding-right: 60px;
+			}
+			#services .mdHidden1 {
+				padding-left: 60px;
+			}
+		}
 	</style>
     <section id="services" class="section">
             
@@ -203,10 +225,19 @@ author_profile: true
 
 
 
-                <div class="row service-row">					
+                <div class="row service-row">
+
+					<div class="col-md-6 mdHidden2">
+						<div class="serviceTextDiv">
+							<h4 style="color: #337ab7"><a href="https://www.noncedata.com" target="_blank">nonceData</a></h4>
+							<div class="serviceTextDiv_link">
+								<small>Blockchain data provider</small>
+							</div>
+						</div>
+					</div>
                     <div class="col-md-6">
                         <div class="carousel-container">
-                            <div id="carousel-who-we-are" class="">
+                            <div>
                                 <!-- Wrapper for slides -->
                                 <div>
                                     <img src="/assets/myimg/img-noncedata.jpg" alt="" class="img-responsive img-rounded"/>
@@ -217,39 +248,32 @@ author_profile: true
                         </div>
                         <!-- //.carousel-container -->
                     </div>
-                    <div class="col-md-6">
-                        <div class="who-we-are-text">
-                            <h4>nonceData <small>- Blockchain data provider</small></h4>
-                            <p>
-								Blockchain data provider
-							</p>
-                            <div class="page-scroll">
-                                <a href="https://www.noncedata.com" target="_blank" class="btn btn-lg btn-custom">nonceData.com &gt;</a>
-                            </div>
-                        </div>
-                        <!-- //.who-we-are-text -->
+                    <div class="col-md-6 mdHidden1">
+						<div class="serviceTextDiv">
+							<h4 style="color: #337ab7"><a href="https://www.noncedata.com" target="_blank">nonceData</a></h4>
+							<div class="serviceTextDiv_link">
+								<small>Blockchain data provider</small>
+							</div>
+						</div>
                     </div>
                 </div>
 				<!-- //.row -->
 
 
 				
-                <div class="row service-row">	
-					<div class="col-md-6">
-						<div class="who-we-are-text">
-							<h4>Luna Whale <small>- Luna network dashboard and whale alert</small></h4>
-							<p>
-								Luna network dashboard and whale alert
-							</p>
-							<div class="page-scroll">
-								<a href="https://www.lunawhale.com" target="_blank" class="btn btn-lg btn-custom">LunaWhale.com ></a>
+                <div class="row service-row">
+					<div class="col-md-6  ">
+						<div class="serviceTextDiv alignRight">
+							<h4><a href="https://www.lunawhale.com" target="_blank">Luna Whale</a></h4>
+							<div class="serviceTextDiv_link">
+								<small>Luna network dashboard and whale alert</small>
 							</div>
 						</div>
 						<!-- //.who-we-are-text -->
 					</div>				
                     <div class="col-md-6">
-                        <div class="carousel-container">
-                            <div id="carousel-who-we-are" class="">
+                        <div>
+                            <div>
                                 <!-- Wrapper for slides -->
                                 <div>
                                     <img src="/assets/myimg/img-lunawhale.jpg" alt="" class="img-responsive img-rounded"/>
@@ -265,10 +289,18 @@ author_profile: true
 
 
 
-                <div class="row service-row">					
+                <div class="row service-row">
+						<div class="col-md-6 mdHidden2">
+							<div class="serviceTextDiv">
+								<h4 style="color: #337ab7"><a href="https://www.welldonestake.com" target="_blank">Well-done Stake</a></h4>
+								<div class="serviceTextDiv_link">
+									<small>A service that you can believe and stake the most</small>
+								</div>
+							</div>
+						</div>
 						<div class="col-md-6">
-							<div class="carousel-container">
-								<div id="carousel-who-we-are" class="">
+							<div>
+								<div>
 									<!-- Wrapper for slides -->
 									<div>
 										<img src="/assets/myimg/img-welldonestake.jpg" alt="" class="img-responsive img-rounded"/>
@@ -279,17 +311,13 @@ author_profile: true
 							</div>
 							<!-- //.carousel-container -->
 						</div>
-						<div class="col-md-6">
-							<div class="who-we-are-text">
-								<h4>Well-done Stake <small>- A service that you can believe and stake the most</small></h4>
-								<p>
-									A service that you can believe and stake the most
-								</p>
-								<div class="page-scroll">
-									<a href="https://www.welldonestake.com/" target="_blank" class="btn btn-lg btn-custom">WelldoneStake.com &gt;</a>
+						<div class="col-md-6 mdHidden1">
+							<div class="serviceTextDiv">
+								<h4 style="color: #337ab7"><a href="https://www.welldonestake.com" target="_blank">Well-done Stake</a></h4>
+								<div class="serviceTextDiv_link">
+									<small>A service that you can believe and stake the most</small>
 								</div>
 							</div>
-							<!-- //.who-we-are-text -->
 						</div>
 					</div>
 					<!-- //.row -->
@@ -298,20 +326,16 @@ author_profile: true
 					
 					<div class="row service-row">	
 						<div class="col-md-6">
-							<div class="who-we-are-text">
-								<h4>Arbitrage <small>- Cryptocurrency arbitrage trading system</small></h4>
-								<p>
-									Cryptocurrency arbitrage trading system
-								</p>
-								<div class="page-scroll">
-									<a href="https://arbitrage.dsrvlabs.com" target="_blank" class="btn btn-lg btn-custom">Arbitrage.dsrvalbs.com &gt;</a>
+							<div class="serviceTextDiv alignRight">
+								<h4 style="color: #337ab7"><a href="https://arbitrage.dsrvlabs.com" target="_blank">Arbitrage</a></h4>
+								<div class="serviceTextDiv_link">
+									<small>Cryptocurrency arbitrage trading system</small>
 								</div>
 							</div>
-							<!-- //.who-we-are-text -->
 						</div>				
 						<div class="col-md-6">
-							<div class="carousel-container">
-								<div id="carousel-who-we-are" class="">
+							<div>
+								<div>
 									<!-- Wrapper for slides -->
 									<div>
 										<img src="/assets/myimg/img-arbitrage.jpg" alt="" class="img-responsive img-rounded"/>
@@ -340,9 +364,6 @@ author_profile: true
 
 	<!-- Begin Our History Section -->
 	<section id="our-history" class="section">
-		
-
-
 		<style>
 			#blogSection h2.archive__item-title {
 				margin-bottom: 0px;
@@ -362,7 +383,7 @@ author_profile: true
 				<div class="row">
 					<div class="col-md-12">
 						<div class="section-title text-center">
-							<h2 class="main-title" >Blog</h2>
+							<h2 class="main-title" style="font-size: 60px;">Blog</h2>
 
 							<h3 class="sub-title">Visit our blog! - <small><a href="https://www.dsrvlabs.com/blog/">https://www.dsrvlabs.com/blog/</a></small></h3>
 
@@ -420,16 +441,17 @@ author_profile: true
 				<style>
 					#myMemberList { width: 80%;}
 					#myMemberList img {
-						width: 70%;
-						height: 70%;
 						filter: grayscale(90%);
 					}
 					#myMemberList .img-rounded.team-element {
 						text-align: center;
 					}
+					#myMemberList .img-responsive {
+						width: 80%;
+					}
 				</style>
 
-				<div class="container" id="myMemberList" style="height: 330px;">
+				<div class="container" id="myMemberList">
 
 					<div class="col-sm-6 col-md-3 team-item not-right-column">
 						<div class="img-rounded team-element">
@@ -438,7 +460,7 @@ author_profile: true
 							Samsung  Electronics<br>
 							Ethereum 2.0 Contributor<br>
 							Inha Univ(M.S.)<br>
-							<a href="https://www.linkedin.com/in/jongkwang/" target="_blank">
+							<a href="https://www.linkedin.com/in/jiyun-kim" target="_blank">
 								<img src="https://content.linkedin.com/content/dam/me/business/en-us/amp/brand-site/v2/bg/LI-Logo.svg.original.svg" style="height: 16px; width: 60px;">
 							</a>
 						</div>
@@ -487,7 +509,7 @@ author_profile: true
 							.NET Contrubutor<br>
 							<!-- UIUC (Visiting scholar)<br> -->
 							Seoul Nat’l Univ (Ph.D.)<br>
-							<a href="https://www.linkedin.com/in/jongkwang/" target="_blank">
+							<a href="https://www.linkedin.com/in/hyung-kyu-choi" target="_blank">
 								<img src="https://content.linkedin.com/content/dam/me/business/en-us/amp/brand-site/v2/bg/LI-Logo.svg.original.svg" style="height: 16px; width: 60px;">
 							</a>
 
@@ -629,10 +651,8 @@ author_profile: true
 								<!--</li>-->
 
 								<li style="padding-bottom: 5px;"><i class="fas fa-envelope"></i> contact@dsrvlabs.com</li>
-
-								<li style="padding-bottom: 5px;"><a href="https://goo.gl/maps/kv2pPKS53DrwtYKN9" target="_blank" style="color: #888"><i class="fas fa-map-marker"></i> &nbsp;&nbsp;&nbsp;&nbsp;서울 강남구 봉은사로22길 45-9, nonce</a></li>
-
 								<li style="padding-bottom: 5px;"><a href="https://goo.gl/maps/kv2pPKS53DrwtYKN9" target="_blank" style="color: #888"><i class="fas fa-map-marker"></i> &nbsp;&nbsp;&nbsp;&nbsp;nonce, 45-9, Bongeunsa-ro 22-gil, Gangnam-gu, Seoul, Republic of Korea</a></li>
+								<li style="padding-bottom: 5px;"><a href="https://goo.gl/maps/kv2pPKS53DrwtYKN9" target="_blank" style="color: #888"><i class="fas fa-map-marker"></i> &nbsp;&nbsp;&nbsp;&nbsp;서울 강남구 봉은사로22길 45-9, nonce</a></li>
 							</ul>
 						</div>
 						<!-- //.footer-text -->
@@ -677,8 +697,6 @@ author_profile: true
 	<script src="assets/plugins/jquery-sticky/jquery.sticky.js"></script>
 	<script src="assets/plugins/jquery-inview/jquery.inview.min.js"></script>
 	<script src="assets/plugins/jquery-countTo/jquery.countTo.js"></script>
-	<script src="assets/plugins/jquery-easypiechart/jquery.easypiechart.min.js"></script>
-	<script src="assets/plugins/jquery-countdown/jquery.countdown.min.js"></script>
 	<script src="assets/plugins/owl-carousel/owl.carousel.min.js"></script>
 	<script src="assets/plugins/isotope/isotope.pkgd.min.js"></script>
 	<script src="assets/plugins/jquery-magnificPopup/jquery.magnific-popup.min.js"></script>
@@ -690,18 +708,6 @@ author_profile: true
 	<!-- Animation JS (Optional) -->
 	<script src="assets/js/animation.js"></script>
 
-	<!-- Component JS -->
-	<script src="assets/js/component/bar-chart.js"></script>
-	<script src="assets/js/component/countdown.js"></script>
-	<script src="assets/js/component/counters.js"></script>
-	<script src="assets/js/component/pie-chart.js"></script>
-	<script src="assets/js/component/portfolio.js"></script>
-	<script src="assets/js/component/animation.js"></script>
-
-	<!-- Map JS -->
-	<!-- <script src="https://maps.googleapis.com/maps/api/js"></script> -->
-	<!-- <script src="assets/js/component/map.js"></script> -->
-
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140408107-1"></script>
 	<script>
@@ -711,9 +717,5 @@ author_profile: true
 
 		gtag('config', 'UA-140408107-1');
 	</script>
-
-
-
 </body>
-
 </html>
