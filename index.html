@@ -279,7 +279,7 @@ author_profile: true
                             <div>
                                 <!-- Wrapper for slides -->
                                 <div>
-									<img src="/assets/myimg/img-interceptx.png" alt="" class="img-responsive img-rounded"/>
+									<img src="/assets/myimg/img-interceptx.png" alt="" class="img-responsive img-rounded" onmouseenter="zoomIn(event);" onmouseleave="zoomOut(event);"/>
 									<!-- <iframe width="550" height="430" src="https://www.youtube.com/embed/?controls=0&autoplay=1&loop=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
                                 </div>
                                 <!-- //.carousel-inner -->
@@ -308,7 +308,7 @@ author_profile: true
                             <div>
                                 <!-- Wrapper for slides -->
                                 <div>
-                                    <img src="/assets/myimg/img-noncedata.jpg" alt="" class="img-responsive img-rounded"/>
+                                    <img src="/assets/myimg/img-noncedata.jpg" alt="" class="img-responsive img-rounded" onmouseenter="zoomIn(event);" onmouseleave="zoomOut(event);"/>
                                 </div>
                                 <!-- //.carousel-inner -->
                             </div>
@@ -344,7 +344,7 @@ author_profile: true
                             <div>
                                 <!-- Wrapper for slides -->
                                 <div>
-                                    <img src="/assets/myimg/img-lunawhale.jpg" alt="" class="img-responsive img-rounded"/>
+                                    <img src="/assets/myimg/img-lunawhale.jpg" alt="" class="img-responsive img-rounded" onmouseenter="zoomIn(event);" onmouseleave="zoomOut(event);"/>
                                 </div>
                                 <!-- //.carousel-inner -->
                             </div>
@@ -386,8 +386,8 @@ author_profile: true
 							<div>
 								<!-- Wrapper for slides -->
 								<div>
-									<img src="/assets/myimg/img-dsrvnet1.png" alt="" class="img-responsive img-rounded"/>
-									<img src="/assets/myimg/img-dsrvnet2.png" alt="" class="img-responsive img-rounded" style="position: relative; top: -170px; left: 70px;"/>
+									<img src="/assets/myimg/img-dsrvnet1.png" alt="" class="img-responsive img-rounded" onmouseenter="zoomIn(event);" onmouseleave="zoomOut(event);"/>
+									<img src="/assets/myimg/img-dsrvnet2.png" alt="" class="img-responsive img-rounded" style="position: relative; top: -170px; left: 70px;" onmouseenter="zoomIn(event);" onmouseleave="zoomOut(event);"/>
 								</div>
 								<!-- //.carousel-inner -->
 							</div>
@@ -438,7 +438,7 @@ author_profile: true
                             <div>
                                 <!-- Wrapper for slides -->
                                 <div>
-                                    <img src="/assets/myimg/img-arbitrage.jpg" alt="" class="img-responsive img-rounded"/>
+                                    <img src="/assets/myimg/img-arbitrage.jpg" alt="" class="img-responsive img-rounded" onmouseenter="zoomIn(event);" onmouseleave="zoomOut(event);"/>
                                 </div>
                                 <!-- //.carousel-inner -->
                             </div>
@@ -848,8 +848,19 @@ author_profile: true
 				  'info'
 				)
 		}
+		function zoomIn(event) {
+			  event.target.style.transform = "scale(1.5)";
+			  event.target.style.zIndex = 1;
+			  event.target.style.transition = "all 0.5s";
+			}
+		  
+			function zoomOut(event) {
+			  event.target.style.transform = "scale(1)";
+			  event.target.style.zIndex = 0;
+			  event.target.style.transition = "all 0.5s";
+			}
 	</script>
-
+	
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140408107-1"></script>
 	<script>
