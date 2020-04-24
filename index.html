@@ -651,12 +651,11 @@ This dashboard provides list and status of all Celo validators
 					}
 				</style>
 
-				<div class="container" id="myMemberList">
-
-					<div class="col-sm-6 col-md-2 team-item not-right-column  col-md-offset-1">
+				<div class="container randomSortingGroup" id="myMemberList">
+					<div class="col-sm-6 col-md-2 team-item not-right-column randomSortingItem">
 						<div class="img-rounded team-element">
 							<img src="assets/myimg/member1.png" alt="" class="img-responsive img-rounded" /><br><br>
-							<strong>Jiyun Kim<br>(Co-Founder)</strong><br>
+							<strong>Jiyun Kim<br>(CEO, Co-Founder)</strong><br>
 							Samsung  Electronics<br>
 							<a href="https://github.com/ethereum/eth2.0-specs/blob/dev/specs/simple-serialize.md" target="_blank">Ethereum 2.0 Contributor</a><br>
 							<a href="https://steemit.com/@sigmoid" target="_blank">Blockchain Tech Blogger</a><br>
@@ -670,7 +669,7 @@ This dashboard provides list and status of all Celo validators
 					</div>
 					<!-- //.team-item -->
 
-					<div class="col-sm-6 col-md-2 team-item not-right-column">
+					<div class="col-sm-6 col-md-2 team-item not-right-column randomSortingItem">
 						<div class="img-rounded team-element">
 							<img src="assets/myimg/member2.png" alt="" class="img-responsive img-rounded" /><br><br>
 							<strong>Jeongho Jeon<br>(Co-Founder)</strong><br>
@@ -687,7 +686,7 @@ This dashboard provides list and status of all Celo validators
 					</div>
 					<!-- //.team-item -->
 
-					<div class="col-sm-6 col-md-2 team-item not-right-column">
+					<div class="col-sm-6 col-md-2 team-item not-right-column randomSortingItem">
 						<div class="img-rounded team-element">
 							<img src="assets/img/team1.jpg" alt="" class="img-responsive img-rounded" /><br><br>
 							<strong>Jongkwang Kim<br>(Co-Founder)</strong><br>
@@ -704,7 +703,7 @@ This dashboard provides list and status of all Celo validators
 					</div>
 					<!-- //.team-item -->
 
-					<div class="col-sm-6 col-md-2 team-item not-right-column">
+					<div class="col-sm-6 col-md-2 team-item not-right-column randomSortingItem">
 						<div class="img-rounded team-element">
 							<img src="assets/myimg/member3.png" alt="" class="img-responsive img-rounded" /><br><br>
 							<strong>Hyung-Kyu Choi<br>(Co-Founder)</strong><br>
@@ -724,7 +723,7 @@ This dashboard provides list and status of all Celo validators
 					<!-- //.team-item -->
 
 
-					<div class="col-sm-6 col-md-2 team-item not-right-column">
+					<div class="col-sm-6 col-md-2 team-item not-right-column randomSortingItem">
 						<div class="img-rounded team-element">
 							<img src="assets/myimg/member4.jpeg" alt="" class="img-responsive img-rounded" /><br><br>
 							<strong>Hyug Bin Kwon<br>(Co-Founder)</strong><br>
@@ -740,7 +739,7 @@ This dashboard provides list and status of all Celo validators
 						<!-- //.team-element -->
 					</div>
 					<!-- //.team-item -->
-
+					<div class="col-sm-1">&nbsp;</div>
 
 				</div>
 				<!-- //.row -->
@@ -944,16 +943,22 @@ This dashboard provides list and status of all Celo validators
 				)
 		}
 		function zoomIn(event) {
-			  event.target.style.transform = "scale(1.5)";
-			  event.target.style.zIndex = 1;
-			  event.target.style.transition = "all 0.5s";
-			}
-		  
-			function zoomOut(event) {
-			  event.target.style.transform = "scale(1)";
-			  event.target.style.zIndex = 0;
-			  event.target.style.transition = "all 0.5s";
-			}
+			event.target.style.transform = "scale(1.5)";
+			event.target.style.zIndex = 1;
+			event.target.style.transition = "all 0.5s";
+		}
+		
+		function zoomOut(event) {
+			event.target.style.transform = "scale(1)";
+			event.target.style.zIndex = 0;
+			event.target.style.transition = "all 0.5s";
+		}
+
+		// Random member positon
+		$(".randomSortingGroup").html($(".randomSortingGroup .randomSortingItem").sort(function(){
+			return Math.random()-0.5;
+		}));
+		$("#myMemberList > div:nth-child(1)").addClass("col-md-offset-1");
 	</script>
 	
 	<!-- Global site tag (gtag.js) - Google Analytics -->
