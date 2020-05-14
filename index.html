@@ -121,7 +121,7 @@ author_profile: true
 							<a class="dropdown-item" href="#">Something else here</a>
 						  </div>
 					</li> -->
-					<li class="page-scroll"><a href="#blogSection">Blog</a></li>
+					<!-- <li class="page-scroll"><a href="#blogSection">Blog</a></li> -->
 					<li class="page-scroll"><a href="#meet-the-team">Team</a></li>
 					<li class="page-scroll"><a href="#contact-us">Contact</a></li>
 
@@ -572,41 +572,7 @@ This dashboard provides list and status of all Celo validators
 				font-size: 22px;
 			}
 		</style>
-		<div class="section-inner" id="blogSection">
-			<div class="container section-content">
-				<div class="row">
-					<div class="col-md-12">
-						<div class="section-title text-center">
-							<h2 class="main-title" style="font-size: 60px;">Blog</h2>
-
-							<h3 class="sub-title">Visit our blog! - <small><a href="https://www.dsrvlabs.com/blog/">https://www.dsrvlabs.com/blog/</a></small></h3>
-
-							<span class="section-line"></span>
-						</div>
-						<!-- //.section-title -->
-					</div>
-					<!-- //.col-md-12 -->
-				</div>
-				<!-- //.row -->
-
-				<div class="row">
-
-
-			  
-					{% assign postsByYear = site.posts | group_by_exp: 'post', 'post.date | date: "%Y"' %}
-					{% for year in postsByYear %}
-					<section id="{{ year.name }}" class="taxonomy__section" style="text-align: center;">
-						<div class="entries-{{ page.entries_layout | default: 'list' }}">
-						{% for post in year.items %}
-							{% include archive-single.html type=page.entries_layout %}
-						{% endfor %}
-						</div>
-					</section>
-					{% endfor %}
-				</div>
-			</div>
-		</div>
-
+               
 	</section>
 	<!-- //End Our History Section -->
 
